@@ -1,0 +1,95 @@
+GPIOs 0-5, platform/139f0000.pinctrl, etc0:
+
+GPIOs 6-8, platform/139f0000.pinctrl, etc1:
+
+GPIOs 9-16, platform/139f0000.pinctrl, gpa0:
+ gpio-9   (Power               ) in  hi IRQ
+ gpio-10  (DWMCI_EXT_CD        ) in  hi IRQ
+ gpio-13  (stm,tsp_int         ) in  hi IRQ
+ gpio-14  (jack_detect         ) in  hi IRQ
+ gpio-15  (cnss_dcdc_en        ) out hi    
+ gpio-16  (ACC_INT1            ) in  lo IRQ
+
+GPIOs 17-24, platform/139f0000.pinctrl, gpa1:
+ gpio-19  (btwake_gpio         ) out lo    
+ gpio-23  (bthostwake_gpio     ) in  hi IRQ
+ gpio-24  (Home                ) in  hi IRQ
+
+GPIOs 25-32, platform/139f0000.pinctrl, gpa2:
+ gpio-25  (Volume Up           ) in  hi IRQ
+ gpio-26  (Volume Down         ) in  hi IRQ
+ gpio-27  (wlan-host-wake      ) in  hi IRQ
+ gpio-28  (SX9306_WIFI_nIRQ    ) in  hi IRQ
+ gpio-29  (SX9306_nIRQ         ) in  hi IRQ
+ gpio-32  (sm5703_mfd_irq      ) in  hi IRQ
+
+GPIOs 33-34, platform/139f0000.pinctrl, gpq0:
+
+GPIOs 35-39, platform/139e0000.pinctrl, gpc7:
+ gpio-39  (sm5703_mrstb        ) out hi    
+
+GPIOs 40-43, platform/148c0000.pinctrl, gpz0:
+
+GPIOs 44-49, platform/148c0000.pinctrl, gpz1:
+
+GPIOs 50-53, platform/148c0000.pinctrl, gpz2:
+
+GPIOs 54-56, platform/13750000.pinctrl, gpr0:
+
+GPIOs 57-64, platform/13750000.pinctrl, gpr1:
+
+GPIOs 65-66, platform/13750000.pinctrl, gpr2:
+
+GPIOs 67-70, platform/13750000.pinctrl, gpr3:
+
+GPIOs 71-76, platform/13750000.pinctrl, gpr4:
+
+GPIOs 77-78, platform/10530000.pinctrl, gpm0:
+
+GPIOs 79-82, platform/139c0000.pinctrl, gpc2:
+
+GPIOs 83-86, platform/139b0000.pinctrl, gpb0:
+
+GPIOs 87-89, platform/139b0000.pinctrl, gpc0:
+ gpio-87  (vmmc                ) out lo    
+
+GPIOs 90-93, platform/139b0000.pinctrl, gpc1:
+
+GPIOs 94-97, platform/139b0000.pinctrl, gpc4:
+
+GPIOs 98-99, platform/139b0000.pinctrl, gpc5:
+
+GPIOs 100-103, platform/139b0000.pinctrl, gpc6:
+
+GPIOs 104-105, platform/139b0000.pinctrl, gpc8:
+
+GPIOs 106-107, platform/139b0000.pinctrl, gpc9:
+
+GPIOs 108-114, platform/139b0000.pinctrl, gpd1:
+ gpio-111 (sm5703_nCHGEN       ) out lo    
+ gpio-112 (tsp_dvdd            ) out hi    
+ gpio-114 (tsp_avdd            ) out hi    
+
+GPIOs 115-120, platform/139b0000.pinctrl, gpd2:
+
+GPIOs 121-128, platform/139b0000.pinctrl, gpd3:
+ gpio-123 (rt5659_ldo          ) out hi    
+ gpio-124 (rt5659_reset        ) out hi    
+ gpio-127 (wlan-en-gpio        ) out hi    
+
+GPIOs 129-135, platform/139b0000.pinctrl, gpd4:
+ gpio-129 (bten_gpio           ) out lo    
+
+GPIOs 136-138, platform/139b0000.pinctrl, gpe0:
+
+GPIOs 139-142, platform/139b0000.pinctrl, gpf0:
+
+GPIOs 143-144, platform/139b0000.pinctrl, gpf1:
+
+GPIOs 145-146, platform/139b0000.pinctrl, gpf2:
+
+GPIOs 147-150, platform/139b0000.pinctrl, gpf3:
+
+GPIOs 151-155, platform/139b0000.pinctrl, gpf4:
+
+GPIOs 156-158, platform/139d0000.pinctrl, gpc3:

@@ -1,0 +1,21 @@
+# Third-party ROM/GApps zips and the personal invoice.pdf
+/samsung galaxy tab a (2016)/
+
+# Build output, regenerable with kernel/build-stage1.sh
+/kernel/build/
+/kernel/out/
+
+# Partition images (Lineage boot/recovery backups)
+/device-dump/**/*.img
+
+# Proprietary firmware blobs (firmware-manifest.sha1 lists them) and
+# dump originals with serial numbers/MACs (the tracked dumps are redacted)
+/device-dump/sm-t585/firmware/
+/device-dump/sm-t585/sys/devicetree-base.tar
+/device-dump/.unredacted/
+
+# Personal user-profile records
+/docs/records/general/user/
+
+# Local Claude Code permissions
+/.claude/settings.local.json

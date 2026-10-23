@@ -1,0 +1,3 @@
+/sys/bus/spi/devices/* 
+/sys/bus/sdio/devices/mmc1:0001:1 sdio:c00v0271d0701
+/sys/bus/usb/devices/* 

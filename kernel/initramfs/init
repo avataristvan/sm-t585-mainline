@@ -1,0 +1,76 @@
+#!/bin/busybox sh
+# Stage-1 boot test for the SM-T585 (gtaxllte): no rootfs, just prove the
+# kernel is alive. Shows status on the framebuffer console and exposes a
+# shell over a USB network gadget (NCM + RNDIS fallback) and USB serial (ACM).
+#
+#   PC: ip addr add 172.16.42.2/24 dev <usb-if>; telnet 172.16.42.1
+#   or: screen /dev/ttyACM0
+
+/bin/busybox --install -s /bin
+
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev 2>/dev/null
+mkdir -p /dev/pts && mount -t devpts devpts /dev/pts
+mount -t configfs configfs /sys/kernel/config
+mount -t pstore pstore /sys/fs/pstore 2>/dev/null
+
+log() {
+	echo "[stage1] $*" > /dev/kmsg
+	echo "[stage1] $*" > /dev/tty0 2>/dev/null
+}
+
+log "kernel $(uname -r) up, $(grep MemTotal /proc/meminfo)"
+
+# No SM5703 MUIC driver in mainline: force the dwc3 role to device.
+for r in /sys/class/usb_role/*/role; do
+	[ -e "$r" ] && echo device > "$r" && log "usb role: $(cat "$r")"
+done
+
+# Wait for the UDC to show up.
+i=0
+while [ -z "$(ls /sys/class/udc 2>/dev/null)" ] && [ $i -lt 20 ]; do
+	sleep 0.5; i=$((i + 1))
+done
+UDC=$(ls /sys/class/udc 2>/dev/null | head -n1)
+log "udc: ${UDC:-none}"
+
+G=/sys/kernel/config/usb_gadget/g1
+if [ -n "$UDC" ]; then
+	mkdir -p $G/strings/0x409 $G/configs/c.1/strings/0x409
+	echo 0x18d1 > $G/idVendor
+	echo 0xd001 > $G/idProduct
+	echo "postmarketOS-stage1" > $G/strings/0x409/manufacturer
+	echo "SM-T585 stage1" > $G/strings/0x409/product
+	echo "stage1" > $G/configs/c.1/strings/0x409/configuration
+	for f in ncm.usb0 rndis.usb1 acm.usb0; do
+		mkdir -p $G/functions/$f && ln -s $G/functions/$f $G/configs/c.1/
+	done
+	echo "$UDC" > $G/UDC && log "gadget bound to $UDC"
+fi
+
+for n in usb0 usb1; do
+	ifconfig $n 172.16.42.1 netmask 255.255.255.0 up 2>/dev/null && log "$n: 172.16.42.1"
+done
+
+cat > /etc/udhcpd.conf <<EOF
+start 172.16.42.2
+end 172.16.42.2
+interface usb0
+option subnet 255.255.255.0
+EOF
+# telnetd/udhcpd are not in the static busybox; Alpine busybox-extras (musl)
+mkdir -p /var/lib/misc
+busybox-extras udhcpd /etc/udhcpd.conf || log "udhcpd failed"
+busybox-extras telnetd -b 172.16.42.1 -l /bin/sh || log "telnetd failed"
+
+# Serial shell over ACM, respawned.
+( while true; do [ -e /dev/ttyGS0 ] && setsid sh -c 'exec sh </dev/ttyGS0 >/dev/ttyGS0 2>&1'; sleep 1; done ) &
+
+log "ready: telnet 172.16.42.1 or /dev/ttyACM0"
+
+# Keep a shell on the framebuffer console too (keys are all we have).
+while true; do
+	setsid sh -c 'exec sh </dev/tty0 >/dev/tty0 2>&1'
+	sleep 1
+done

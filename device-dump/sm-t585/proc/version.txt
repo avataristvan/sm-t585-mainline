@@ -1,0 +1,1 @@
+Linux version 3.18.140-ge2426d3c1cef (nobody@android-build) (Android (10087095, +pgo, +bolt, +lto, -mlgo, based on r487747c) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362)) #1 SMP PREEMPT Mon Dec 2 14:18:59 GMT 2024

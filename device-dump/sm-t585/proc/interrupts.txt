@@ -1,0 +1,100 @@
+           CPU0       CPU1       CPU2       CPU3       CPU4       CPU5       CPU6       CPU7       
+  1:          1          0          0          0          0          0          0          0  exynos_wkup_irq_chip   1  tflash_det
+  2:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   2  s2mpu05
+  3:          1          0          0          0          0          0          0          0  exynos_wkup_irq_chip   3  sx9306_wifi_irq
+  4:          1          0          0          0          0          0          0          0  exynos_wkup_irq_chip   4  sx9306_irq
+  5:       2492          0          0          0          0          0          0          0  exynos_wkup_irq_chip   4  fts_touch
+  6:          9          0          0          0          0          0          0          0  exynos_wkup_irq_chip   6  sm5703-muic
+  8:          1          0          0          0          0          0          0          0  exynos_wkup_irq_chip   7  k2hh_accel
+  9:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   7  sm5703
+ 10:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   6  bt_host_wake
+ 11:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   3  fuelgauge-irq
+ 12:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   5  sec_headset_detect
+ 13:         10          0          0          0          0          0          0          0  exynos_wkup_irq_chip   0  Power
+ 14:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   1  Volume Down
+ 15:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   0  Volume Up
+ 27:          0          0          0          0          0          0          0          0       GIC  27  arch_timer
+ 32:          0          0          0          0          0          0          0          0       GIC  32  139f0000.pinctrl
+ 50:          0          0          0          0          0          0          0          0       GIC  50  cp_fail
+ 51:          0          0          0          0          0          0          0          0       GIC  51  kepler_active_handler
+105:          0          0          0          0          0          0          0          0       GIC 105  14890000.adma
+132:          0          0          0          0          0          0          0          0       GIC 132  10170000.watchdog
+134:          0          0          0          0          0          0          0          0       GIC 134  mct_comp_irq
+138:     397825          0          0          0          0          0          0          0       GIC 138  mct_tick0
+139:          0     300588          0          0          0          0          0          0       GIC 139  mct_tick1
+140:          0          0     311494          0          0          0          0          0       GIC 140  mct_tick2
+141:          0          0          0     151948          0          0          0          0       GIC 141  mct_tick3
+142:          0          0          0          0     208088          0          0          0       GIC 142  mct_tick4
+143:          0          0          0          0          0     333817          0          0       GIC 143  mct_tick5
+144:          0          0          0          0          0          0     225472          0       GIC 144  mct_tick6
+145:          0          0          0          0          0          0          0     183062       GIC 145  mct_tick7
+160:          0          0          0          0          0          0          0          0       GIC 160  14470000.sysmmu
+163:          0          0          0          0          0          0          0          0       GIC 163  14490000.sysmmu
+166:          0          0          0          0          0          0          0          0       GIC 166  144a0000.sysmmu
+171:       3477       1793        846        832          0          0          0          0       GIC 171  fimc3a0-1
+172:          0          0          0          0          0          0          0          0       GIC 172  fimc3a0-2
+173:        913        542        139        143          0          0          0          0       GIC 173  fimc3a0-3
+174:       1169       1172        717        416          0          0          0          0       GIC 174  fimcmcsc-0
+176:       1328        686       1090        370          0          0          0          0       GIC 176
+178:          0          0          0          0          0          0          0          0       GIC 178  fimcvra-0
+179:          0          0          0          0          0          0          0          0       GIC 179  fimcvra-1
+225:          0          0          0          0          0          0          0          0       GIC 225  14860000.sysmmu
+233:          0          0          0          0          0          0          0          0       GIC 233  14830000.decon_fb
+234:      16515          0          0          0          0          0          0          0       GIC 234  14830000.decon_fb
+239:      28651          0          0          0          0          0          0          0       GIC 239  14800000.dsim
+260:          0          0          0          0          0          0          0          0       GIC 260  13450000.pdma0
+261:          0          0          0          0          0          0          0          0       GIC 261  13460000.pdma1
+262:       1375          0          0          0          0          0          0          0       GIC 262  dwc3
+277:    1966556          0          0          0          0          0          0          0       GIC 277  dw-mci
+278:     154570          0          0          0          0          0          0          0       GIC 278  dw-mci
+279:          0          0          0          0          0          0          0          0       GIC 279  dw-mci
+282:          0          0          0          0          0          0          0          0       GIC 282  13750000.pinctrl
+313:      43714          0          0          0          0          0          0          0       GIC 313  11400000.mali
+314:      40613          0          0          0          0          0          0          0       GIC 314  11400000.mali
+315:          0          0          0          0          0          0          0          0       GIC 315  11400000.mali
+384:          0          0          0          0          0          0          0          0       GIC 384  12c90000.sysmmu
+386:         72          0          0          0          0          0          0          0       GIC 386  12c30000.mfc0
+401:        208          0          0          0          0          0          0          0       GIC 401  10500000.mcu_ipc
+404:      81718          0          0          0          0          0          0          0       GIC 404  10510000.hsi2c
+405:        813          0          0          0          0          0          0          0       GIC 405  10570000.mcu_ipc
+424:          0          0          0          0          0          0          0          0       GIC 424  10530000.pinctrl
+427:       3020          0          0          0          0          0          0          0       GIC 427  10550000.adc
+432:          0          0          0          0          0          0          0          0       GIC 432  12c00000.scaler
+433:       3424          0          0          0          0          0          0          0       GIC 433  12c10000.scaler
+434:          0          0          0          0          0          0          0          0       GIC 434  12c80000.sysmmu
+436:          0          0          0          0          0          0          0          0       GIC 436  12c20000.smfc
+456:      30375          0          0          0          0          0          0          0       GIC 456  13830000.i2c
+457:      46010          0          0          0          0          0          0          0       GIC 457  13840000.i2c
+458:        507          0          0          0          0          0          0          0       GIC 458  13850000.i2c
+459:        161          0          0          0          0          0          0          0       GIC 459  13860000.i2c
+460:      31502          0          0          0          0          0          0          0       GIC 460  13870000.i2c
+461:       3794          0          0          0          0          0          0          0       GIC 461  13880000.i2c
+462:        161          0          0          0          0          0          0          0       GIC 462  13890000.i2c
+467:          2          0          0          0          0          0          0          0       GIC 467  10130000.tmuctrl_CPUCL0, 10130000.tmuctrl_CPUCL1, 10130000.tmuctrl_G3D
+470:          0          0          0          0          0          0          0          0       GIC 470  139b0000.pinctrl
+471:          0          0          0          0          0          0          0          0       GIC 471  139c0000.pinctrl
+472:          0          0          0          0          0          0          0          0       GIC 472  139d0000.pinctrl
+473:          0          0          0          0          0          0          0          0       GIC 473  139e0000.pinctrl
+481:      14284          0          0          0          0          0          0          0       GIC 481  138a0000.hsi2c
+482:      14080          0          0          0          0          0          0          0       GIC 482  138b0000.hsi2c
+483:          0          0          0          0          0          0          0          0       GIC 483  138c0000.hsi2c
+485:      96051          0          0          0          0          0          0          0       GIC 485  138d0000.i2c
+509:          0          0          0          0          0          0          0          0       GIC 509  kepler_wakelock_handler
+510:          0          0          0          0          0          0          0          0       GIC 510  kepler_wdt_handler
+511:          0          0          0          0          0          0          0          0       GIC 511  cp_wdt
+522:          0          0          0          0          0          0          0          0   s2mpu05  10  rtc-alarm0
+529:          0          0          0          0          0          0          0          0    sm5703  aicl
+535:          0          0          0          0          0          0          0          0    sm5703  otffail
+545:          0          0          0          0          0          0          0          0    sm5703  topoff
+546:          0          0          0          0          0          0          0          0    sm5703  done
+553:          2          0          0          0          0          0          0          0  exynos_wkup_irq_chip   7  Home
+554:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   3  flip_cover
+555:      26419          0          0          0          0          0          0          0  exynos_wkup_irq_chip   2  wlan-host-wake
+IPI0:    334244     535642     478226     304084     491845     414261     334994     323247       Rescheduling interrupts
+IPI1:       398        411        406        413        404        426        391        390       Function call interrupts
+IPI2:        33         23          7         17        430          7         10          9       Single function call interrupts
+IPI3:         0          0          0          0          0          0          0          0       CPU stop interrupts
+IPI4:         0          0          0          0          0          0          0          0       Timer broadcast interrupts
+IPI5:         8          0          3          1          0          0          0          0       IRQ work interrupts
+IPI6:         0          1          1          1          1          1          1          1       CPU Wakeup by interrupts
+Err:          0

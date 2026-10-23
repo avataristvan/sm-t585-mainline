@@ -1,0 +1,24 @@
+total 0
+lrwxrwxrwx 1 root root 20 2016-01-01 13:08 BOOT -> /dev/block/mmcblk0p9
+lrwxrwxrwx 1 root root 20 2016-01-01 13:08 BOTA0 -> /dev/block/mmcblk0p1
+lrwxrwxrwx 1 root root 20 2016-01-01 13:08 BOTA1 -> /dev/block/mmcblk0p2
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 CACHE -> /dev/block/mmcblk0p20
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 CDMA-RADIO -> /dev/block/mmcblk0p12
+lrwxrwxrwx 1 root root 20 2016-01-01 13:08 CPEFS -> /dev/block/mmcblk0p4
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 CP_DEBUG -> /dev/block/mmcblk0p22
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 DNT -> /dev/block/mmcblk0p15
+lrwxrwxrwx 1 root root 20 2016-01-01 13:08 EFS -> /dev/block/mmcblk0p3
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 HIDDEN -> /dev/block/mmcblk0p21
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 OTA -> /dev/block/mmcblk0p11
+lrwxrwxrwx 1 root root 20 2016-01-01 13:08 PARAM -> /dev/block/mmcblk0p8
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 PERSDATA -> /dev/block/mmcblk0p17
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 PERSISTENT -> /dev/block/mmcblk0p16
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 RADIO -> /dev/block/mmcblk0p13
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 RECOVERY -> /dev/block/mmcblk0p10
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 RESERVED2 -> /dev/block/mmcblk0p18
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 SYSTEM -> /dev/block/mmcblk0p19
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 TOMBSTONES -> /dev/block/mmcblk0p14
+lrwxrwxrwx 1 root root 21 2016-01-01 13:08 USERDATA -> /dev/block/mmcblk0p23
+lrwxrwxrwx 1 root root 20 2016-01-01 13:08 m9kefs1 -> /dev/block/mmcblk0p5
+lrwxrwxrwx 1 root root 20 2016-01-01 13:08 m9kefs2 -> /dev/block/mmcblk0p6
+lrwxrwxrwx 1 root root 20 2016-01-01 13:08 m9kefs3 -> /dev/block/mmcblk0p7

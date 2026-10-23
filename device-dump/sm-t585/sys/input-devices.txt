@@ -1,0 +1,8 @@
+input0: meta_event
+input1: sec_touchscreen
+input2: accelerometer_sensor
+input3: light_sensor
+input4: grip_sensor
+input5: grip_sensor_wifi
+input6: gpio_keys
+input7: hall

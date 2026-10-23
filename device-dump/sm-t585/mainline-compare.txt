@@ -1,0 +1,118 @@
+DRIVER       arm,amba-bus                                   1x  amba  drivers/bus/simple-pm-bus.c
+MISSING      arm,armv8                                      8x  cpus/cpu@102  
+DRIVER       arm,armv8-pmuv3                                1x  arm-pmu  drivers/perf/arm_pmuv3.c
+DRIVER       arm,armv8-timer                                1x  timer  drivers/clocksource/arm_arch_timer.c
+DRIVER       arm,cortex-a15-gic                             1x  interrupt-controller@104E0000  drivers/irqchip/irq-gic.c
+BINDING-ONLY arm,cortex-a53                                 8x  cpus/cpu@102  
+DRIVER       arm,cortex-a9-gic                              1x  interrupt-controller@104E0000  drivers/irqchip/irq-gic.c
+MISSING      arm,mali                                       1x  mali@11400000  
+BINDING-ONLY arm,pl330                                      3x  amba/adma@14890000  
+DRIVER       arm,primecell                                  3x  amba/adma@14890000  drivers/of/platform.c
+DRIVER       arm,psci                                       1x  psci  drivers/firmware/psci/psci.c
+MISSING      cm3323-i2c                                     1x  i2c@138D0000/cm3323-i2c@10  
+MISSING      exynos,cpu_hotplug                             1x  cpu_hotplug  
+MISSING      exynos,fb_handover                             1x  reserved-memory/bootloader_fb@67000000  
+MISSING      exynos,idle-state                              2x  cpus/idle-states/cpu-sleep-nonboot  
+MISSING      exynos,powermode                               1x  exynos-powermode  
+MISSING      exynos,reboot                                  1x  reboot  
+MISSING      exynos5433-ion,mfc_fw                          1x  reserved-memory/mfc_fw@AE800000  
+MISSING      exynos5433-ion,mfc_nfw                         1x  reserved-memory/mfc_nfw@AE600000  
+MISSING      exynos7870,deliver_cp                          1x  reserved-memory/dram_init@AFFFF000  
+MISSING      exynos7870,gnss_if                             1x  reserved-memory/gnss_if@B7C00000  
+MISSING      exynos7870,modem_if                            1x  reserved-memory/modem_if@B0000000  
+MISSING      exynos8890-ion,crypto                          1x  reserved-memory/crypto@80000000  
+MISSING      exynos8890-ion,vframe                          1x  reserved-memory/video_frame@82400000  
+MISSING      exynos8890-ion,vfw                             1x  reserved-memory/video_fw@80800000  
+MISSING      exynos8890-ion,vnfw                            1x  reserved-memory/video_nfw@80C00000  
+MISSING      exynos8890-ion,vscaler                         1x  reserved-memory/video_scaler@87800000  
+MISSING      exynos8890-ion,vstream                         1x  reserved-memory/video_stream@81000000  
+DRIVER       gpio-keys                                      1x  gpio_keys  drivers/input/keyboard/gpio_keys.c
+DRIVER       hall                                           1x  hall  drivers/input/misc/iqs626a.c
+MISSING      k2hh-i2c                                       1x  i2c@138D0000/k2hh-i2c@1D  
+MISSING      qca,qca6174                                    1x  bluetooth  
+MISSING      qcom,cnss_sdio                                 1x  wlan  
+DRIVER       realtek,rt5659                                 1x  i2c@13880000/rt5659@1b  sound/soc/codecs/rt5659.c
+DRIVER       regulator-fixed                                4x  tsp_dvdd  drivers/gpio/gpiolib-of.c
+MISSING      samsung, Galaxy Tab A LTE 05                   1x  .  
+MISSING      samsung,blowfish                               1x  tgris  
+MISSING      samsung,bt_dummy                               1x  bt_dummy  
+MISSING      samsung,cp_dummy                               1x  cp_dummy  
+MISSING      samsung,dummy-codec                            1x  dummy-codec  
+MISSING      samsung,exynos-adc-v3                          1x  adc@10550000  
+MISSING      samsung,exynos-amixer                          1x  eax  
+MISSING      samsung,exynos-busmonitor                      4x  BUSMON_PERI_GROUP4@107A0000  
+MISSING      samsung,exynos-devfreq                         4x  devfreq_cam@17000040  
+MISSING      samsung,exynos-dw-mshc                         3x  dwmmc2@13560000  
+MISSING      samsung,exynos-fips-fmp                        1x  fips-fmp  
+MISSING      samsung,exynos-iommu-bus                       4x  iommu-domain_mscl  
+MISSING      samsung,exynos-mcinfo                          1x  mcinfo@10400000  
+MISSING      samsung,exynos-mp-cpufreq                      1x  cpufreq  
+MISSING      samsung,exynos-pd                              4x  pd-dispaud@10484020  
+MISSING      samsung,exynos-pmu                             1x  exynos-pmu  
+MISSING      samsung,exynos-pwm-clock                       1x  pwm-clock-controller@13970000  
+MISSING      samsung,exynos-shd-ipc-mailbox                 2x  mcu_ipc@10500000  
+MISSING      samsung,exynos-spd                             6x  pd-dispaud@10484020/spd-disp  
+MISSING      samsung,exynos-uart                            2x  uart@13820000  
+MISSING      samsung,exynos-uart-sel                        1x  uart_sel  
+DRIVER       samsung,exynos4210-chipid                      1x  chipid@10100000  drivers/soc/samsung/exynos-chipid.c
+DRIVER       samsung,exynos4210-mct                         1x  mct@101B0000  drivers/clocksource/exynos_mct.c
+DRIVER       samsung,exynos4210-wakeup-eint                 1x  pinctrl@139F0000/wakeup-interrupt-controller  drivers/pinctrl/samsung/pinctrl-exynos.c
+MISSING      samsung,exynos5-decon_driver                   1x  decon_fb@14830000  
+MISSING      samsung,exynos5-fimc-is                        1x  fimc_is@14400000  
+MISSING      samsung,exynos5-fimc-is-actuator-dw9807        1x  hsi2c@138B0000/fimc-is-actuator@C  
+MISSING      samsung,exynos5-fimc-is-cis-4h5yc              1x  hsi2c@138A0000/fimc-is-4h5yc@37  
+MISSING      samsung,exynos5-fimc-is-cis-sr259              1x  hsi2c@138C0000/fimc-is-sr259@30  
+MISSING      samsung,exynos5-fimc-is-sensor                 3x  fimc_is_sensor@14420000  
+DRIVER       samsung,exynos5-hsi2c                          4x  hsi2c@138B0000  drivers/i2c/busses/i2c-exynos5.c
+MISSING      samsung,exynos5-mdev                           1x  mdev_output  
+MISSING      samsung,exynos5-scaler                         2x  scaler@12C10000  
+MISSING      samsung,exynos5430-ion                         1x  ion  
+DRIVER       samsung,exynos7-wdt                            1x  watchdog@10170000  drivers/watchdog/s3c2410_wdt.c
+MISSING      samsung,exynos7420-sysmmu                      6x  iommu-domain_mscl/sysmmu@12C80000  
+MISSING      samsung,exynos7870                             1x  .  
+MISSING      samsung,exynos7870-clock                       1x  clock-controller@10460000  
+MISSING      samsung,exynos7870-dwusb2                      1x  usb@13600000  
+MISSING      samsung,exynos7870-jpeg                        1x  smfc@12C20000  
+MISSING      samsung,exynos7870-lpass                       1x  lpass@148F0000  
+MISSING      samsung,exynos7870-oscclk                      1x  fixed-rate-clocks/oscclk  
+DRIVER       samsung,exynos7870-pinctrl                     8x  pinctrl@139C0000  drivers/pinctrl/samsung/pinctrl-samsung.c
+MISSING      samsung,exynos7870-pmu                         1x  system-controller@10480000  
+MISSING      samsung,exynos7870-secgpio-dvs                 1x  secgpio_dvs  
+MISSING      samsung,exynos7870-shm_ipc                     1x  shmem  
+MISSING      samsung,exynos7870-tmu                         3x  tmuctrl_CPUCL1@10130000  
+DRIVER       samsung,exynos7870-usbdrd-phy                  1x  phy@135c0000  drivers/phy/samsung/phy-exynos5-usbdrd.c
+MISSING      samsung,exynos8-mipi-dsi                       1x  dsim@14800000  
+MISSING      samsung,fm_dummy                               1x  fm_dummy  
+MISSING      samsung,gnss_shdmem_if                         1x  gnss_pdata  
+MISSING      samsung,i2s-v5                                 2x  i2s@148B0000  
+DRIVER       samsung,mfc-v6                                 1x  mfc0@12C30000  drivers/media/platform/samsung/s5p-mfc/s5p_mfc.c
+MISSING      samsung,mipi-phy-csis                          1x  phy_isp_csi@144F1040  
+MISSING      samsung,mipi-phy-dsim                          1x  phy_m4s4_dsi@148F100C  
+MISSING      samsung,rear-eeprom-i2c                        1x  hsi2c@138B0000/rear_eeprom@58  
+MISSING      samsung,s1402x                                 1x  s1402x@14880000  
+DRIVER       samsung,s2mpu05-pmic                           1x  hsi2c@10510000/s2mpu05_pmic@66  drivers/mfd/sec-i2c.c
+DRIVER       samsung,s3c2440-i2c                            8x  i2c@13850000  drivers/i2c/busses/i2c-s3c2410.c
+DRIVER       samsung,s3c6400-pwm                            1x  pwm@13970000  drivers/pwm/pwm-samsung.c
+MISSING      samsung,sec-ap-thermistor                      1x  sec_thermistor  
+MISSING      samsung,sec-battery                            1x  battery  
+MISSING      samsung,sensor-flash-gpio                      1x  fimc-is-flash_gpio  
+MISSING      samsung,sensor-module-4h5yc                    1x  fimc-is_sensor_4h5yc  
+MISSING      samsung,sensor-module-sr259                    1x  fimc-is_sensor_sr259  
+MISSING      samsung,sm5703-fuelgauge                       1x  i2c@13830000/sm5703-fuelgauge@71  
+MISSING      samsung,universal7870-rt5659                   1x  sound  
+MISSING      samsung,usb-notifier                           1x  usb_notifier  
+MISSING      sec_jack                                       1x  earjack  
+MISSING      sec_modem,modem_pdata                          1x  mif_pdata  
+MISSING      sec_vib                                        1x  sec_vib  
+MISSING      siliconmitus,sm5703-buck                       1x  i2c@13870000/sm5703-mfd@49/sm5703_buck  
+MISSING      siliconmitus,sm5703-fled                       1x  i2c@13870000/sm5703-mfd@49/sm5703_fled  
+MISSING      siliconmitus,sm5703-ldo1                       1x  i2c@13870000/sm5703-mfd@49/sm5703_ldo1  
+MISSING      siliconmitus,sm5703-ldo2                       1x  i2c@13870000/sm5703-mfd@49/sm5703_ldo2  
+MISSING      siliconmitus,sm5703-ldo3                       1x  i2c@13870000/sm5703-mfd@49/sm5703_ldo3  
+MISSING      siliconmitus,sm5703mfd                         1x  i2c@13870000/sm5703-mfd@49  
+MISSING      sm,sm5703                                      1x  i2c@13850000/muic-s2mm001@25  
+MISSING      stm,fts_touch                                  1x  i2c@13840000/touchscreen@49  
+MISSING      sx9306-i2c                                     1x  i2c@13860000/sx9306-i2c@28  
+MISSING      sx9306_wifi-i2c                                1x  i2c@13890000/sx9306_wifi-i2c@2B  
+DRIVER       synopsys,dwc3                                  1x  usb@13600000/dwc3@13600000  drivers/usb/dwc3/core.c
+DRIVER       syscon                                         1x  system-controller@10480000  drivers/ata/sata_gemini.c

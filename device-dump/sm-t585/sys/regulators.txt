@@ -1,0 +1,34 @@
+regulator-dummy |  uV | 
+vmmc | 2800000 uV | disabled
+vdd_ldo1 | 800000 uV | enabled
+vqmmc | 2800000 uV | disabled
+vdd_ldo3 | 1800000 uV | enabled
+vdd_ldo4 | 1200000 uV | enabled
+vdd_ldo5 | 1200000 uV | enabled
+vdd_ldo6 | 900000 uV | enabled
+vdd_ldo7 | 1800000 uV | enabled
+vdd_ldo8 | 3000000 uV | enabled
+vdd_ldo9 | 800000 uV | enabled
+vdd_ldo10 | 800000 uV | enabled
+cnss_dcdc_en |  uV | enabled
+VDD_CODEC_1P8 | 1800000 uV | enabled
+vemmc | 2850000 uV | enabled
+vqemmc | 1800000 uV | enabled
+VDD_CAM_AF_2P8 | 2800000 uV | disabled
+VDD_CAM_CORE_1P2 | 1200000 uV | disabled
+vdd_ldo31 | 2800000 uV | enabled
+VDD_CODEC_3P3 | 3300000 uV | enabled
+VDD_SENSOR_2P8 | 2800000 uV | enabled
+VDDIO_1.8V_CAM | 1800000 uV | disabled
+LCD_1P8 | 1800000 uV | enabled
+tsp_dvdd | 1800000 uV | enabled
+VDDAF_2.8V_CAM | 1500000 uV | disabled
+VDD_MOTOR_3.3 | 3300000 uV | disabled
+none | 3000000 uV | disabled
+VDD_VTCAM_1P2 | 1200000 uV | disabled
+tsp_avdd | 3300000 uV | enabled
+BUCK1 | 1068750 uV | enabled
+BUCK2 | 712500 uV | enabled
+BUCK3 | 768750 uV | enabled
+BUCK4 | 1350000 uV | enabled
+BUCK5 | 2000000 uV | enabled

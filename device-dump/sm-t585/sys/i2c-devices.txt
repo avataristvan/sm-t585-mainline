@@ -1,0 +1,27 @@
+0-0006 dummy -> dummy
+0-a066 s2mpu05-pmic -> sec_pmic
+1-0037 exynos5-fimc-is-cis -> S5K4H5YC
+10-0025 sm5703 -> muic-sm5703
+11-0028 sx9306-i2c -> SX9306
+2-000c exynos5-fimc-is-act -> DW9807
+2-0058 rear-eeprom-i2c -> fimc_is_eeprom_i2c
+3-0030 exynos5-fimc-is-cis -> SR259
+4-0049 sm5703mfd -> sm5703-mfd
+5-001b rt5659 -> rt5659
+6-002b sx9306_wifi-i2c -> SX9306_WIFI
+7-0049 fts_touch -> fts_touch
+8-0071 sm5703-fuelgauge -> sm5703-fuelgauge
+9-0010 cm3323-i2c -> CM3323
+9-001d k2hh-i2c -> k2hh-i2c
+i2c-0 exynos5-i2c -> 
+i2c-1 exynos5-i2c -> 
+i2c-10 s3c2410-i2c -> 
+i2c-11 s3c2410-i2c -> 
+i2c-2 exynos5-i2c -> 
+i2c-3 exynos5-i2c -> 
+i2c-4 s3c2410-i2c -> 
+i2c-5 s3c2410-i2c -> 
+i2c-6 s3c2410-i2c -> 
+i2c-7 s3c2410-i2c -> 
+i2c-8 s3c2410-i2c -> 
+i2c-9 s3c2410-i2c -> 

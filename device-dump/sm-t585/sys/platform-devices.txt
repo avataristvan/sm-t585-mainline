@@ -1,0 +1,152 @@
+10000.mif_pdata -> mif_sipc5
+10100000.chipid -> exynos-chipid
+10130000.tmuctrl_CPUCL0 -> exynos-tmu
+10130000.tmuctrl_CPUCL1 -> exynos-tmu
+10130000.tmuctrl_G3D -> exynos-tmu
+10170000.watchdog -> s3c2410-wdt
+101b0000.mct -> 
+104000f4.mcinfo -> exynos-mcinfo
+10460000.clock-controller -> 
+10480000.system-controller -> syscon
+10484000.pd-g3d -> 
+10484020.pd-dispaud -> 
+10484020.pd-dispaud:spd-aud -> 
+10484020.pd-dispaud:spd-disp -> 
+10484040.pd-cam0 -> 
+10484060.pd-mfcmscl -> 
+10484060.pd-mfcmscl:spd-jpeg -> 
+10484060.pd-mfcmscl:spd-mfc -> 
+10484060.pd-mfcmscl:spd-mscl0 -> 
+10484060.pd-mfcmscl:spd-mscl1 -> 
+104e1000.interrupt-controller -> 
+10500000.mcu_ipc -> mcu_ipc
+10510000.hsi2c -> exynos5-hsi2c
+10530000.pinctrl -> samsung-pinctrl
+10550000.adc -> exynos-adc
+10570000.mcu_ipc -> mcu_ipc
+10780400.BUSMON_RT_GROUP2 -> 
+10790100.BUSMON_NRT_GROUP1 -> 
+107a0000.BUSMON_PERI_GROUP4 -> 
+107b0000.BUSMON_CP_GROUP3 -> 
+11400000.mali -> mali
+12c00000.scaler -> exynos5-scaler
+12c10000.scaler -> exynos5-scaler
+12c20000.smfc -> exynos-jpeg
+12c30000.mfc0 -> s5p-mfc
+12c80000.sysmmu -> exynos-sysmmu
+12c90000.sysmmu -> exynos-sysmmu
+13540000.dwmmc0 -> dwmmc_exynos
+13550000.dwmmc1 -> dwmmc_exynos
+13560000.dwmmc2 -> dwmmc_exynos
+135c0000.phy -> phy_exynos_usbdrd
+13600000.dwc3 -> dwc3
+13600000.usb -> exynos-dwc3
+13750000.pinctrl -> samsung-pinctrl
+13810000.uart -> samsung-uart
+13820000.uart -> samsung-uart
+13830000.i2c -> s3c-i2c
+13840000.i2c -> s3c-i2c
+13850000.i2c -> s3c-i2c
+13860000.i2c -> s3c-i2c
+13870000.i2c -> s3c-i2c
+13880000.i2c -> s3c-i2c
+13890000.i2c -> s3c-i2c
+138a0000.hsi2c -> exynos5-hsi2c
+138b0000.hsi2c -> exynos5-hsi2c
+138c0000.hsi2c -> exynos5-hsi2c
+138d0000.i2c -> s3c-i2c
+13970000.pwm -> samsung-pwm
+13970000.pwm-clock-controller -> 
+139b0000.pinctrl -> samsung-pinctrl
+139c0000.pinctrl -> samsung-pinctrl
+139d0000.pinctrl -> samsung-pinctrl
+139e0000.pinctrl -> samsung-pinctrl
+139f0000.pinctrl -> samsung-pinctrl
+14400000.fimc_is -> exynos-fimc-is
+14420000.fimc_is_sensor -> exynos-fimc-is-sensor
+14460000.fimc_is_sensor -> exynos-fimc-is-sensor
+14460000.fimc_is_sensor_secure -> 
+14470000.sysmmu -> exynos-sysmmu
+14490000.sysmmu -> exynos-sysmmu
+144a0000.sysmmu -> exynos-sysmmu
+144f1040.phy_isp_csi -> exynos-mipi-phy
+14800000.dsim -> exynos-mipi-dsi
+14830000.decon_fb -> decon
+14860000.sysmmu -> exynos-sysmmu
+14880000.s1402x -> audmixer
+148a0000.i2s -> samsung-i2s
+148b0000.i2s -> samsung-i2s
+148c0000.pinctrl -> samsung-pinctrl
+148f0000.lpass -> samsung-lpass
+148f100c.phy_m4s4_dsi -> exynos-mipi-phy
+17000010.devfreq_mif -> exynos-devfreq
+17000020.devfreq_int -> exynos-devfreq
+17000030.devfreq_disp -> exynos-devfreq
+17000040.devfreq_cam -> exynos-devfreq
+alarmtimer -> alarmtimer
+amba -> 
+arm-pmu -> arm-pmu
+battery -> sec-battery
+bluetooth -> bt_power
+bt_dummy -> 
+cnss_dcdc_en -> reg-fixed-voltage
+cp_dummy -> 
+cpu_hotplug -> 
+cpufreq -> exynos-mp-cpufreq
+dummy-codec -> dummy-codec
+earjack -> sec_jack
+eax -> samsung-amixer
+exynos-cpufreq -> 
+exynos-pmu -> exynos-pmu
+exynos-powermode -> 
+exyswd_rng -> exyswd_rng
+fimc-is-flash_gpio -> FIMC-IS-SENSOR-FLASH-GPIO-PLATFORM
+fimc-is_sensor_4h5yc -> FIMC-IS-SENSOR-MODULE-4H5YC
+fimc-is_sensor_sr259 -> FIMC-IS-SENSOR-MODULE-SR259
+fips-fmp -> 
+fixedregulator -> reg-fixed-voltage
+fm_dummy -> 
+gnss_pdata -> gif_exynos
+gpio_keys -> gpio-keys
+hall -> hall
+iommu-domain_disp -> 
+iommu-domain_fimc-is -> 
+iommu-domain_mfc -> 
+iommu-domain_mscl -> 
+ion -> ion-exynos
+mdev_output -> exynos-mdev
+psci -> 
+ramoops.0 -> ramoops
+reboot -> 
+reg-dummy -> reg-dummy
+regulatory.0 -> 
+runtime_pm_test -> runtime_pm_test
+s2m-rtc -> s2m-rtc
+s2mpu05-pmic -> s2mpu05-pmic
+samsung-eax.0 -> samsung-eax
+samsung-eax.1 -> samsung-eax
+samsung-eax.2 -> samsung-eax
+samsung-eax.3 -> samsung-eax
+samsung-i2s-sec -> samsung-i2s
+sec_thermistor -> sec-thermistor
+sec_vib -> sec_vib
+secgpio_dvs -> 
+shmem -> shm_ipc
+sm-flash-led -> sm-flash-led
+sm5703-charger -> sm5703-charger
+sm5703-fled -> sm5703-fled
+sm5703-regulator.2 -> sm5703-regulator
+sm5703-regulator.3 -> sm5703-regulator
+sm5703-regulator.4 -> sm5703-regulator
+sm5703-regulator.5 -> sm5703-regulator
+snd-soc-dummy -> snd-soc-dummy
+sound -> Universal7870-rt5659-audio
+tgris -> 
+timer -> 
+tsp_avdd -> reg-fixed-voltage
+tsp_dvdd -> reg-fixed-voltage
+uart_sel -> uart_sel
+usb_notifier -> usb_notifier
+usb_phy_generic.0.auto -> 
+usb_phy_generic.1.auto -> 
+wlan -> cnss_sdio

@@ -1,0 +1,263 @@
+dmesg
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+[    0.000000] Linux version 7.3.0-gtaxllte-g734bef548a96-dirty (istvan@ironmachine) (clang version 23.1.3, LLD 23.1.3) #2 SMP PREEMPT_DYNAMIC Fri Oct 23 16:59:04 CEST 2026
+[    0.000000] Machine model: Samsung Galaxy Tab A 10.1 (2016) LTE
+[    0.000000] efi: UEFI not found.
+[    0.000000] [Firmware Bug]: Kernel image misaligned at boot, please fix your bootloader!
+[    0.000000] OF: reserved mem: 0x0000000046e00000..0x0000000046e07fff (32 KiB) map non-reusable ramoops@46e00000
+[    0.000000] OF: reserved mem: 0x0000000067000000..0x00000000678c9fff (9000 KiB) nomap non-reusable framebuffer@67000000
+[    0.000000] cma: Reserved 32 MiB at 0x00000000bda00000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: Using PSCI v0.1 Function IDs from DT
+[    0.000000] WARNING: x1-x3 nonzero in violation of boot protocol:
+[    0.000000] 	x1: 0000000000000000
+[    0.000000] 	x2: 0000000000000000
+[    0.000000] 	x3: 0000000040080000
+[    0.000000] This indicates a broken bootloader or old kernel
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x00000000bfffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x0000000066ffffff]
+[    0.000000]   node   0: [mem 0x0000000067000000-0x00000000678c9fff]
+[    0.000000]   node   0: [mem 0x00000000678ca000-0x000000007e3fffff]
+[    0.000000]   node   0: [mem 0x0000000080000000-0x00000000bfffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x00000000bfffffff]
+[    0.000000] On node 0, zone DMA: 7168 pages in unavailable ranges
+[    0.000000] percpu: Embedded 19 pages/cpu s48024 r0 d29800 u77824
+[    0.000000] pcpu-alloc: s48024 r0 d29800 u77824 alloc=19*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Kernel command line: console=ram loglevel=4 sec_debug.level=0 sec_watchdog.sec_pet=5 androidboot.debug_level=0x4f4c androidboot.ap_serial=REDACTED_AP_SERIAL sec_debug.sjl=1 ess_setup=0x46000000 tima_log=0x200000@0x52a00000 sec_avc_log=0x40000@0x47002000 sec_tsp_log=0x40000@0x47044000 s3cfb.bootloaderfb=0x67000000 lcdtype=8550659 consoleblank=0 vmalloc=384m sec_debug.reset_reason=7 sec_reset.reset_reason=7 ehci_hcd.park=3 oops=panic pmic_info=19 cordon=0bd72380567ffedc629b0c9cbf7b08f5 connie=SM-T585_OPEN_EUR_1fc4b93651c255c5082e7c14ed8cf445 androidboot.emmc_checksum=3 androidboot.sales.param.offset=7340572 sales_code=AUT androidboot.odin_download=1 androidboot.bootloader=T585XXS7CUI2 androidboot.selinux=enforcing androidboot.security_mode=1526595584 androidboot.ucs_mode=0 androidboot.revision=6 androidboot.hardware=samsungexynos7870 androidboot.warranty_bit=1 androidboot.wb.hs=030c sec_debug.bin=A androidboot.hmac_mismatch=0 androidboot.sec_atd.tty=/dev/ttySAC2 androidboot.serialno=REDACTED_SERIALNO \
+[    0.000000] Kernel command line: snd_soc_core.pmdown_time=1000 reserve-fimc=0 firmware_class.path=/vendor/firmware
+[    0.000000] Unknown kernel command line parameters "ess_setup=0x46000000 tima_log=0x200000@0x52a00000 sec_avc_log=0x40000@0x47002000 sec_tsp_log=0x40000@0x47044000 lcdtype=8550659 vmalloc=384m pmic_info=19 cordon=0bd72380567ffedc629b0c9cbf7b08f5 connie=SM-T585_OPEN_EUR_1fc4b93651c255c5082e7c14ed8cf445 sales_code=AUT reserve-fimc=0", will be passed to user space.
+[    0.000000] printk: log buffer data + meta data: 131072 + 458752 = 589824 bytes
+[    0.000000] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.000000] software IO TLB: SWIOTLB bounce buffer size adjusted to 1MB
+[    0.000000] software IO TLB: area num 8.
+[    0.000000] software IO TLB: mapped [mem 0x00000000bb600000-0x00000000bb800000] (2MB)
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 517120
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] Dynamic Preempt: full
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.000000] arch_timer: cp15 timer running at 26.00MHz (virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x5ff13d5a9, max_idle_ns: 440795202370 ns
+[    0.000001] sched_clock: 56 bits at 26MHz, resolution 38ns, wraps every 4398046511088ns
+[    0.000232] Console: colour dummy device 80x25
+[    0.000276] Calibrating delay loop (skipped), value calculated using timer frequency.. 52.00 BogoMIPS (lpj=104000)
+[    0.000288] pid_max: default: 32768 minimum: 301
+[    0.000591] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.000608] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.000967] VFS: Finished mounting rootfs on nullfs
+[    0.003298] rcu: Hierarchical SRCU implementation.
+[    0.003305] rcu: 	Max phase no-delay instances is 1000.
+[    0.003548] Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+[    0.004076] EFI services will not be available.
+[    0.004501] smp: Bringing up secondary CPUs ...
+[    0.005196] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+[    0.005950] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+[    0.006659] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+[    0.007405] CPU4: Booted secondary processor 0x0000000100 [0x410fd034]
+[    0.008264] CPU5: Booted secondary processor 0x0000000101 [0x410fd034]
+[    0.009050] CPU6: Booted secondary processor 0x0000000102 [0x410fd034]
+[    0.009802] CPU7: Booted secondary processor 0x0000000103 [0x410fd034]
+[    0.009938] smp: Brought up 1 node, 8 CPUs
+[    0.009948] SMP: Total of 8 processors activated.
+[    0.009952] CPU: All CPU(s) started at EL1
+[    0.009957] CPU features: detected: 32-bit EL0 Support
+[    0.009962] CPU features: detected: CRC32 instructions
+[    0.009974] CPU features: detected: PMUv3
+[    0.010037] alternatives: applying system-wide alternatives
+[    0.011433] Memory: 1959900K/2068480K available (11456K kernel code, 1404K rwdata, 4292K rodata, 1408K init, 363K bss, 71724K reserved, 32768K cma-reserved)
+[    0.012376] devtmpfs: initialized
+[    0.022964] posixtimers hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    0.023095] futex hash table entries: 2048 (131072 bytes on 1 NUMA nodes, total 128 KiB, linear).
+[    0.023736] 27984 pages in range for non-PLT usage
+[    0.023744] 519504 pages in range for PLT usage
+[    0.024748] DMI: not present or invalid.
+[    0.025380] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.027393] DMA: preallocated 256 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.028629] thermal_sys: Registered thermal governor 'step_wise'
+[    0.028634] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.029717] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.029914] ASID allocator initialised with 65536 entries
+[    0.030120] Serial: AMBA PL011 UART driver
+[    0.030488] printk: legacy console [ramoops-1] enabled
+[    0.030821] pstore: Registered ramoops as persistent store backend
+[    0.030830] ramoops: using 0x8000@0x46e00000, ecc: 0
+[    0.035460] /soc@0/interrupt-controller@104e1000: Fixed dependency cycle(s) with /soc@0/interrupt-controller@104e1000
+[    0.063276] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.063294] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.063304] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.063311] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.063320] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.063327] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.063337] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.063344] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.066009] iommu: Default domain type: Translated
+[    0.066024] iommu: DMA domain TLB invalidation policy: strict mode
+[    0.067264] usbcore: registered new interface driver usbfs
+[    0.067302] usbcore: registered new interface driver hub
+[    0.067347] usbcore: registered new device driver usb
+[    0.068247] scmi_core: SCMI protocol bus registered
+[    0.068678] FPGA manager framework
+[    0.070813] clocksource: Switched to clocksource arch_sys_counter
+[    0.071156] VFS: Disk quotas dquot_6.6.0
+[    0.071183] VFS: Dquot-cache hash table entries: 512 (4096 bytes)
+[    0.079975] NET: Registered PF_INET protocol family
+[    0.080157] IP idents hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.082086] tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes, linear)
+[    0.082119] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.082136] TCP established hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.082284] TCP bind hash table entries: 16384 (order: 7, 524288 bytes, linear)
+[    0.082770] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.082922] UDP hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    0.083145] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.083433] Unpacking initramfs...
+[    0.085763] workingset: timestamp_bits=46 (anon: 41) max_order=19 bucket_order=0 (anon: 0)
+[    0.086181] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.086686] NET: Registered PF_ALG protocol family
+[    0.086724] io scheduler mq-deadline registered
+[    0.086733] io scheduler kyber registered
+[    0.086781] io scheduler bfq registered
+[    0.087449] samsung-pinctrl 139f0000.pinctrl: Failed to create device link (0x180) with supplier soc@0 for /soc@0/pinctrl@139f0000/wakeup-interrupt-controller
+[    0.089518] exynos5_usb3drd_phy 135c0000.phy: supply vbus not found, using dummy regulator
+[    0.089657] exynos5_usb3drd_phy 135c0000.phy: supply vbus-boost not found, using dummy regulator
+[    0.095003] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.095090] IPMI message handler: version 39.2
+[    0.095137] ipmi device interface
+[    0.095342] ipmi_si: IPMI System Interface driver
+[    0.095504] ipmi_si: Unable to find any System Interface(s)
+[    0.096264] exynos-clkout exynos-clkout: cannot match parent device
+[    0.096285] exynos-clkout exynos-clkout: probe with driver exynos-clkout failed with error -22
+[    0.102432] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.110061] [drm] Initialized simpledrm 1.0.0 for 67000000.framebuffer on minor 0
+[    0.113188] Freeing initrd memory: 644K
+[    0.138312] Console: switching to colour frame buffer device 150x120
+[    0.165121] simple-framebuffer 67000000.framebuffer: [drm] fb0: simpledrmdrmfb frame buffer device
+[    0.174276] loop: module loaded
+[    0.210343] tun: Universal TUN/TAP device driver, 1.6
+[    0.210601] pegasus: Pegasus/Pegasus II USB Ethernet driver
+[    0.210639] usbcore: registered new interface driver pegasus
+[    0.210673] usbcore: registered new interface driver rtl8150
+[    0.210701] usbcore: registered new device driver r8152-cfgselector
+[    0.210733] usbcore: registered new interface driver r8152
+[    0.210765] usbcore: registered new interface driver lan78xx
+[    0.210819] usbcore: registered new interface driver asix
+[    0.210854] usbcore: registered new interface driver ax88179_178a
+[    0.210886] usbcore: registered new interface driver cdc_ether
+[    0.210918] usbcore: registered new interface driver dm9601
+[    0.210955] usbcore: registered new interface driver CoreChips
+[    0.210987] usbcore: registered new interface driver smsc75xx
+[    0.211019] usbcore: registered new interface driver smsc95xx
+[    0.211051] usbcore: registered new interface driver net1080
+[    0.211086] usbcore: registered new interface driver plusb
+[    0.211118] usbcore: registered new interface driver cdc_subset
+[    0.211151] usbcore: registered new interface driver zaurus
+[    0.211190] usbcore: registered new interface driver MOSCHIP usb-ethernet driver
+[    0.211224] usbcore: registered new interface driver cdc_ncm
+[    0.211257] usbcore: registered new interface driver r8153_ecm
+[    0.211420] VFIO - User Level meta-driver version: 0.3
+[    0.213414] usbcore: registered new interface driver cdc_acm
+[    0.213424] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    0.213591] usbcore: registered new interface driver cp210x
+[    0.213620] usbserial: USB Serial support registered for cp210x
+[    0.213650] usbcore: registered new interface driver ftdi_sio
+[    0.213677] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    0.213716] usbcore: registered new interface driver option
+[    0.213744] usbserial: USB Serial support registered for GSM modem (1-port)
+[    0.213905] usbcore: registered new device driver onboard-usb-dev
+[    0.215504] UDC core: g_mass_storage: couldn't find an available UDC
+[    0.218144] i2c_dev: i2c /dev entries driver
+[    0.242145] s5m-rtc s2mps15-rtc: registered as rtc0
+[    0.245801] s5m-rtc s2mps15-rtc: setting system clock to 2026-10-23T15:01:30 UTC (1792767690)
+[    0.250884] device-mapper: ioctl: 4.50.0-ioctl (2025-04-28) initialised: dm-devel@lists.linux.dev
+[    0.252763] dwmmc_exynos 13540000.mmc: IDMAC supports 64-bit address mode.
+[    0.252763] dwmmc_exynos 13560000.mmc: IDMAC supports 64-bit address mode.
+[    0.252799] dwmmc_exynos 13560000.mmc: Using internal DMA controller.
+[    0.252799] dwmmc_exynos 13540000.mmc: Using internal DMA controller.
+[    0.252812] dwmmc_exynos 13540000.mmc: Version ID is 270a
+[    0.252816] dwmmc_exynos 13560000.mmc: Version ID is 270a
+[    0.252868] dwmmc_exynos 13540000.mmc: DW MMC controller at irq 41,64 bit host data width,64 deep fifo
+[    0.252882] dwmmc_exynos 13560000.mmc: DW MMC controller at irq 42,64 bit host data width,64 deep fifo
+[    0.253294] mmc_host mmc2: card is polling.
+[    0.253939] usbcore: registered new interface driver usbhid
+[    0.253953] usbhid: USB HID core driver
+[    0.256593]  cs_system_cfg: CoreSight Configuration manager initialised
+[    0.258071] gnss: GNSS driver registered with major 511
+[    0.258676] NET: Registered PF_PACKET protocol family
+[    0.258686] 8021q: 802.1Q VLAN Support v1.8
+[    0.258775] 9pnet: Installing 9P2000 support
+[    0.269145] mmc_host mmc2: Bus speed = 49968750Hz (req 400000Hz, actual 396577HZ div = 63)
+[    0.269720] registered taskstats version 1
+[    0.297227] 13820000.serial: ttySAC2 MMIO:0x0000000013820000 (irq = 43, base_baud = 0) is a S3C6400/10
+[    0.299047] exynos-dwc3 soc@0:usb@13600000: supply vdd10 not found, using dummy regulator
+[    0.302692] input: GPIO Hall Effect Sensor as /devices/platform/gpio-hall-effect-sensor/input/input0
+[    0.303578] LUN: removable file: (no medium)
+[    0.303611] no file given for LUN0
+[    0.303644] udc 13600000.usb: failed to start g_mass_storage: -22
+[    0.303661] g_mass_storage gadget.0: probe with driver g_mass_storage failed with error -22
+[    0.303739] dwmmc_exynos 13540000.mmc: IDMAC supports 64-bit address mode.
+[    0.303774] dwmmc_exynos 13540000.mmc: Using internal DMA controller.
+[    0.303789] dwmmc_exynos 13540000.mmc: Version ID is 270a
+[    0.303815] dwmmc_exynos 13540000.mmc: DW MMC controller at irq 41,64 bit host data width,64 deep fifo
+[    0.304202] input: GPIO Keys as /devices/platform/gpio-keys/input/input1
+[    0.304206] mmc_host mmc0: card is non-removable.
+[    0.304969] clk: Disabling unused clocks
+[    0.305323] PM: genpd: Disabling unused power domains
+[    0.305382] Warning: unable to open an initial console.
+[    0.316762] mmc_host mmc2: Bus speed = 49968750Hz (req 300000Hz, actual 297433HZ div = 84)
+[    0.322475] mmc_host mmc0: Bus speed = 49968750Hz (req 400000Hz, actual 396577HZ div = 63)
+[    0.335821] Freeing unused kernel memory: 1408K
+[    0.335950] Run /init as init process
+[    0.335958]   with arguments:
+[    0.335963]     /init
+[    0.335969]   with environment:
+[    0.335975]     HOME=/
+[    0.335981]     TERM=linux
+[    0.335986]     ess_setup=0x46000000
+[    0.335992]     tima_log=0x200000@0x52a00000
+[    0.335998]     sec_avc_log=0x40000@0x47002000
+[    0.336004]     sec_tsp_log=0x40000@0x47044000
+[    0.336011]     lcdtype=8550659
+[    0.336016]     vmalloc=384m
+[    0.336022]     pmic_info=19
+[    0.336028]     cordon=0bd72380567ffedc629b0c9cbf7b08f5
+[    0.336034]     connie=SM-T585_OPEN_EUR_1fc4b93651c255c5082e7c14ed8cf445
+[    0.336041]     sales_code=AUT
+[    0.336046]     reserve-fimc=0
+[    0.364583] mmc_host mmc2: Bus speed = 49968750Hz (req 200000Hz, actual 199875HZ div = 125)
+[    0.367635] [stage1] kernel 7.3.0-gtaxllte-g734bef548a96-dirty up, MemTotal:        1998808 kB
+[    0.370168] [stage1] usb role: device
+[    0.375548] [stage1] udc: 13600000.usb
+[    0.387626] configfs-gadget.g1 gadget.0: HOST MAC 8e:46:af:ad:87:a8
+[    0.387651] configfs-gadget.g1 gadget.0: MAC c2:81:e1:c7:82:fb
+[    0.388086] configfs-gadget.g1 gadget.0: HOST MAC a2:ab:4d:d1:91:e2
+[    0.388098] configfs-gadget.g1 gadget.0: MAC f2:0a:f1:56:49:98
+[    0.390668] [stage1] gadget bound to 13600000.usb
+[    0.393268] [stage1] usb0: 172.16.42.1
+[    0.395619] [stage1] usb1: 172.16.42.1
+[    0.398113] [stage1] ready: telnet 172.16.42.1 or /dev/ttyACM0
+[    0.416132] mmc_host mmc2: Bus speed = 49968750Hz (req 100000Hz, actual 99937HZ div = 250)
+[    0.477435] mmc_host mmc0: Bus speed = 49968750Hz (req 25000000Hz, actual 24984375HZ div = 1)
+[    0.477698] mmc0: new MMC card at address 0001
+[    0.478426] mmcblk0: mmc0:0001 500073 29.1 GiB
+[    0.482906] Alternate GPT is invalid, using primary GPT.
+[    0.482979]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 p19 p20 p21 p22 p23
+[    0.486463] mmcblk0boot0: mmc0:0001 500073 4.00 MiB
+[    0.489562] mmcblk0boot1: mmc0:0001 500073 4.00 MiB
+[    0.491685] mmcblk0rpmb: mmc0:0001 500073 4.00 MiB, chardev (234:0)
+[    3.877934] dwc3 13600000.usb: remote wakeup not configured
+[   31.713355] vdd_ldo33: disabling
+[   36.930827] random: crng init done
+[  122.111124] dwc3 13600000.usb: remote wakeup not configured
+~ # [6n

@@ -1,0 +1,8 @@
+[submodule "src/mainline"]
+	path = src/mainline
+	url = https://github.com/avataristvan/linux.git
+	branch = gtaxllte
+[submodule "src/downstream-lineage-21"]
+	path = src/downstream-lineage-21
+	url = https://github.com/Exynos7870-labs/android_kernel_samsung_exynos7870
+	branch = lineage-21

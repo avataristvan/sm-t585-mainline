@@ -27,7 +27,29 @@ dir /lib 755 0 0
 file /lib/ld-musl-aarch64.so.1 $HERE/prebuilt/alpine/ld-musl-aarch64.so.1 755 0 0
 slink /lib/libc.musl-aarch64.so.1 ld-musl-aarch64.so.1 777 0 0
 file /bin/busybox-extras $HERE/prebuilt/alpine/busybox-extras-1.37.0-r30-aarch64 755 0 0
+dir /lib/modules 755 0 0
 EOF
+
+# Audio modules in load order (init insmods them in this order). Modules, not
+# built in, so they can still be reloaded with other parameters at runtime.
+: > "$OUT"/modules.order
+for m in sound/soundcore sound/core/snd sound/core/snd-timer \
+	sound/core/snd-pcm sound/core/snd-pcm-dmaengine sound/soc/snd-soc-core \
+	sound/soc/codecs/snd-soc-rl6231 sound/soc/codecs/snd-soc-rt5659 \
+	sound/soc/samsung/snd-soc-s1402x-mixer sound/soc/samsung/snd-soc-s3c-dma \
+	sound/soc/samsung/snd-soc-idma sound/soc/samsung/snd-soc-i2s \
+	sound/soc/samsung/snd-soc-gtaxllte-rt5659; do
+	echo "file /lib/modules/${m##*/}.ko $KOUT/$m.ko 644 0 0"
+	echo "${m##*/}" >> "$OUT"/modules.order
+done >> "$OUT"/initramfs.list
+echo "file /lib/modules/modules.order $OUT/modules.order 644 0 0" >> "$OUT"/initramfs.list
+
+# Audio test tools, when built (tinymix links against musl)
+for t in tinymix pcmplay pcmrec; do
+	if [ -f "$OUT"/alsa/$t ]; then
+		echo "file /bin/$t $OUT/alsa/$t 755 0 0"
+	fi
+done >> "$OUT"/initramfs.list
 "$KOUT"/scripts/gen_init_cpio "$OUT"/initramfs.list | gzip -9 > "$OUT"/initramfs.cpio.gz
 
 # Leave room for the properties S-Boot writes into the DTB (bootargs, initrd,

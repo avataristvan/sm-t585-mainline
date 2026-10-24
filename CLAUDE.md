@@ -48,6 +48,7 @@ inventory) is in `device-dump/sm-t585/`; mainline boot logs in `device-dump/sm-t
   (`exynos7870-gtaxllte_eur_open_05.dts` + `exynos7870-gtaxl_common.dtsi`).
 - `kernel/` — our build tooling: `gtaxllte-stage1.config` (fragment on top of arm64 defconfig),
   `mkbootimg-gtaxllte.py`, `build-stage1.sh`, `initramfs/init`, `tools/acm-shell.py`,
+  `tools/alsa/` (device-side audio helper scripts, served from `out/alsa/` via symlinks),
   `prebuilt/` (static aarch64 busybox), `out/` (boot images), `build/` (kernel build dir).
 - `samsung galaxy tab a (2016)/` — LineageOS/TWRP/GApps zips for `gtaxllte`; contains a personal
   `invoice.pdf` that must stay out of any VCS.

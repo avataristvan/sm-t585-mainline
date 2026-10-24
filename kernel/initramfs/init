@@ -69,6 +69,19 @@ busybox-extras telnetd -b 172.16.42.1 -l /bin/sh || log "telnetd failed"
 
 log "ready: telnet 172.16.42.1 or /dev/ttyACM0"
 
+# Audio, in the background after the debug shells, so a hanging driver
+# cannot cost the shell. S-Boot drops the cmdline, so machine module
+# options go here (e.g. jack_switch=0).
+SND_MACHINE_OPTS=""
+(
+	for m in $(cat /lib/modules/modules.order); do
+		opts=
+		[ "$m" = snd-soc-gtaxllte-rt5659 ] && opts=$SND_MACHINE_OPTS
+		insmod /lib/modules/$m.ko $opts || log "insmod $m failed"
+	done
+	log "audio: $(head -n1 /proc/asound/cards 2>/dev/null)"
+) &
+
 # Keep a shell on the framebuffer console too (keys are all we have).
 while true; do
 	setsid sh -c 'exec sh </dev/tty0 >/dev/tty0 2>&1'

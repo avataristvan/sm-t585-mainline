@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792820997.472733
-edges: [{"target_id": "learning_t585_speaker_silent_dac_mux_stereo_dac_mixer_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_speaker_silent_clicks_only_mainline_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_speaker_silent_dac_mux_stereo_dac_mixer_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_speaker_silent_clicks_only_mainline_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_playback_pops_were_test_wav_not_hardware_2026_10_24", "edge_type": "related"}]
 cue: You are tempted to copy another Lineage-vs-mainline RT5659 register difference to fix silent speakers on the SM-T585.
 ---
 

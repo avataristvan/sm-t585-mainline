@@ -16,8 +16,13 @@
 | domain_stage1_enable_modules_for_stmfts_2026_10_23 | mainline | domain | Decision: Enable CONFIG_MODULES in the stage-1 kernel and build stmfts as a modu | active |
 | domain_stmfts_fts1a096_variant_2026_10_23 | mainline | domain | Decision: Support the FTS1A096 by adding a chip variant to mainline stmfts (new  | active |
 | domain_stmfts_patches_not_upstreamed_2026_10_23 | mainline | domain | Decision: The stmfts (FTS1A096 variant), board DTS and binding patches are not s | active |
+| domain_t585_audio_modules_load_at_boot_from_initramfs_2026_10_24 | mainline | domain | Decision: Audio loads at boot. kernel/build-stage1.sh puts the 13 sound modules  | active |
 | domain_t585_default_audio_routing_in_machine_driver_2026_10_24 | mainline | domain | Decision: Default audio routing lives in the machine driver: DAC1 -> Stereo DAC  | active |
+| domain_t585_jack_detect_gpio_only_2026_10_24 | mainline | domain | Decision (user, 2026-10-24): Jack detection option (a), GPIO-only. Machine drive | active |
+| domain_t585_jack_switch_module_param_2026_10_24 | mainline | domain | Decision (user, 2026-10-24): Autoswitching on jack events is configurable by mod | active |
 | domain_t585_lean_linux_music_device_2026_10_23 | goal | domain | Decision: Revive the SM-T585 as a lean-Linux music device (reopened explicitly b | active |
+| domain_t585_mic_panning_summing_in_software_2026_10_24 | mainline | domain | Decision (user, 2026-10-24): Mic panning and summing is done in software, not in | active |
+| domain_t585_mics_fixed_mono_tracks_2026_10_24 | mainline | domain | Decision (user, 2026-10-24): The mics are fixed mono tracks like on a mixing des | active |
 | domain_t585_own_machine_driver_for_audio_2026_10_23 | mainline | domain | Decision: A small own machine driver for gtaxllte (src/mainline/sound/soc/samsun | active |
 | domain_t585_touch_keys_menu_left_back_right_2026_10_23 | mainline | domain | Decision: On the SM-T585 the left capacitive key (left of Home) is KEY_MENU and  | active |
 | domain_target_device_sm_t585_2026_10_23 | device | domain | Decision: The physical test device is a Samsung SM-T585 (gtaxllte, LTE, board "G | active |
@@ -62,9 +67,13 @@
 | learning_t585_audio_roughness_volume_independent_open_2026_10_23 | mainline | learning | Observed: After the click fix the 440 Hz tone is rough ("ring modulator", "Amiga | superseded_by: learning_t585_i2s0_rclksrc_pclk_causes_roughness_2026_10_23 |
 | learning_t585_bootloader_fb_a8r8g8b8_2026_10_23 | mainline | learning | Observed: On mainline, the SM-T585 bootloader framebuffer at 0x67000000 is a8r8g | active |
 | learning_t585_capture_not_running_i2s0_rx_needed_2026_10_23 | mainline | learning | Observed: Capture on the mainline SM-T585 card does not run yet. tinycap -t 5 re | superseded_by: learning_t585_capture_runs_realtime_use_pcmrec_i2s0_rx_zeros_2026_10_23 |
+| learning_t585_capture_open_delay_every_open_not_latency_2026_10_24 | mainline | learning | Observed: The 200 ms adc_power_delay hits every capture open, not only at boot.  | active |
 | learning_t585_capture_runs_realtime_use_pcmrec_i2s0_rx_zeros_2026_10_23 | mainline | learning | Observed: Capture DOES run in real time on the mainline SM-T585 card; the instan | active |
+| learning_t585_capture_start_pop_settling_delay_2026_10_24 | mainline | learning | Observed: The capture-start pop had two parts: (1) 0-10 ms, sample-identical on  | active |
 | learning_t585_capture_zeros_fixed_by_adc_sto1_asrc_2026_10_24 | mainline | learning | Observed: Codec-side capture zeros on mainline SM-T585 were caused by the ADC ST | active |
 | learning_t585_clk_summary_reboots_2026_10_23 | device | learning | Observed: On the SM-T585 downstream 3.18 kernel, reading /sys/kernel/debug/clk/c | active |
+| learning_t585_dapm_delay_event_on_both_widgets_skip_if_done_2026_10_24 | mainline | learning | Observed: Putting the PRE_PMU adc_power_delay only on "Stereo1 ADC Volume L" bro | active |
+| learning_t585_dapm_delay_event_on_one_widget_only_2026_10_24 | mainline | learning | Observed: With the delay event on both the L and R widgets of the same register, | superseded_by: learning_t585_dapm_delay_event_on_both_widgets_skip_if_done_2026_10_24 |
 | learning_t585_dispaud_reset_pulse_needed_2026_10_23 | mainline | learning | Observed: DISPAUD_CFG (0x148F1000) audio soft resets (bit0 mixer, 1 MI2S, 2 AMP, | active |
 | learning_t585_downstream_kernel_source_and_roms_2026_10_23 | device | learning | Observed: Working downstream kernel for gtaxllte/gtaxlwifi: github.com/Exynos787 | active |
 | learning_t585_headset_mic_in1_needs_ejd_ctrl_1_0x70c0_2026_10_24 | mainline | learning | Observed: Headset mic on SM-T585 = IN1 (single-ended) + MICBIAS1 (downstream DT  | active |
@@ -73,13 +82,16 @@
 | learning_t585_i2s0_rclksrc_dtsi_fix_verified_2026_10_23 | mainline | learning | Observed: The permanent fix for the I2S0 RCLKSRC roughness is in the DTS, not at | active |
 | learning_t585_i2s0_rclksrc_pclk_causes_roughness_2026_10_23 | mainline | learning | Observed: Root cause of the "ring-modulator" roughness: Exynos7870 I2S0 MOD[10]  | active |
 | learning_t585_i2s_mainline_sysclk_calls_opclk_rclksrc_2026_10_23 | mainline | learning | Observed: In the mainline machine driver gtaxllte_rt5659.c: (1) snd_soc_dai_set_ | active |
+| learning_t585_jack_detect_gpa0_5_active_low_verified_2026_10_24 | mainline | learning | Observed: SM-T585 jack detect is gpa0-5, verified on mainline stage 1 with /tmp/ | active |
 | learning_t585_lineage_capture_dump_procedure_2026_10_24 | workflow | learning | Observed: Lineage capture-dump procedure: script kernel/out/alsa/lineage-capdump | active |
 | learning_t585_localversion_auto_changes_vermagic_2026_10_24 | workflow | learning | Observed: Committing in the src/mainline submodule changed the setlocalversion g | active |
+| learning_t585_loose_plug_looks_like_dead_headset_mic_2026_10_24 | mainline | learning | Observed: A loose 3.5 mm plug during tests looks like a dead headset-mic channel | active |
 | learning_t585_lpass_is_not_exynos5433_lpass_2026_10_23 | mainline | learning | Observed: The Exynos 7870 "LPASS" (downstream sound/soc/samsung/lpass-exynos7870 | active |
 | learning_t585_machine_module_reload_leaves_playback_silent_2026_10_23 | mainline | learning | Observed: After rmmod/insmod of the machine module (snd-soc-gtaxllte-rt5659) pla | superseded_by: learning_t585_rt5659_remove_leaves_regcache_stale_fixed_2026_10_24 |
 | learning_t585_main_mic_in3_micbias2_lineage_ref_2026_10_24 | mainline | learning | Observed: Main mic on SM-T585 = IN3 with MICBIAS2. Lineage capture dump (recorde | active |
 | learning_t585_memtool_bus_error_on_mixer_use_regmap_2026_10_23 | mainline | learning | Observed: kernel/tools/memtool (/dev/mem) gave "Bus error" on the mixer register | active |
 | learning_t585_memtool_works_on_mixer_and_i2s0_during_audio_2026_10_23 | mainline | learning | Observed: memtool works on the s1402x mixer (e.g. 0x14880058) and on I2S0 (0x148 | active |
+| learning_t585_playback_pops_were_test_wav_not_hardware_2026_10_24 | mainline | learning | Observed: The playback start/end pops heard on headphones were in the test WAV ( | active |
 | learning_t585_pmu_aud_sys_pwr_alone_gives_no_sound_2026_10_23 | mainline | learning | Observed: PMU 0x10481340 (GPIO_MODE_AUD_SYS_PWR) reads 0 on mainline; setting bi | active |
 | learning_t585_pmu_clkout_7870_mainline_wiring_2026_10_23 | mainline | learning | Observed: PMU CLKOUT on 7870 works via mainline drivers/clk/samsung/clk-exynos-c | active |
 | learning_t585_pmu_regmap_cat_hangs_device_2026_10_23 | device | learning | Observed: Under Lineage (downstream 3.18), `cat /d/regmap/10480000.system-contro | active |
@@ -111,6 +123,7 @@
 | pattern_mixer_loopback_fft_and_wallclock_rate_check_2026_10_23 | mainline | pattern | Rule: Measure the AP-side digital path with the s1402x mixer-internal loopback ( | active |
 | pattern_poll_shell_after_reboot_f_under_10s_2026_10_24 | workflow | pattern | Rule: After `reboot -f` on stage 1, poll the shell every ~2 s instead of using f | active |
 | pattern_propose_measurement_when_listening_stops_converging_2026_10_23 | workflow | pattern | Rule: When by-ear (or by-eye) tests stop converging, stop guessing and propose a | active |
+| pattern_t585_reload_audio_modules_from_host_2026_10_24 | mainline | pattern | Rule: Use kernel/out/alsa/reload.sh to reload the codec and machine modules from | active |
 | pattern_user_runs_audio_test_with_timed_register_write_2026_10_24 | workflow | pattern | Rule: When the user tests audio, let them run the test commands themselves via " | active |
 | todo_audio_analysis_lpass_i2s_2026_10_23 | mainline | todo | TODO: Audio analysis: compare downstream lpass-exynos7870.c + i2s.c with mainlin | active |
 | todo_bluetooth_then_dsi_panel_2026_10_23 | mainline | todo | TODO: Bluetooth (hci_qca + "tf" firmware), then the real DSI panel (hx8279 varia | active |
@@ -118,7 +131,7 @@
 | todo_kernel_venv_pyusb_dtschema_2026_10_23 | workflow | todo | TODO: Create a persistent kernel/.venv (pyusb, dtschema) for dtbs_check and tool | active |
 | todo_sm5703_charger_fuel_gauge_2026_10_23 | mainline | todo | TODO: SM5703 charger and fuel gauge. The downstream sm5703-fuelgauge (@0x71 on i | active |
 | todo_stmfts_pm_runtime_before_register_2026_10_23 | mainline | todo | TODO: Fix an upstream-style bug in mainline stmfts: input_register_device() runs | active |
-| todo_t585_headset_mic_auto_switch_jack_detect_2026_10_24 | mainline | todo | TODO: Automatic switching main mic <-> headset mic needs jack detection, which i | active |
+| todo_t585_alsa_ucm_profile_for_pipewire_2026_10_24 | mainline | todo | TODO: For the future postmarketOS/PipeWire userspace, write an ALSA UCM profile  | active |
 | todo_t585_speaker_lineage_reference_dump_2026_10_23 | mainline | todo | TODO: The Lineage reference dump is done and the speaker works at runtime (see l | active |
 | todo_trim_kernel_config_2026_10_23 | mainline | todo | TODO: Trim the kernel config per domain_kernel_config_trim_policy_2026_10_23, af | active |
 | user_skill_profile_hw_bringup | general | user | User (avataristvan) skill profile for the galaxy-rab-a-10 device bring-up projec | active |

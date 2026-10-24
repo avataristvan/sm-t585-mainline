@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792826506.944441
-edges: [{"target_id": "learning_t585_main_mic_in3_micbias2_lineage_ref_2026_10_24", "edge_type": "related"}, {"target_id": "pattern_dump_downstream_regmap_when_port_silent_2026_10_23", "edge_type": "confirms"}]
+edges: [{"target_id": "learning_t585_main_mic_in3_micbias2_lineage_ref_2026_10_24", "edge_type": "related"}, {"target_id": "pattern_dump_downstream_regmap_when_port_silent_2026_10_23", "edge_type": "confirms"}, {"target_id": "domain_t585_mics_fixed_mono_tracks_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_loose_plug_looks_like_dead_headset_mic_2026_10_24", "edge_type": "related"}]
 cue: You get silence from the SM-T585 headset mic (IN1) on mainline although MICBIAS1 and the RECMIX registers match Lineage.
 ---
 

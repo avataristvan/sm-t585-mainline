@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792824545.857695
-edges: [{"target_id": "learning_t585_headset_mic_in1_needs_ejd_ctrl_1_0x70c0_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_headset_mic_in1_needs_ejd_ctrl_1_0x70c0_2026_10_24", "edge_type": "related"}, {"target_id": "domain_t585_mics_fixed_mono_tracks_2026_10_24", "edge_type": "related"}]
 cue: You get only noise floor from the SM-T585 main mic on mainline; the mic bias / IN3 boost path is not powered.
 ---
 

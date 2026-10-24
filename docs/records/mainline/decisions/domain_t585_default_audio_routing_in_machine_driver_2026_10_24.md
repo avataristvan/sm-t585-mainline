@@ -3,7 +3,7 @@ type: domain
 area: mainline
 perspective: agent
 created: 1792822788.283481
-edges: [{"target_id": "learning_t585_rt5659_dapm_mixer_default_needs_kctl_put_after_register_2026_10_24", "edge_type": "derived_from"}, {"target_id": "learning_t585_speaker_silent_dac_mux_stereo_dac_mixer_2026_10_24", "edge_type": "derived_from"}, {"target_id": "domain_t585_own_machine_driver_for_audio_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_audio_defaults_in_machine_driver_work_on_hw_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_rt5659_dapm_mixer_default_needs_kctl_put_after_register_2026_10_24", "edge_type": "derived_from"}, {"target_id": "learning_t585_speaker_silent_dac_mux_stereo_dac_mixer_2026_10_24", "edge_type": "derived_from"}, {"target_id": "domain_t585_own_machine_driver_for_audio_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_audio_defaults_in_machine_driver_work_on_hw_2026_10_24", "edge_type": "related"}, {"target_id": "domain_t585_jack_detect_gpio_only_2026_10_24", "edge_type": "related"}]
 cue: You are about to route SM-T585 audio (headphones or speaker) with tinymix or a setup script instead of relying on machine-driver defaults.
 ---
 

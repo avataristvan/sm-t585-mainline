@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792788230.045897
-edges: [{"target_id": "learning_t585_rt5659_pll1_from_mclk_26mhz_pmu_clkout_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_capture_zeros_fixed_by_adc_sto1_asrc_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_rt5659_pll1_from_mclk_26mhz_pmu_clkout_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_capture_zeros_fixed_by_adc_sto1_asrc_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_playback_pops_were_test_wav_not_hardware_2026_10_24", "edge_type": "related"}]
 cue: You hear clicks or dropouts from the SM-T585 RT5659 although I2S0 and the PLLs look right, or you set up the codec clocks.
 ---
 

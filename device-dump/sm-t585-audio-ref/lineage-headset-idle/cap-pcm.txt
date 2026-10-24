@@ -1,0 +1,12 @@
+== /proc/asound/card0/pcm0c/sub0/hw_params
+closed
+== /proc/asound/card0/pcm2c/sub0/hw_params
+closed
+== /proc/asound/card0/pcm3c/sub0/hw_params
+closed
+== /proc/asound/card0/pcm0c/sub0/status
+closed
+== /proc/asound/card0/pcm2c/sub0/status
+closed
+== /proc/asound/card0/pcm3c/sub0/status
+closed

@@ -1,0 +1,27 @@
+== /proc/asound/card0/pcm0c/sub0/hw_params
+access: RW_INTERLEAVED
+format: S16_LE
+subformat: STD
+channels: 2
+rate: 48000 (48000/1)
+period_size: 1024
+buffer_size: 2048
+== /proc/asound/card0/pcm2c/sub0/hw_params
+closed
+== /proc/asound/card0/pcm3c/sub0/hw_params
+closed
+== /proc/asound/card0/pcm0c/sub0/status
+state: RUNNING
+owner_pid   : 5850
+trigger_time: 75.703770740
+tstamp      : 77.687824168
+delay       : 0
+avail       : 0
+avail_max   : 512
+-----
+hw_ptr      : 95232
+appl_ptr    : 95232
+== /proc/asound/card0/pcm2c/sub0/status
+closed
+== /proc/asound/card0/pcm3c/sub0/status
+closed

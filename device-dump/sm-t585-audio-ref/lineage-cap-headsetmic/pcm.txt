@@ -1,0 +1,8 @@
+00-00: i2s0-pri multicodec-0 :  : playback 1 : capture 1
+00-01: i2s0-sec multicodec-1 :  : playback 1
+00-02: voice call multicodec-2 :  : playback 1 : capture 1
+00-03: bluetooth audio multicodec-3 :  : playback 1 : capture 1
+00-04: eax0 multicodec-4 :  : playback 1
+00-05: eax1 multicodec-5 :  : playback 1
+00-06: eax2 multicodec-6 :  : playback 1
+00-07: eax3 multicodec-7 :  : playback 1

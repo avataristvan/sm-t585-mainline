@@ -3,6 +3,8 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792788230.437933
+superseded_by: learning_t585_rt5659_remove_leaves_regcache_stale_fixed_2026_10_24
+valid_until: 1792823583.680222
 edges: [{"target_id": "learning_t585_rt5659_clicks_fixed_by_dac_asrc_2026_10_23", "edge_type": "related"}]
 cue: You rmmod/insmod snd-soc-gtaxllte-rt5659 to test a change and playback goes silent.
 ---

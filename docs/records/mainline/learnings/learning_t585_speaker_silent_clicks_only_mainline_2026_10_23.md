@@ -3,7 +3,9 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792791141.298341
-edges: [{"target_id": "todo_t585_speaker_lineage_reference_dump_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_i2cx_rt5659_register_access_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_dump_downstream_regmap_when_port_silent_2026_10_23", "edge_type": "related"}]
+superseded_by: learning_t585_speaker_silent_dac_mux_stereo_dac_mixer_2026_10_24
+valid_until: 1792821003.803934
+edges: [{"target_id": "todo_t585_speaker_lineage_reference_dump_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_i2cx_rt5659_register_access_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_dump_downstream_regmap_when_port_silent_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_speaker_rt5659_diffs_not_sufficient_alone_2026_10_24", "edge_type": "related"}]
 cue: SM-T585 speakers give only clicks and hiss on mainline though DAPM powers the path, and you are about to try more register tweaks.
 ---
 

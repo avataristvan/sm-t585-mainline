@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: agent
 created: 1792774428.557991
-edges: [{"target_id": "pattern_devsh_for_all_device_commands_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_flash_via_ncm_wget_verified_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "pattern_devsh_for_all_device_commands_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_flash_via_ncm_wget_verified_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_setup_sh_lacks_i2cx_fetch_2026_10_24", "edge_type": "related"}]
 cue: You rebooted the SM-T585 after a flash and the sound (or other) modules downloaded earlier are gone.
 ---
 

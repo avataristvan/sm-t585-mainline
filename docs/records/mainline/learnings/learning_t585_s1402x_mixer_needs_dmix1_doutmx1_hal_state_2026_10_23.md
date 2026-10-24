@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792786743.235986
-edges: [{"target_id": "learning_t585_s1402x_mixer_driver_works_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_audio_downstream_multicodec_link_mixer_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_audio_roughness_volume_independent_open_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_capture_runs_realtime_use_pcmrec_i2s0_rx_zeros_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_s1402x_mixer_driver_works_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_audio_downstream_multicodec_link_mixer_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_audio_roughness_volume_independent_open_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_capture_runs_realtime_use_pcmrec_i2s0_rx_zeros_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_s1402x_mixer_same_for_capture_and_playback_2026_10_24", "edge_type": "related"}]
 cue: SM-T585 headphones are silent on mainline although DAPM, PLL1, I2S timing and pinmux all look right and the mixer driver probes fine.
 ---
 

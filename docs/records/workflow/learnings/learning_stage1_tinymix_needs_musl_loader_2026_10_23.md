@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: the-coder
 created: 1792786744.006977
-edges: [{"target_id": "learning_tinyplay_alpine_2_0_broken_use_pcmplay_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_telnetd_udhcpd_via_busybox_extras_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_tinyplay_alpine_2_0_broken_use_pcmplay_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_telnetd_udhcpd_via_busybox_extras_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_tinymix_needs_subcommand_2026_10_24", "edge_type": "related"}]
 cue: tinymix (Alpine) fails to start on the stage-1 SM-T585 initramfs, or you need to load the sound modules and route headphones on stage 1.
 ---
 

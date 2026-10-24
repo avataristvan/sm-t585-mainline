@@ -1,0 +1,270 @@
+Mixer name: 'Universal7870-RT5659'
+Number of controls: 266
+ctl	type	num	name                                     value
+
+0	INT	1	AudioMixer RMIX1_LVL                     0
+1	INT	1	AudioMixer RMIX2_LVL                     0
+2	INT	1	AudioMixer MIX1_LVL                      0
+3	INT	1	AudioMixer MIX2_LVL                      0
+4	INT	1	AudioMixer MIX3_LVL                      0
+5	INT	1	AudioMixer MIX4_LVL                      0
+6	INT	1	AudioMixer ALC NG HYS                    0
+7	INT	1	AudioMixer ALC Max Gain                  20
+8	INT	1	AudioMixer ALC Min Gain                  88
+9	INT	1	AudioMixer ALC Start Gain Left           0
+10	INT	1	AudioMixer ALC Start Gain Right          0
+11	INT	1	AudioMixer ALC LVL Left                  26
+12	INT	1	AudioMixer ALC LVL Right                 26
+13	INT	1	AudioMixer ALC Noise Gate Threshold      23
+14	ENUM	1	AudioMixer CH1 Master PCM Sample Rate    8KHz
+15	ENUM	1	AudioMixer CH2 Master PCM Sample Rate    8KHz
+16	ENUM	1	AudioMixer CH3 Master PCM Sample Rate    8KHz
+17	ENUM	1	AudioMixer CH1 Master PCM Slot           4 slots
+18	ENUM	1	AudioMixer CH2 Master PCM Slot           4 slots
+19	ENUM	1	AudioMixer CH3 Master PCM Slot           2 slots
+20	ENUM	1	AudioMixer CH1 BCLK Polarity             Normal
+21	ENUM	1	AudioMixer CH2 BCLK Polarity             Normal
+22	ENUM	1	AudioMixer CH3 BCLK Polarity             Normal
+23	ENUM	1	AudioMixer CH1 LRCLK Polarity            Normal
+24	ENUM	1	AudioMixer CH2 LRCLK Polarity            Normal
+25	ENUM	1	AudioMixer CH3 LRCLK Polarity            Normal
+26	ENUM	1	AudioMixer CH1 Input Audio Mode          I2S
+27	ENUM	1	AudioMixer CH2 Input Audio Mode          I2S
+28	ENUM	1	AudioMixer CH3 Input Audio Mode          I2S
+29	ENUM	1	AudioMixer CH1 XFS                       32fs
+30	ENUM	1	AudioMixer CH2 XFS                       32fs
+31	ENUM	1	AudioMixer CH3 XFS                       32fs
+32	ENUM	1	AudioMixer CH1 I2S Format                I2S
+33	ENUM	1	AudioMixer CH2 I2S Format                I2S
+34	ENUM	1	AudioMixer CH3 I2S Format                I2S
+35	ENUM	1	AudioMixer CH1 I2S Data Length           16-bit
+36	ENUM	1	AudioMixer CH2 I2S Data Length           16-bit
+37	ENUM	1	AudioMixer CH3 I2S Data Length           16-bit
+38	ENUM	1	AudioMixer CH1 PCM DAD                   0 bck
+39	ENUM	1	AudioMixer CH2 PCM DAD                   0 bck
+40	ENUM	1	AudioMixer CH3 PCM DAD                   0 bck
+41	ENUM	1	AudioMixer CH1 PCM Data Format           Short Frame
+42	ENUM	1	AudioMixer CH2 PCM Data Format           Short Frame
+43	ENUM	1	AudioMixer CH3 PCM Data Format           Short Frame
+44	ENUM	1	AudioMixer CH3 Rec En                    Off
+45	ENUM	1	AudioMixer MCKO En                       On
+46	ENUM	1	AudioMixer RMIX1 En                      Off
+47	ENUM	1	AudioMixer RMIX2 En                      Off
+48	ENUM	1	AudioMixer BCK4 Output Selection         Normal BCK
+49	ENUM	1	AudioMixer HQ En                         Off
+50	ENUM	1	AudioMixer CH1 DOUT Select               DMIX_OUT
+51	ENUM	1	AudioMixer CH2 DOUT Select               DMIX_OUT
+52	ENUM	1	AudioMixer CH3 DOUT Select               DMIX_OUT
+53	ENUM	1	AudioMixer CH1 Mixer En                  Off
+54	ENUM	1	AudioMixer CH2 Mixer En                  Off
+55	ENUM	1	AudioMixer CH3 Mixer En                  Off
+56	ENUM	1	AudioMixer CH4 Mixer En                  Off
+57	ENUM	1	AudioMixer Mixer En                      On
+58	ENUM	1	AudioMixer AP0 En                        Off
+59	ENUM	1	AudioMixer AP1 En                        Off
+60	ENUM	1	AudioMixer CP1 En                        Off
+61	ENUM	1	AudioMixer SRC2 En                       Off
+62	ENUM	1	AudioMixer SRC3 En                       Off
+63	ENUM	1	AudioMixer ALC Window Length             fs600
+64	ENUM	1	AudioMixer ALC Mode                      Stereo
+65	ENUM	1	AudioMixer ALC En                        Off
+66	ENUM	1	AudioMixer ALC Limiter Mode En           Off
+67	ENUM	1	AudioMixer ALC Start Gain En             Off
+68	INT	1	AudioMixer ALC Hold Time                 18
+69	INT	1	AudioMixer ALC Attack Time               18
+70	INT	1	AudioMixer ALC Decay Time                18
+71	ENUM	1	AudioMixer ALC Path                      ADC
+72	ENUM	1	AudioMixer ALC Noise Gate En             Off
+73	INT	2	Speaker Playback Volume                  31 31
+74	INT	2	Headphone Playback Volume                31 31
+75	INT	1	Mono Playback Volume                     31
+76	INT	2	OUT Playback Volume                      31 31
+77	INT	2	DAC1 Playback Volume                     175 175
+78	BOOL	2	DAC1 Playback Switch                     On On
+79	INT	2	DAC2 Playback Volume                     175 175
+80	BOOL	2	DAC2 Playback Switch                     On On
+81	INT	1	IN1 Boost Volume                         0
+82	INT	1	IN2 Boost Volume                         0
+83	INT	1	IN3 Boost Volume                         0
+84	INT	1	IN4 Boost Volume                         0
+85	INT	2	IN Capture Volume                        23 23
+86	BOOL	2	STO1 ADC Capture Switch                  Off Off
+87	INT	2	STO1 ADC Capture Volume                  47 47
+88	BOOL	2	Mono ADC Capture Switch                  Off Off
+89	INT	2	Mono ADC Capture Volume                  47 47
+90	BOOL	2	STO2 ADC Capture Switch                  On On
+91	INT	2	STO2 ADC Capture Volume                  47 47
+92	INT	2	STO1 ADC Boost Gain Volume               0 0
+93	INT	2	Mono ADC Boost Gain Volume               0 0
+94	INT	2	STO2 ADC Boost Gain Volume               0 0
+95	INT	1	Stereo DAC MIXL DAC L1 Volume            1
+96	INT	1	Stereo DAC MIXL DAC R1 Volume            1
+97	INT	1	Stereo DAC MIXL DAC L2 Volume            1
+98	INT	1	Stereo DAC MIXL DAC R2 Volume            1
+99	INT	1	Stereo DAC MIXR DAC L1 Volume            1
+100	INT	1	Stereo DAC MIXR DAC R1 Volume            1
+101	INT	1	Stereo DAC MIXR DAC L2 Volume            1
+102	INT	1	Stereo DAC MIXR DAC R2 Volume            1
+103	INT	1	Mono DAC MIXL DAC L1 Volume              1
+104	INT	1	Mono DAC MIXL DAC R1 Volume              1
+105	INT	1	Mono DAC MIXL DAC L2 Volume              1
+106	INT	1	Mono DAC MIXL DAC R2 Volume              1
+107	INT	1	Mono DAC MIXR DAC L1 Volume              1
+108	INT	1	Mono DAC MIXR DAC R1 Volume              1
+109	INT	1	Mono DAC MIXR DAC L2 Volume              1
+110	INT	1	Mono DAC MIXR DAC R2 Volume              1
+111	ENUM	1	ADC IF1 0/1 Data Switch                  L/R
+112	ENUM	1	ADC IF1 2/3 Data Switch                  L/R
+113	ENUM	1	ADC IF1 4/5 Data Switch                  L/R
+114	ENUM	1	ADC IF1 6/7 Data Switch                  L/R
+115	INT	1	DAC IF1 DAC1 L Data Switch               0
+116	INT	1	DAC IF1 DAC1 R Data Switch               1
+117	INT	1	DAC IF1 DAC2 L Data Switch               2
+118	INT	1	DAC IF1 DAC2 R Data Switch               3
+119	ENUM	1	ADC IF2 Data Switch                      L/R
+120	ENUM	1	DAC IF2 Data Switch                      L/R
+121	ENUM	1	ADC IF3 Data Switch                      L/R
+122	ENUM	1	DAC IF3 Data Switch                      L/R
+123	ENUM	1	DA STO Clk Sel                           clk_i2s1_track
+124	ENUM	1	DA MONOL Clk Sel                         clk_sysy_div_out
+125	ENUM	1	DA MONOR Clk Sel                         clk_sysy_div_out
+126	ENUM	1	AD STO1 Clk Sel                          clk_i2s1_track
+127	ENUM	1	AD STO2 Clk Sel                          clk_sysy_div_out
+128	ENUM	1	AD MONOL Clk Sel                         clk_i2s1_track
+129	ENUM	1	AD MONOR Clk Sel                         clk_i2s1_track
+130	ENUM	1	push button                              Disable
+131	ENUM	1	jack type                                Disable
+132	INT	1	ADC Power On Delay                       100
+133	BOOL	1	HP Switch                                Off
+134	BOOL	1	SPK Switch                               Off
+135	BOOL	1	RCV Switch                               Off
+136	BOOL	1	Main Mic Switch                          Off
+137	BOOL	1	Headset Mic Switch                       Off
+138	ENUM	1	SPDIF Mux                                IF1_DAC1
+139	ENUM	1	PDM R Mux                                Mono DAC
+140	ENUM	1	PDM L Mux                                Mono DAC
+141	BOOL	1	PDM R Playback Switch                    Off
+142	BOOL	1	PDM L Playback Switch                    Off
+143	BOOL	1	LOUT R Playback Switch                   Off
+144	BOOL	1	LOUT L Playback Switch                   Off
+145	BOOL	1	HPO R Playback Switch                    Off
+146	BOOL	1	HPO L Playback Switch                    Off
+147	BOOL	1	Mono Playback Switch                     Off
+148	BOOL	1	SPO Playback Switch                      On
+149	BOOL	1	LOUT R MIX DAC R2 Switch                 Off
+150	BOOL	1	LOUT R MIX OUTVOL R Switch               Off
+151	BOOL	1	LOUT L MIX DAC L2 Switch                 Off
+152	BOOL	1	LOUT L MIX OUTVOL L Switch               Off
+153	BOOL	1	Mono MIX DAC L2 Switch                   Off
+154	BOOL	1	Mono MIX MONOVOL Switch                  Off
+155	BOOL	1	SPO R MIX DAC R2 Switch                  Off
+156	BOOL	1	SPO R MIX SPKVOL R Switch                Off
+157	BOOL	1	SPO L MIX DAC L2 Switch                  Off
+158	BOOL	1	SPO L MIX SPKVOL L Switch                Off
+159	BOOL	1	OUTVOL R Switch                          Off
+160	BOOL	1	OUTVOL L Switch                          Off
+161	BOOL	1	MONOVOL Switch                           Off
+162	BOOL	1	SPKVOL R Switch                          Off
+163	BOOL	1	SPKVOL L Switch                          Off
+164	BOOL	1	OUT MIXR DAC R2 Switch                   Off
+165	BOOL	1	OUT MIXR INR Switch                      Off
+166	BOOL	1	OUT MIXR BST2 Switch                     Off
+167	BOOL	1	OUT MIXR BST3 Switch                     Off
+168	BOOL	1	OUT MIXR BST4 Switch                     Off
+169	BOOL	1	OUT MIXL DAC L2 Switch                   Off
+170	BOOL	1	OUT MIXL INL Switch                      Off
+171	BOOL	1	OUT MIXL BST1 Switch                     Off
+172	BOOL	1	OUT MIXL BST2 Switch                     Off
+173	BOOL	1	OUT MIXL BST3 Switch                     Off
+174	BOOL	1	MONOVOL MIX DAC L2 Switch                Off
+175	BOOL	1	MONOVOL MIX DAC R2 Switch                Off
+176	BOOL	1	MONOVOL MIX BST1 Switch                  Off
+177	BOOL	1	MONOVOL MIX BST2 Switch                  Off
+178	BOOL	1	MONOVOL MIX BST3 Switch                  Off
+179	BOOL	1	SPK MIXR DAC R2 Switch                   Off
+180	BOOL	1	SPK MIXR BST4 Switch                     Off
+181	BOOL	1	SPK MIXR INL Switch                      Off
+182	BOOL	1	SPK MIXR INR Switch                      Off
+183	BOOL	1	SPK MIXR BST3 Switch                     Off
+184	BOOL	1	SPK MIXL DAC L2 Switch                   Off
+185	BOOL	1	SPK MIXL BST1 Switch                     Off
+186	BOOL	1	SPK MIXL INL Switch                      Off
+187	BOOL	1	SPK MIXL INR Switch                      Off
+188	BOOL	1	SPK MIXL BST3 Switch                     Off
+189	ENUM	1	DAC MIXR Mux                             Stereo DAC Mixer
+190	ENUM	1	DAC MIXL Mux                             Stereo DAC Mixer
+191	BOOL	1	Mono DAC MIXR DAC L1 Switch              Off
+192	BOOL	1	Mono DAC MIXR DAC R1 Switch              Off
+193	BOOL	1	Mono DAC MIXR DAC L2 Switch              Off
+194	BOOL	1	Mono DAC MIXR DAC R2 Switch              Off
+195	BOOL	1	Mono DAC MIXL DAC L1 Switch              Off
+196	BOOL	1	Mono DAC MIXL DAC R1 Switch              Off
+197	BOOL	1	Mono DAC MIXL DAC L2 Switch              Off
+198	BOOL	1	Mono DAC MIXL DAC R2 Switch              Off
+199	BOOL	1	Stereo DAC MIXR DAC L1 Switch            Off
+200	BOOL	1	Stereo DAC MIXR DAC R1 Switch            Off
+201	BOOL	1	Stereo DAC MIXR DAC L2 Switch            Off
+202	BOOL	1	Stereo DAC MIXR DAC R2 Switch            Off
+203	BOOL	1	Stereo DAC MIXL DAC L1 Switch            Off
+204	BOOL	1	Stereo DAC MIXL DAC R1 Switch            Off
+205	BOOL	1	Stereo DAC MIXL DAC L2 Switch            Off
+206	BOOL	1	Stereo DAC MIXL DAC R2 Switch            Off
+207	ENUM	1	DAC R2 Source                            Mono DAC Mixer
+208	ENUM	1	DAC L2 Source                            Mono DAC Mixer
+209	ENUM	1	DAC R1 Source                            Stereo DAC Mixer
+210	ENUM	1	DAC L1 Source                            Stereo DAC Mixer
+211	ENUM	1	DAC R2 Mux                               IF2 DAC
+212	ENUM	1	DAC L2 Mux                               IF2 DAC
+213	ENUM	1	DAC R1 Mux                               IF1 DAC1
+214	ENUM	1	DAC L1 Mux                               IF1 DAC1
+215	BOOL	1	DAC1 MIXR Stereo ADC Switch              Off
+216	BOOL	1	DAC1 MIXR DAC1 Switch                    On
+217	BOOL	1	DAC1 MIXL Stereo ADC Switch              Off
+218	BOOL	1	DAC1 MIXL DAC1 Switch                    On
+219	ENUM	1	IF3 ADC Mux                              Stereo2_ADC_L/R
+220	ENUM	1	IF2 ADC Mux                              IF_ADC2
+221	ENUM	1	TDM Data Mux                             AD1:AD2:DAC:NUL
+222	BOOL	1	Mono ADC MIXR ADC1 Switch                Off
+223	BOOL	1	Mono ADC MIXR ADC2 Switch                Off
+224	BOOL	1	Mono ADC MIXL ADC1 Switch                Off
+225	BOOL	1	Mono ADC MIXL ADC2 Switch                Off
+226	BOOL	1	Stereo1 ADC MIXR ADC1 Switch             Off
+227	BOOL	1	Stereo1 ADC MIXR ADC2 Switch             Off
+228	BOOL	1	Stereo1 ADC MIXL ADC1 Switch             Off
+229	BOOL	1	Stereo1 ADC MIXL ADC2 Switch             Off
+230	ENUM	1	Mono ADC R Mux                           ADC1 L
+231	ENUM	1	Mono ADC L Mux                           ADC1 L
+232	ENUM	1	Mono DMIC R Mux                          DMIC1 R
+233	ENUM	1	Mono DMIC L Mux                          DMIC1 L
+234	ENUM	1	Mono ADC R1 Mux                          ADC
+235	ENUM	1	Mono ADC L1 Mux                          ADC
+236	ENUM	1	Mono ADC R2 Mux                          DMIC
+237	ENUM	1	Mono ADC L2 Mux                          DMIC
+238	ENUM	1	Stereo1 ADC Source                       ADC1
+239	ENUM	1	Stereo1 ADC2 Source                      DAC MIX
+240	ENUM	1	Stereo1 ADC1 Source                      DAC MIX
+241	ENUM	1	Stereo1 DMIC Source                      DMIC1
+242	BOOL	1	RECMIX2R MONOVOL Switch                  Off
+243	BOOL	1	RECMIX2R OUTVOLR Switch                  Off
+244	BOOL	1	RECMIX2R BST4 Switch                     Off
+245	BOOL	1	RECMIX2R BST3 Switch                     Off
+246	BOOL	1	RECMIX2R BST2 Switch                     Off
+247	BOOL	1	RECMIX2R BST1 Switch                     Off
+248	BOOL	1	RECMIX2L SPKVOLL Switch                  Off
+249	BOOL	1	RECMIX2L OUTVOLL Switch                  Off
+250	BOOL	1	RECMIX2L BST4 Switch                     Off
+251	BOOL	1	RECMIX2L BST3 Switch                     Off
+252	BOOL	1	RECMIX2L BST2 Switch                     Off
+253	BOOL	1	RECMIX2L BST1 Switch                     Off
+254	BOOL	1	RECMIX1R HPOVOLR Switch                  Off
+255	BOOL	1	RECMIX1R INR Switch                      Off
+256	BOOL	1	RECMIX1R BST4 Switch                     Off
+257	BOOL	1	RECMIX1R BST3 Switch                     Off
+258	BOOL	1	RECMIX1R BST2 Switch                     Off
+259	BOOL	1	RECMIX1R BST1 Switch                     Off
+260	BOOL	1	RECMIX1L SPKVOLL Switch                  Off
+261	BOOL	1	RECMIX1L INL Switch                      Off
+262	BOOL	1	RECMIX1L BST4 Switch                     Off
+263	BOOL	1	RECMIX1L BST3 Switch                     Off
+264	BOOL	1	RECMIX1L BST2 Switch                     Off
+265	BOOL	1	RECMIX1L BST1 Switch                     Off

@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: agent
 created: 1792770177.031708
-edges: [{"target_id": "learning_stage1_busybox_lacks_telnetd_udhcpd_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_flash_via_ncm_wget_unverified_2026_10_23", "edge_type": "supersedes"}, {"target_id": "learning_mainline_stage1_boot_t585_2026_10_23", "edge_type": "related"}, {"target_id": "learning_http_server_poll_before_device_wget_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_tmp_is_tmpfs_refetch_modules_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_devsh_for_all_device_commands_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_stage1_busybox_lacks_telnetd_udhcpd_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_flash_via_ncm_wget_unverified_2026_10_23", "edge_type": "supersedes"}, {"target_id": "learning_mainline_stage1_boot_t585_2026_10_23", "edge_type": "related"}, {"target_id": "learning_http_server_poll_before_device_wget_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_tmp_is_tmpfs_refetch_modules_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_devsh_for_all_device_commands_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_poll_shell_after_reboot_f_under_10s_2026_10_24", "edge_type": "related"}]
 cue: You iterate kernel builds on the SM-T585 and want to flash a new image without TWRP while stage 1 is running.
 ---
 

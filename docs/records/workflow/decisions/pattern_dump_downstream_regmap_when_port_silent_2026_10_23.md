@@ -3,7 +3,7 @@ type: pattern
 area: workflow
 perspective: agent
 created: 1792786743.435998
-edges: [{"target_id": "learning_t585_s1402x_mixer_needs_dmix1_doutmx1_hal_state_2026_10_23", "edge_type": "derived_from"}, {"target_id": "learning_t585_pmu_regmap_cat_hangs_device_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_propose_measurement_when_listening_stops_converging_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_speaker_silent_clicks_only_mainline_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_s1402x_mixer_needs_dmix1_doutmx1_hal_state_2026_10_23", "edge_type": "derived_from"}, {"target_id": "learning_t585_pmu_regmap_cat_hangs_device_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_propose_measurement_when_listening_stops_converging_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_speaker_silent_clicks_only_mainline_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_speaker_dump_lineage_reference_and_roundtrip_2026_10_24", "edge_type": "related"}, {"target_id": "pattern_debugfs_regmap_shows_cache_compare_hw_reads_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_headset_mic_in1_needs_ejd_ctrl_1_0x70c0_2026_10_24", "edge_type": "related"}]
 cue: A minimal mainline port of a vendor driver stays silent or dead after a few guesses from the vendor source.
 ---
 

@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792772540.744932
-edges: [{"target_id": "learning_stmfts_fts1a096_not_command_compatible_2026_10_23", "edge_type": "related"}, {"target_id": "todo_test_touchscreen_stmfts_2026_10_23", "edge_type": "related"}, {"target_id": "domain_stmfts_fts1a096_variant_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_stmfts_fts1a096_not_command_compatible_2026_10_23", "edge_type": "related"}, {"target_id": "domain_stmfts_fts1a096_variant_2026_10_23", "edge_type": "related"}]
 cue: You touch the SM-T585 touch path (stmfts, IRQ, axes) and wonder if touch works, why no IRQ fires, or whether to flip axes.
 ---
 

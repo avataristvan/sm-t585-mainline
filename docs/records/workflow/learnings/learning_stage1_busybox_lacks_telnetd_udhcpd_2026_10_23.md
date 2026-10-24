@@ -5,7 +5,6 @@ perspective: agent
 created: 1792770176.849228
 superseded_by: learning_stage1_telnetd_udhcpd_via_busybox_extras_2026_10_23
 valid_until: 1792791388.397234
-edges: [{"target_id": "todo_stage1_telnetd_udhcpd_2026_10_23", "edge_type": "related"}]
 cue: You try telnet or DHCP into the SM-T585 stage-1 shell over USB NCM and nothing answers, or you set up the host side of the link.
 ---
 

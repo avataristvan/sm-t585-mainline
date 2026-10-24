@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: agent
 created: 1792791387.984432
-edges: [{"target_id": "learning_stage1_busybox_lacks_telnetd_udhcpd_2026_10_23", "edge_type": "supersedes"}, {"target_id": "todo_stage1_telnetd_udhcpd_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_tinymix_needs_musl_loader_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_stage1_busybox_lacks_telnetd_udhcpd_2026_10_23", "edge_type": "supersedes"}, {"target_id": "learning_stage1_tinymix_needs_musl_loader_2026_10_23", "edge_type": "related"}]
 cue: You want telnet or DHCP on the SM-T585 stage-1 initramfs, or telnetd/udhcpd are silently missing after a boot-image rebuild.
 ---
 

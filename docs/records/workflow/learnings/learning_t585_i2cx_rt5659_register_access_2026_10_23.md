@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: agent
 created: 1792788230.844604
-edges: [{"target_id": "learning_t585_audio_roughness_volume_independent_open_2026_10_23", "edge_type": "related"}, {"target_id": "learning_i2cx_and_evdecode_tools_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_i2cx_full_four_digit_rt5659_address_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_speaker_silent_clicks_only_mainline_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_audio_roughness_volume_independent_open_2026_10_23", "edge_type": "related"}, {"target_id": "learning_i2cx_and_evdecode_tools_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_i2cx_full_four_digit_rt5659_address_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_speaker_silent_clicks_only_mainline_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_speaker_silent_dac_mux_stereo_dac_mixer_2026_10_24", "edge_type": "related"}, {"target_id": "pattern_debugfs_regmap_shows_cache_compare_hw_reads_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_rt5659_remove_leaves_regcache_stale_fixed_2026_10_24", "edge_type": "related"}]
 cue: You want to poke or read a single RT5659 register on the running SM-T585 without rebuilding a module.
 ---
 

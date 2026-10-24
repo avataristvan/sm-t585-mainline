@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792784296.758494
-edges: [{"target_id": "todo_tinyplay_returns_instantly_pcm_closed_2026_10_23", "edge_type": "fixes"}, {"target_id": "learning_t585_clk_summary_reboots_2026_10_23", "edge_type": "confirms"}, {"target_id": "learning_t585_aud_pll_is_fractional_pll36xx_98_304_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_tinymix_needs_musl_loader_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_capture_not_running_i2s0_rx_needed_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_capture_runs_realtime_use_pcmrec_i2s0_rx_zeros_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_clk_summary_reboots_2026_10_23", "edge_type": "confirms"}, {"target_id": "learning_t585_aud_pll_is_fractional_pll36xx_98_304_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_tinymix_needs_musl_loader_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_capture_not_running_i2s0_rx_needed_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_capture_runs_realtime_use_pcmrec_i2s0_rx_zeros_2026_10_23", "edge_type": "related"}]
 cue: tinyplay on the stage-1 SM-T585 prints "playing" and exits in about 10 ms with rc=0 and you suspect the audio driver.
 ---
 

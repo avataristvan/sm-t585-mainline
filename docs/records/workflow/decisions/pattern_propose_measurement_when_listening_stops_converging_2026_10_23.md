@@ -3,7 +3,7 @@ type: pattern
 area: workflow
 perspective: agent
 created: 1792788231.039968
-edges: [{"target_id": "learning_t585_audio_roughness_volume_independent_open_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_dump_downstream_regmap_when_port_silent_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_mixer_loopback_fft_and_wallclock_rate_check_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_speaker_session_repeated_guessing_loop_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_audio_roughness_volume_independent_open_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_dump_downstream_regmap_when_port_silent_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_mixer_loopback_fft_and_wallclock_rate_check_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_speaker_session_repeated_guessing_loop_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_user_runs_audio_test_with_timed_register_write_2026_10_24", "edge_type": "related"}]
 cue: Listening or visual hardware tests have stopped converging after several rounds of tweaks.
 ---
 

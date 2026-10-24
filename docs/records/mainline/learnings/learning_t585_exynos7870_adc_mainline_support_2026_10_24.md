@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792861505.156831
-edges: [{"target_id": "domain_t585_sm5703_battery_ntc_exynos_adc_chunk3c_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "domain_t585_sm5703_battery_ntc_exynos_adc_chunk3c_2026_10_24", "edge_type": "related"}, {"target_id": "domain_t585_adc_vdd_supply_ldo3_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_adc_vdd_supply_switches_consumers_to_mv_2026_10_24", "edge_type": "related"}]
 cue: You need the Exynos7870 ADC (battery NTC, in-bat) in mainline: compatible, register offset, clocks, node, Kconfig symbols.
 ---
 

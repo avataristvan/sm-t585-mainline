@@ -21,6 +21,7 @@
 | domain_stage1_enable_modules_for_stmfts_2026_10_23 | mainline | domain | Decision: Enable CONFIG_MODULES in the stage-1 kernel and build stmfts as a modu | active |
 | domain_stmfts_fts1a096_variant_2026_10_23 | mainline | domain | Decision: Support the FTS1A096 by adding a chip variant to mainline stmfts (new  | active |
 | domain_stmfts_patches_not_upstreamed_2026_10_23 | mainline | domain | Decision: The stmfts (FTS1A096 variant), board DTS and binding patches are not s | active |
+| domain_t585_adc_vdd_supply_ldo3_2026_10_24 | mainline | domain | Decision: The Exynos7870 ADC on the SM-T585 gets vdd-supply = vdd_ldo3 (S2MPU05  | active |
 | domain_t585_audio_modules_load_at_boot_from_initramfs_2026_10_24 | mainline | domain | Decision: Audio loads at boot. kernel/build-stage1.sh puts the 13 sound modules  | active |
 | domain_t585_cmu_cpucl_readonly_in_mainline_fork_2026_10_24 | mainline | domain | Decision: CMU_CPUCL0 (0x10900000) and CMU_CPUCL1 (0x10800000) are added to the m | active |
 | domain_t585_cooling_maps_both_clusters_2026_10_24 | mainline | domain | Decision: Cooling maps on soc-thermal bind both cpufreq cooling devices (cpu0 =  | active |
@@ -63,7 +64,7 @@
 | learning_http_server_poll_before_device_wget_2026_10_23 | workflow | learning | Observed: A backgrounded `python3 -m http.server` is not ready immediately. Once | active |
 | learning_i2cx_and_evdecode_tools_2026_10_23 | workflow | learning | Observed: kernel/tools/i2cx/ is a 7.6 KB static aarch64 i2c write/read tool (I2C | active |
 | learning_kconfig_fragment_typo_silently_ignored_2026_10_24 | mainline | learning | Observed: A Kconfig fragment merged with merge_config.sh silently ignores a miss | active |
-| learning_kernel_venv_ready_dtbs_check_audio_warnings_2026_10_24 | workflow | learning | Observed: kernel/.venv (python venv with dtschema + pyusb) now exists persistent | active |
+| learning_kernel_venv_ready_dtbs_check_audio_warnings_2026_10_24 | workflow | learning | Observed: kernel/.venv (python venv with dtschema + pyusb) now exists persistent | superseded_by: learning_t585_dtbs_check_clean_local_bindings_2026_10_24 |
 | learning_lineage_pin_cpu_freq_performance_governor_2026_10_24 | workflow | learning | Observed: Lineage has no userspace cpufreq governor. To pin a frequency, use the | active |
 | learning_linux73_mod_delayed_work_system_wq_deprecated_2026_10_24 | mainline | learning | Observed: On Linux 7.3, mod_delayed_work(system_wq, ...) logs "enqueued on depre | active |
 | learning_mainline_73_exynos7870_gap_2026_10_23 | mainline | learning | Observed: Mainline Linux 7.3 contains Exynos7870 support (exynos7870.dtsi; board | active |
@@ -84,6 +85,7 @@
 | learning_stmfts_fts1a096_not_command_compatible_2026_10_23 | mainline | learning | Observed: The SM-T585 touch controller STM FTS1A096 (downstream fts7 driver, stm | active |
 | learning_stmfts_kbd_attach_error_only_on_runtime_insmod_2026_10_23 | mainline | learning | Observed: With stmfts built in (=y) the "failed to attach handler kbd ... -13" m | active |
 | learning_t585_adc_loopback_zeros_dac_mix_mute_nopm_rt5659_2026_10_24 | mainline | learning | Observed: RT5659 ADC loopback (Stereo1 ADC1/ADC2 Source = "DAC MIX") returned ex | active |
+| learning_t585_adc_vdd_supply_switches_consumers_to_mv_2026_10_24 | mainline | learning | Observed: Giving the Exynos ADC a real vdd-supply changes what its consumers rea | active |
 | learning_t585_adma_bus_clock_apb_aud_2026_10_23 | mainline | learning | Observed: The Exynos7870 ADMA (PL330 @14890000) bus clock is APB_AUD, not APB_AU | active |
 | learning_t585_aud_pll_97_5mhz_not_98_304_2026_10_23 | mainline | learning | Observed: AUD_PLL runs at 97.5 MHz under mainline, not 98.304 MHz, so 48 kHz aud | superseded_by: learning_t585_aud_pll_is_fractional_pll36xx_98_304_2026_10_23 |
 | learning_t585_aud_pll_is_fractional_pll36xx_98_304_2026_10_23 | mainline | learning | Observed: The 7870 DISPAUD AUD_PLL is a fractional PLL1431x (downstream pwrcal:  | active |
@@ -109,6 +111,7 @@
 | learning_t585_dapm_delay_event_on_one_widget_only_2026_10_24 | mainline | learning | Observed: With the delay event on both the L and R widgets of the same register, | superseded_by: learning_t585_dapm_delay_event_on_both_widgets_skip_if_done_2026_10_24 |
 | learning_t585_dispaud_reset_pulse_needed_2026_10_23 | mainline | learning | Observed: DISPAUD_CFG (0x148F1000) audio soft resets (bit0 mixer, 1 MI2S, 2 AMP, | active |
 | learning_t585_downstream_kernel_source_and_roms_2026_10_23 | device | learning | Observed: Working downstream kernel for gtaxllte/gtaxlwifi: github.com/Exynos787 | active |
+| learning_t585_dtbs_check_clean_local_bindings_2026_10_24 | mainline | learning | Observed: dtbs_check of exynos7870-gtaxllte.dtb is clean (2026-10-24) after loca | active |
 | learning_t585_dvfs_stress_60s_4200_transitions_ok_2026_10_24 | mainline | learning | Observed: DVFS stress kernel/out/dvfsstress.sh (8 cpuloop busy loops plus a rand | active |
 | learning_t585_exynos7870_adc_mainline_support_2026_10_24 | mainline | learning | Observed: Exynos7870 ADC works in mainline with a new compatible samsung,exynos7 | active |
 | learning_t585_exynos_thermal_selects_max8973_2026_10_24 | mainline | learning | Observed: EXYNOS_THERMAL selects REGULATOR_MAX8973 (dead weight on this board);  | superseded_by: learning_t585_max8973_comes_from_defconfig_depends_2026_10_24 |
@@ -146,8 +149,11 @@
 | learning_t585_s1402x_mixer_driver_works_2026_10_23 | mainline | learning | Observed: The local s1402x mixer driver works: src/mainline/sound/soc/samsung/s1 | active |
 | learning_t585_s1402x_mixer_needs_dmix1_doutmx1_hal_state_2026_10_23 | mainline | learning | Observed: Headphones stayed silent on mainline although the whole RT5659 DAPM pa | active |
 | learning_t585_s1402x_mixer_same_for_capture_and_playback_2026_10_24 | mainline | learning | Observed: The s1402x mixer registers are identical under Lineage during capture  | active |
+| learning_t585_s2mpu05_manual_reset_regs_2key_2026_10_24 | mainline | learning | Observed: S2MPU05 registers on kernel #31 (i2c-0 0x66, read-only with i2cx): CTR | active |
 | learning_t585_sboot_leaves_cpu_clusters_902mhz_clk_summary_2026_10_24 | mainline | learning | Observed: S-Boot leaves BOTH clusters at 902.2 MHz from their PLL (P5 M347 S1),  | active |
 | learning_t585_sm5703_charger_base_verified_hw_kernel28_2026_10_24 | mainline | learning | Observed: The SM5703 charger driver (drivers/power/supply/sm5703_charger.c, CONF | active |
+| learning_t585_sm5703_charger_teardown_race_fixed_temp_enodata_2026_10_24 | mainline | learning | Observed: Charger review findings fixed in sm5703_charger.c (commit aa17ce4a9 in | active |
+| learning_t585_sm5703_charger_zones_verified_temp_offset_2026_10_24 | mainline | learning | Observed: The SM5703 charger temperature zones work on the SM-T585 hardware. Deb | active |
 | learning_t585_sm5703_chunk3b_limiter_verified_module_swap_2026_10_24 | mainline | learning | Observed: Chunk 3b verified on HW by module swap only (no flash; kernel #28 stil | active |
 | learning_t585_sm5703_downstream_dt_pins_charger_params_2026_10_24 | mainline | learning | Observed: Downstream DT: SM5703 MFD @0x49 irq gpa2-7, mrstb gpc7-4, chg_en pin g | active |
 | learning_t585_sm5703_fg_temp_cycles_charge_useless_protection_2026_10_24 | mainline | learning | Observed: On the wall charger at about 1030 mA the FG temperature reaches 55 C i | active |
@@ -160,6 +166,7 @@
 | learning_t585_speaker_session_repeated_guessing_loop_2026_10_23 | workflow | learning | Observed: The speaker session repeated the listening-and-guessing loop for about | active |
 | learning_t585_speaker_silent_clicks_only_mainline_2026_10_23 | mainline | learning | Observed: SM-T585 speakers on mainline: no tone yet, only class-D switch clicks  | superseded_by: learning_t585_speaker_silent_dac_mux_stereo_dac_mixer_2026_10_24 |
 | learning_t585_speaker_silent_dac_mux_stereo_dac_mixer_2026_10_24 | mainline | learning | Observed: SM-T585 mainline speakers were silent (class-D hiss only) because RT56 | active |
+| learning_t585_stage1_pwrkeyd_screen_toggle_long_press_poweroff_2026_10_24 | mainline | learning | Observed: kernel/tools/pwrkeyd (nolibc, built by build-stage1.sh, started from i | active |
 | learning_t585_sustained_load_reaches_81c_trip_2026_10_24 | mainline | learning | Observed: On SM-T585 mainline at 1690 MHz on all 8 cores (busy loops) the SoC zo | active |
 | learning_t585_tmu_clocked_by_cpucl0_gates_2026_10_24 | mainline | learning | Observed: The 7870 TMU register block at 0x10130000 is clocked by the CPUCL0 gat | active |
 | learning_t585_tmu_irq_rise_fall_works_2026_10_24 | mainline | learning | Observed: TMU interrupt path works on mainline 7870. The exynos7 set_trips windo | active |
@@ -170,6 +177,7 @@
 | learning_tinyplay_alpine_2_0_broken_use_pcmplay_2026_10_23 | mainline | learning | Observed: The "tinyplay returns rc=0 instantly" symptom was a userland problem,  | active |
 | learning_trim_check_selected_subsystems_vanish_2026_10_24 | mainline | learning | Observed: Second occurrence, worse. In trim chunk 3, dropping defconfig =y optio | active |
 | learning_usb_cable_fake_reboots_2026_10_23 | workflow | learning | Observed: A crumbling USB cable produced fake "reboots" (ttyACM re-enumeration). | active |
+| pattern_check_iio_consumer_values_after_provider_dt_change_2026_10_24 | mainline | pattern | Rule: After a DT change that alters an IIO provider (supply, scale), read the co | active |
 | pattern_debug_crashing_driver_as_module_panic5_2026_10_24 | workflow | pattern | Rule: To debug a driver that crashes the boot, build it =m temporarily. The kern | active |
 | pattern_debug_stage1_hangs_memtool_udplog_2026_10_23 | workflow | pattern | Rule: For stage-1 hangs use kernel/tools/memtool (no-libc mmap /dev/mem tool) fo | active |
 | pattern_debugfs_regmap_shows_cache_compare_hw_reads_2026_10_24 | workflow | pattern | Rule: debugfs /sys/kernel/debug/regmap/<dev>/registers shows the regcache for no | active |
@@ -179,6 +187,7 @@
 | pattern_mixer_loopback_fft_and_wallclock_rate_check_2026_10_23 | mainline | pattern | Rule: Measure the AP-side digital path with the s1402x mixer-internal loopback ( | active |
 | pattern_poll_shell_after_reboot_f_under_10s_2026_10_24 | workflow | pattern | Rule: After `reboot -f` on stage 1, poll the shell every ~2 s instead of using f | active |
 | pattern_propose_measurement_when_listening_stops_converging_2026_10_23 | workflow | pattern | Rule: When by-ear (or by-eye) tests stop converging, stop guessing and propose a | active |
+| pattern_t585_charger_test_without_shell_setsid_dcpzones_2026_10_24 | mainline | pattern | Rule: For a test that needs the wall charger or no USB host, run a script that w | active |
 | pattern_t585_reload_audio_modules_from_host_2026_10_24 | mainline | pattern | Rule: Use kernel/out/alsa/reload.sh to reload the codec and machine modules from | active |
 | pattern_user_runs_audio_test_with_timed_register_write_2026_10_24 | workflow | pattern | Rule: When the user tests audio, let them run the test commands themselves via " | active |
 | todo_audio_analysis_lpass_i2s_2026_10_23 | mainline | todo | TODO: Audio analysis: compare downstream lpass-exynos7870.c + i2s.c with mainlin | active |
@@ -187,7 +196,8 @@
 | todo_sm5703_charger_fuel_gauge_2026_10_23 | mainline | todo | TODO: SM5703 charger and fuel gauge drivers. Chunk 1 (raw read) is DONE 2026-10- | active |
 | todo_stmfts_pm_runtime_before_register_2026_10_23 | mainline | todo | TODO: Fix an upstream-style bug in mainline stmfts: input_register_device() runs | active |
 | todo_t585_alsa_ucm_profile_for_pipewire_2026_10_24 | mainline | todo | TODO: For the future postmarketOS/PipeWire userspace, write an ALSA UCM profile  | active |
-| todo_t585_sm5703_charger_review_findings_2026_10_24 | mainline | todo | TODO: Charger review findings. Committed in src/mainline (branch gtaxllte) 2f65e | active |
+| todo_t585_pmic_reset_test_numbered_images_flash_panfrost_2026_10_24 | mainline | todo | TODO (user-confirmed order, 2026-10-24): | active |
+| todo_t585_sm5703_charger_review_findings_2026_10_24 | mainline | todo | TODO: Charger review findings, remaining optional points. Committed in src/mainl | active |
 | todo_t585_speaker_lineage_reference_dump_2026_10_23 | mainline | todo | TODO: The Lineage reference dump is done and the speaker works at runtime (see l | active |
 | todo_t585_thermal_followup_trips_cpufreq_2026_10_24 | mainline | todo | TODO: Thermal follow-up, remaining only: polling-delay 0 once the TMU IRQ is tru | active |
 | user_skill_profile_hw_bringup | general | user | User (avataristvan) skill profile for the galaxy-rab-a-10 device bring-up projec | active |

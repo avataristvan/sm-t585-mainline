@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792861505.634999
-edges: [{"target_id": "domain_t585_sm5703_battery_ntc_generic_adc_thermal_charger_zones_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_fg_temp_cycles_charge_useless_protection_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "domain_t585_sm5703_battery_ntc_generic_adc_thermal_charger_zones_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_fg_temp_cycles_charge_useless_protection_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_charger_zones_verified_temp_offset_2026_10_24", "edge_type": "related"}]
 cue: You compare battery NTC and fuel-gauge temperature on the wall charger, or wonder if NTC protection really responds.
 ---
 

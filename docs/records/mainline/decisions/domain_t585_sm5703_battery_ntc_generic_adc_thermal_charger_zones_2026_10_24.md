@@ -3,7 +3,7 @@ type: domain
 area: mainline
 perspective: agent
 created: 1792861505.394499
-edges: [{"target_id": "learning_t585_exynos7870_adc_mainline_support_2026_10_24", "edge_type": "derived_from"}, {"target_id": "domain_t585_sm5703_battery_ntc_exynos_adc_chunk3c_2026_10_24", "edge_type": "derived_from"}, {"target_id": "domain_t585_sm5703_charger_temp_limit_fg_proxy_2026_10_24", "edge_type": "supersedes"}]
+edges: [{"target_id": "learning_t585_exynos7870_adc_mainline_support_2026_10_24", "edge_type": "derived_from"}, {"target_id": "domain_t585_sm5703_battery_ntc_exynos_adc_chunk3c_2026_10_24", "edge_type": "derived_from"}, {"target_id": "domain_t585_sm5703_charger_temp_limit_fg_proxy_2026_10_24", "edge_type": "supersedes"}, {"target_id": "learning_t585_sm5703_charger_zones_verified_temp_offset_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_adc_vdd_supply_switches_consumers_to_mv_2026_10_24", "edge_type": "related"}]
 cue: You touch SM5703 charger temperature protection, battery NTC wiring (generic-adc-thermal, io-channels) or the charge temperature zones.
 ---
 

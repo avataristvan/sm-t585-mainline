@@ -46,6 +46,10 @@ for m in sound/soundcore sound/core/snd sound/core/snd-timer \
 done >> "$OUT"/initramfs.list
 echo "file /lib/modules/modules.order $OUT/modules.order 644 0 0" >> "$OUT"/initramfs.list
 
+# Power key daemon (nolibc, needs "make headers" in the kernel build dir)
+sh "$HERE"/tools/pwrkeyd/build.sh "$KOUT" "$OUT"/pwrkeyd
+echo "file /bin/pwrkeyd $OUT/pwrkeyd 755 0 0" >> "$OUT"/initramfs.list
+
 # Audio test tools, when built (tinymix links against musl)
 for t in tinymix pcmplay pcmrec; do
 	if [ -f "$OUT"/alsa/$t ]; then

@@ -72,6 +72,9 @@ busybox-extras telnetd -b 172.16.42.1 -l /bin/sh || log "telnetd failed"
 
 log "ready: telnet 172.16.42.1 or /dev/ttyACM0"
 
+# Power key: short press toggles the screen black, holding it powers off
+setsid /bin/pwrkeyd </dev/null >/dev/kmsg 2>&1 &
+
 # Audio and fuel gauge, in the background after the debug shells, so a hanging driver
 # cannot cost the shell. S-Boot drops the cmdline, so machine module
 # options go here (e.g. jack_switch=0).

@@ -3,6 +3,8 @@ type: learning
 area: workflow
 perspective: agent
 created: 1792857707.107686
+superseded_by: learning_t585_dtbs_check_clean_local_bindings_2026_10_24
+valid_until: 1792862897.150788
 edges: [{"target_id": "learning_clk_summary_safe_on_mainline_dtschema_venv_2026_10_24", "edge_type": "related"}]
 cue: You run make dt_binding_check or CHECK_DTBS=y, or wonder whether the gtaxllte DTS still passes dtbs_check.
 ---

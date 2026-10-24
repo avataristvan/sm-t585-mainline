@@ -25,7 +25,7 @@ The user is self-supporting this device — no vendor support; upstream help is 
 ## Current state (2026-10-23)
 
 - **Mainline Linux 7.3 boots** on the device with our own board DTS
-  `src/mainline/arch/arm64/boot/dts/exynos/exynos7870-gtaxllte.dts` (`dtbs_check`: clean except audio nodes without bindings; venv in `kernel/.venv`;
+  `src/mainline/arch/arm64/boot/dts/exynos/exynos7870-gtaxllte.dts` (`dtbs_check`: clean, with local bindings for the audio nodes; venv in `kernel/.venv`;
   binding entry added in `samsung-boards.yaml`).
 - Working: 8 CPUs, RAM, simpledrm framebuffer console (a8r8g8b8, colors correct), eMMC
   (25 MHz, HS200 not yet set), S2MPU05 PMIC regulators, keys + hall, USB gadget
@@ -66,7 +66,7 @@ cd src/mainline
 O=../../kernel/build
 scripts/kconfig/merge_config.sh -m -O $O arch/arm64/configs/defconfig ../../kernel/gtaxllte-stage1.config ../../kernel/gtaxllte-builtin.config
 make O=$O ARCH=arm64 LLVM=1 CC="ccache clang" olddefconfig
-make -j8 O=$O ARCH=arm64 LLVM=1 CC="ccache clang" Image dtbs modules
+make -j8 O=$O ARCH=arm64 LLVM=1 CC="ccache clang" Image dtbs modules headers  # headers: for the nolibc tools (pwrkeyd)
 sh ../../kernel/build-stage1.sh $O ../../kernel/prebuilt/busybox-1.37.0-r31-aarch64-static ../../kernel/out
 ```
 

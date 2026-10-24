@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792774428.16664
-edges: [{"target_id": "learning_t585_rt5659_codec_probes_mainline_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_rt5659_codec_probes_mainline_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_dtbs_check_clean_local_bindings_2026_10_24", "edge_type": "related"}]
 cue: You write an rt5659 codec DTS node with ldo1-en/reset GPIOs and the binding or dtbs_check says different property names.
 ---
 

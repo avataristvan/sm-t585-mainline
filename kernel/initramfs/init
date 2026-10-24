@@ -14,6 +14,9 @@ mount -t devtmpfs devtmpfs /dev 2>/dev/null
 mkdir -p /dev/pts && mount -t devpts devpts /dev/pts
 mount -t configfs configfs /sys/kernel/config
 mount -t pstore pstore /sys/fs/pstore 2>/dev/null
+# S-Boot passes loglevel=4; raise it so the console (and with it pstore)
+# records everything from here on.
+echo 8 > /proc/sys/kernel/printk
 
 log() {
 	echo "[stage1] $*" > /dev/kmsg
@@ -69,7 +72,7 @@ busybox-extras telnetd -b 172.16.42.1 -l /bin/sh || log "telnetd failed"
 
 log "ready: telnet 172.16.42.1 or /dev/ttyACM0"
 
-# Audio, in the background after the debug shells, so a hanging driver
+# Audio and fuel gauge, in the background after the debug shells, so a hanging driver
 # cannot cost the shell. S-Boot drops the cmdline, so machine module
 # options go here (e.g. jack_switch=0).
 SND_MACHINE_OPTS=""

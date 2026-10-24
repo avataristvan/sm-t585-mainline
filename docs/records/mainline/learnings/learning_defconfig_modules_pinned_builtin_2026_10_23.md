@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792771107.398246
-edges: [{"target_id": "domain_stage1_enable_modules_for_stmfts_2026_10_23", "edge_type": "derived_from"}, {"target_id": "domain_kernel_config_trim_policy_bt_2026_10_23", "edge_type": "related"}, {"target_id": "domain_kernel_config_trim_policy_periph_net_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "domain_stage1_enable_modules_for_stmfts_2026_10_23", "edge_type": "derived_from"}, {"target_id": "domain_kernel_config_trim_policy_bt_2026_10_23", "edge_type": "related"}, {"target_id": "domain_kernel_config_trim_policy_periph_net_2026_10_23", "edge_type": "related"}, {"target_id": "domain_kernel_trim_chunk1_foreign_sound_disabled_2026_10_24", "edge_type": "related"}, {"target_id": "learning_dropping_drivers_removes_selected_core_options_2026_10_24", "edge_type": "related"}]
 cue: You enable CONFIG_MODULES or change the kernel fragments and wonder why the image is big or drivers vanished; or build with merge_config.
 ---
 

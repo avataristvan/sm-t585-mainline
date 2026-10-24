@@ -3,7 +3,7 @@ type: domain
 area: workflow
 perspective: user
 created: 1792773115.942563
-edges: [{"target_id": "domain_bringup_interactive_devteam_for_drivers_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "domain_bringup_interactive_devteam_for_drivers_2026_10_23", "edge_type": "related"}, {"target_id": "learning_coder_subagent_brief_ask_make_modules_2026_10_24", "edge_type": "related"}]
 cue: You start a todo and decide whether to spawn a cheaper subagent or do it in the main session.
 ---
 

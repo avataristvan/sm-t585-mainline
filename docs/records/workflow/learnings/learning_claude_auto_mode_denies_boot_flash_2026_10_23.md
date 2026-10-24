@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: agent
 created: 1792785321.17311
-edges: [{"target_id": "domain_flash_boot_no_confirmation_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "domain_flash_boot_no_confirmation_2026_10_23", "edge_type": "related"}, {"target_id": "learning_claude_auto_mode_denies_boot_flash_again_2026_10_24", "edge_type": "related"}]
 cue: You are about to flash BOOT with dd via devsh.py in Claude Code auto mode and the permission classifier denies it.
 ---
 

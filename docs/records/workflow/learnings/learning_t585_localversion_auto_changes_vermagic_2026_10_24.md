@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: agent
 created: 1792822788.469499
-edges: [{"target_id": "learning_t585_rt5659_remove_leaves_regcache_stale_fixed_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_rt5659_remove_leaves_regcache_stale_fixed_2026_10_24", "edge_type": "related"}, {"target_id": "learning_module_new_device_test_before_flash_2026_10_24", "edge_type": "related"}]
 cue: Kernel modules built after a commit in src/mainline are refused with "invalid module format" by the booted kernel.
 ---
 

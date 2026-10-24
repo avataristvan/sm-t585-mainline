@@ -1,0 +1,73 @@
+# buses fg=8 muic=10 mfd=4
+# t_s status charge_type online cap_% volt_uV curr_now_mA curr_avg temp input_lim chg_cur | fg05-09 | mfd0c-13 st08-0b st6b | muic07 muic0a
+80 Charging Slow 4 12 3691000 -89 -88 256 450 450 | 1c 0c 1c 0c b0 03 bb 03 3e 00 | 55 07 03 07 12 d8 7a 08 08 08 03 00 20 | 1f 04
+# MUIC 05-1f: dc 00 1f 03 00 04 00 00 00 00 00 00 00 00 25 00 00 00 00 00 00 00 00 00 03 00 00 
+# MFD 04-7f: be ff f3 ff 08 08 03 00 55 07 03 07 12 d8 7a 08 1c 94 19 0e 00 05 10 05 14 ac 01 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff a0 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 03 00 aa ff aa ff 00 ff 13 85 8f 20 00 07 03 07 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+91 Charging Slow 4 12 3718000 207 206 256 450 450 | 1c 0c 1c 0c b0 03 a8 03 4c 80 | 55 07 03 07 12 d8 7a 08 08 08 03 00 20 | 1f 04
+101 Charging Slow 4 12 3636000 -226 -226 256 450 450 | 1c 0c 1c 0c b0 03 aa 03 25 80 | 55 07 03 07 12 d8 7a 08 08 08 03 00 20 | 1f 04
+112 Charging Slow 4 12 3558000 -589 -588 257 450 450 | 1c 0c 1c 0c b0 03 8f 03 97 80 | 55 07 03 07 12 d8 7a 08 08 08 03 00 20 | 1f 04
+122 Charging Slow 4 12 3652000 -117 -116 257 450 450 | 1c 0c 1c 0c b0 03 a2 03 2d 80 | 55 07 03 07 12 d8 7a 08 08 08 03 00 20 | 1f 04
+132 Discharging N/A 1 12 3578000 -175 -174 258 450 0 | 10 0c 10 0c af 03 7f 03 e9 80 | 55 07 03 07 12 80 7a 08 00 00 00 00 40 | 1f 00
+# MUIC 05-1f: dc 00 1f 03 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 
+# MFD 04-7f: be ff f3 ff 00 00 00 00 55 07 03 07 12 80 7a 08 1c 94 19 0e 00 05 10 05 14 ac 01 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff a0 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 03 00 aa ff aa ff 00 ff 20 80 87 40 00 07 03 07 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+143 Charging Fast 3 12 3472000 -644 -644 258 1650 1650 | 1c 0c 1c 0c b0 03 e3 03 f8 00 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+# MUIC 05-1f: dc 00 1f 03 00 00 00 00 00 00 00 00 00 00 01 00 40 00 00 00 00 00 00 00 03 00 00 
+# MFD 04-7f: be ff f3 ff 08 08 03 00 55 1f 03 2e 12 d8 7a 08 1c 94 19 0e 00 05 10 05 14 ac 01 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff a0 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 03 00 aa ff aa ff 00 ff 93 85 8f 20 00 1f 03 2e ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+153 Charging Fast 3 12 3800000 453 452 258 1650 1650 | 1c 0c 1c 0c b0 03 d5 03 b6 00 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+164 Charging Fast 3 12 3812000 519 518 259 1650 1650 | 1c 0c 1c 0c b0 03 cf 03 77 00 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+174 Charging Fast 3 12 3812000 511 510 260 1650 1650 | 28 0c 28 0c b0 03 e0 03 e9 00 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+185 Charging Fast 3 12 3875000 882 882 261 1650 1650 | 34 0c 34 0c b0 03 e1 03 e9 00 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+195 Charging Fast 3 12 3914000 988 988 261 1650 1650 | 40 0c 40 0c b0 03 e2 03 d1 00 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+206 Charging Fast 3 12 3968000 1414 1414 262 1650 1650 | 40 0c 40 0c b0 03 f8 03 6a 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+216 Charging Fast 3 12 3894000 949 948 263 1650 1650 | 50 0c 50 0c b0 03 e5 03 ee 00 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+227 Charging Fast 3 12 3839000 980 980 263 1650 1650 | 5c 0c 5c 0c b0 03 dc 03 b0 00 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+237 Charging Fast 3 12 3886000 976 976 263 1650 1650 | 68 0c 68 0c b0 03 e6 03 e8 00 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+247 Charging Fast 3 12 3906000 1085 1084 264 1650 1650 | 74 0c 74 0c b0 03 eb 03 13 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+258 Charging Fast 3 12 3921000 1109 1108 264 1650 1650 | 80 0c 80 0c b0 03 ec 03 12 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+268 Charging Fast 3 12 3921000 1109 1108 264 1650 1650 | 80 0c 80 0c b0 03 ec 03 1c 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+279 Charging Fast 3 12 3925000 1109 1108 264 1650 1650 | 8c 0c 8c 0c b0 03 ec 03 1d 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+289 Charging Fast 3 12 3925000 1109 1108 264 1650 1650 | 98 0c 98 0c b0 03 ed 03 1b 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+299 Charging Fast 3 12 3921000 1113 1112 264 1650 1650 | a4 0c a4 0c b0 03 ed 03 11 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+310 Charging Fast 3 12 3925000 1113 1112 264 1650 1650 | b4 0c b4 0c b0 03 ed 03 1e 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+320 Charging Fast 3 12 3925000 1082 1082 264 1650 1650 | c0 0c c0 0c b1 03 ed 03 19 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+331 Discharging N/A 1 12 3746000 1109 1108 264 450 0 | c0 0c c0 0c b1 03 95 03 86 80 | 55 07 03 2e 12 80 7a 08 00 00 00 00 40 | 1f 00
+# MUIC 05-1f: dc 00 1f 03 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 
+# MFD 04-7f: be ff f3 ff 00 00 00 00 55 07 03 2e 12 80 7a 08 1c 94 19 0e 00 05 10 05 14 ac 01 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff a0 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 03 00 aa ff aa ff 00 ff 20 80 87 40 00 07 03 2e ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+341 Charging Fast 3 12 3527000 -648 -648 264 1650 1650 | c0 0c c0 0c b1 03 ef 03 32 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+# MUIC 05-1f: dc 00 1f 03 00 00 00 00 00 00 00 00 00 00 01 00 40 00 00 00 00 00 00 00 03 00 00 
+# MFD 04-7f: be ff f3 ff 08 08 03 00 55 1f 03 2e 12 d8 7a 08 1c 94 19 0e 00 05 10 05 14 ac 01 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff a0 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 03 00 aa ff aa ff 00 ff 13 85 8f 20 00 1f 03 2e ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+352 Charging Fast 3 12 3914000 1039 1038 264 1650 1650 | cc 0c cc 0c b1 03 ea 03 1d 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+362 Charging Fast 3 12 3937000 1101 1100 264 1650 1650 | d8 0c d8 0c b1 03 ef 03 07 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+373 Charging Fast 3 12 3937000 1144 1144 264 1650 1650 | e4 0c e4 0c b1 03 f0 03 2c 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+383 Charging Fast 3 13 3941000 1171 1170 264 1650 1650 | f0 0c f0 0c b1 03 f1 03 1e 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+394 Charging Fast 3 13 3941000 1179 1178 264 1650 1650 | fc 0c fc 0c b1 03 f1 03 2d 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+404 Charging Fast 3 13 3941000 1160 1160 263 1650 1650 | 08 0d 08 0d b1 03 f2 03 2e 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+415 Charging Fast 3 13 3945000 1179 1178 263 1650 1650 | 18 0d 18 0d b1 03 f2 03 2f 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+425 Charging Fast 3 13 3945000 1179 1178 263 1650 1650 | 24 0d 24 0d b1 03 f2 03 2e 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+436 Charging Fast 3 13 3871000 1042 1042 263 1650 1650 | 30 0d 30 0d b1 03 e9 03 da 00 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+448 Charging Fast 3 13 3910000 1097 1096 263 1650 1650 | 3c 0d 3c 0d b1 03 f0 03 16 01 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+458 Charging Fast 3 13 3933000 613 612 264 1650 1650 | 48 0d 48 0d b1 03 e0 03 dd 00 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+469 Charging Fast 3 13 3886000 816 816 264 1650 1650 | 54 0d 54 0d b1 03 e7 03 d5 00 | 55 1f 03 2e 12 d8 7a 08 08 08 03 00 20 | 1f 00
+479 Discharging N/A 1 13 3945000 1152 1152 264 450 0 | 60 0d 60 0d b2 03 97 03 86 80 | 55 07 03 2e 12 80 7a 08 00 00 00 00 40 | 1f 00
+# MUIC 05-1f: dc 00 1f 03 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 
+# MFD 04-7f: be ff f3 ff 00 00 00 00 55 07 03 2e 12 80 7a 08 1c 94 19 0e 00 05 10 05 14 ac 01 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff a0 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 03 00 aa ff aa ff 00 ff 20 80 87 40 00 07 03 2e ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+490 Charging Fast 3 13 3644000 -613 -612 264 1650 1650 | 60 0d 60 0d b2 03 eb 03 07 01 | 55 1f 03 2e 12 d8 7a 08 00 08 03 00 20 | 1f 00
+# MUIC 05-1f: dc 00 1f 03 00 00 00 00 00 00 00 00 00 00 01 00 40 00 00 00 00 00 00 00 03 00 00 
+# MFD 04-7f: be ff f3 ff 00 08 03 00 55 1f 03 2e 12 d8 7a 08 1c 94 19 0e 00 05 10 05 14 ac 01 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff a0 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 03 00 aa ff aa ff 00 ff 13 85 8f 20 00 1f 03 2e ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+500 Charging Fast 3 13 3902000 921 920 264 1650 1650 | 6c 0d 6c 0d b2 03 eb 03 06 01 | 55 1f 03 2e 12 d8 7a 08 00 08 03 00 20 | 1f 00
+511 Charging Fast 3 13 3914000 988 988 264 1650 1650 | 6c 0d 6c 0d b2 03 eb 03 07 01 | 55 1f 03 2e 12 d8 7a 08 00 08 03 00 20 | 1f 00
+521 Charging Fast 3 13 3917000 1019 1018 264 1650 1650 | 7c 0d 7c 0d b2 03 ea 03 01 01 | 55 1f 03 2e 12 d8 7a 08 00 08 03 00 20 | 1f 00
+532 Discharging N/A 1 13 3585000 -542 -542 264 450 0 | 7c 0d 7c 0d b2 03 b5 03 01 80 | 55 07 03 07 12 80 7a 08 08 08 00 00 20 | 1f 04
+# MUIC 05-1f: dc 00 1f 03 00 04 00 00 00 00 00 00 00 00 25 00 00 00 00 00 00 00 00 00 03 00 00 
+# MFD 04-7f: be ff f3 ff 08 08 00 00 55 07 03 07 12 80 7a 08 1c 94 19 0e 00 05 10 05 14 ac 01 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff a0 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 03 00 aa ff aa ff 00 ff 03 85 8f 20 00 08 03 07 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+542 Discharging N/A 1 13 3585000 -542 -542 264 450 0 | 7c 0d 7c 0d b2 03 b7 03 01 80 | 55 07 03 07 12 80 7a 08 00 08 00 00 20 | 1f 04
+553 Discharging N/A 1 13 3585000 -542 -542 264 450 0 | 7c 0d 7c 0d b2 03 b7 03 01 80 | 55 07 03 07 12 80 7a 08 00 08 00 00 20 | 1f 04
+563 Discharging N/A 1 13 3714000 -3 -2 264 450 0 | 7c 0d 7c 0d b2 03 b7 03 01 80 | 55 07 03 07 12 80 7a 08 08 08 00 00 20 | 1f 04
+574 Discharging N/A 1 13 3714000 -3 -2 264 450 0 | 7c 0d 7c 0d b2 03 b7 03 01 80 | 55 07 03 07 12 80 7a 08 00 08 00 00 20 | 1f 04
+585 Discharging N/A 1 13 3714000 -3 -2 264 450 0 | 7c 0d 7c 0d b2 03 b7 03 01 80 | 55 07 03 07 12 80 7a 08 00 08 00 00 20 | 1f 04
+595 Discharging N/A 1 13 3714000 -3 -2 263 450 0 | 7c 0d 7c 0d b2 03 b6 03 01 80 | 55 07 03 07 12 80 7a 08 00 08 00 00 20 | 1f 04
+606 Discharging N/A 1 13 3714000 -3 -2 263 450 0 | 7c 0d 7c 0d b2 03 b6 03 01 80 | 55 07 03 07 12 80 7a 08 00 08 00 00 20 | 1f 04
+616 Discharging N/A 1 13 3714000 -3 -2 262 450 0 | 7c 0d 7c 0d b2 03 b6 03 01 80 | 55 07 03 07 12 80 7a 08 00 08 00 00 20 | 1f 04
+627 Discharging N/A 1 13 3710000 -3 -2 262 450 0 | 7c 0d 7c 0d b2 03 b6 03 01 80 | 55 07 03 07 12 80 7a 08 00 08 00 00 20 | 1f 04
+637 Discharging N/A 1 13 3710000 -3 -2 261 450 0 | 7c 0d 7c 0d b2 03 b6 03 01 80 | 55 07 03 07 12 80 7a 08 00 08 00 00 20 | 1f 04
+648 Discharging N/A 1 13 3710000 -3 -2 261 450 0 | 7c 0d 7c 0d b2 03 b6 03 01 80 | 55 07 03 07 12 80 7a 08 00 08 00 00 20 | 1f 04

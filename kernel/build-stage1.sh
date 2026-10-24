@@ -30,15 +30,17 @@ file /bin/busybox-extras $HERE/prebuilt/alpine/busybox-extras-1.37.0-r30-aarch64
 dir /lib/modules 755 0 0
 EOF
 
-# Audio modules in load order (init insmods them in this order). Modules, not
-# built in, so they can still be reloaded with other parameters at runtime.
+# Modules in load order (init insmods them in this order): audio, then the
+# SM5703 fuel gauge and charger. Modules, not built in, so they can still be reloaded with
+# other parameters at runtime.
 : > "$OUT"/modules.order
 for m in sound/soundcore sound/core/snd sound/core/snd-timer \
 	sound/core/snd-pcm sound/core/snd-pcm-dmaengine sound/soc/snd-soc-core \
 	sound/soc/codecs/snd-soc-rl6231 sound/soc/codecs/snd-soc-rt5659 \
 	sound/soc/samsung/snd-soc-s1402x-mixer sound/soc/samsung/snd-soc-s3c-dma \
 	sound/soc/samsung/snd-soc-idma sound/soc/samsung/snd-soc-i2s \
-	sound/soc/samsung/snd-soc-gtaxllte-rt5659; do
+	sound/soc/samsung/snd-soc-gtaxllte-rt5659 \
+	drivers/power/supply/sm5703_fuel_gauge drivers/power/supply/sm5703_charger; do
 	echo "file /lib/modules/${m##*/}.ko $KOUT/$m.ko 644 0 0"
 	echo "${m##*/}" >> "$OUT"/modules.order
 done >> "$OUT"/initramfs.list

@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: agent
 created: 1792772532.827232
-edges: [{"target_id": "learning_t585_touch_works_stmfts_fts1a096_2026_10_23", "edge_type": "related"}, {"target_id": "todo_sm5703_charger_fuel_gauge_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_i2cx_rt5659_register_access_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_touch_works_stmfts_fts1a096_2026_10_23", "edge_type": "related"}, {"target_id": "todo_sm5703_charger_fuel_gauge_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_i2cx_rt5659_register_access_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_raw_read_addresses_por_charger_undercharges_2026_10_24", "edge_type": "related"}]
 cue: You need to poke an i2c chip or capture and decode raw evdev input on the stage-1 SM-T585 without extra userland.
 ---
 

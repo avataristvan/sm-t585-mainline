@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792774427.976406
-edges: [{"target_id": "learning_t585_audio_path_rt5659_s1402x_gap_2026_10_23", "edge_type": "related"}, {"target_id": "todo_trim_kernel_config_2026_10_23", "edge_type": "related"}, {"target_id": "domain_priority_audio_bt_dsi_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_tmp_is_tmpfs_refetch_modules_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_audio_path_rt5659_s1402x_gap_2026_10_23", "edge_type": "related"}, {"target_id": "domain_priority_audio_bt_dsi_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_tmp_is_tmpfs_refetch_modules_2026_10_23", "edge_type": "related"}]
 cue: You continue SM-T585 audio bring-up and need to know what already works for the RT5659 codec (chunk 1 done) and how it is wired in the DTS.
 ---
 

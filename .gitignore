@@ -19,3 +19,6 @@
 
 # Local Claude Code permissions
 /.claude/settings.local.json
+
+# Python env for dtbs_check / acm-shell.py (pip install dtschema pyusb)
+kernel/.venv/

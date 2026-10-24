@@ -1,0 +1,40 @@
+[ECT] : Minlock Information
+	[PARSER VERSION] : 1
+	[VERSION] : 0.0 
+	[NUM OF DOMAIN] : 2
+		[DOMAIN NAME] : dvfs_cpucl0
+			[Frequency] : (MAIN)2002000, (SUB)902000
+			[Frequency] : (MAIN)1924000, (SUB)902000
+			[Frequency] : (MAIN)1794000, (SUB)902000
+			[Frequency] : (MAIN)1690000, (SUB)902000
+			[Frequency] : (MAIN)1586000, (SUB)902000
+			[Frequency] : (MAIN)1482000, (SUB)902000
+			[Frequency] : (MAIN)1352000, (SUB)836000
+			[Frequency] : (MAIN)1248000, (SUB)836000
+			[Frequency] : (MAIN)1144000, (SUB)728000
+			[Frequency] : (MAIN)1014000, (SUB)728000
+			[Frequency] : (MAIN)902000, (SUB)676000
+			[Frequency] : (MAIN)839000, (SUB)546000
+			[Frequency] : (MAIN)757000, (SUB)546000
+			[Frequency] : (MAIN)676000, (SUB)451000
+			[Frequency] : (MAIN)546000, (SUB)451000
+			[Frequency] : (MAIN)449000, (SUB)0
+			[Frequency] : (MAIN)343000, (SUB)0
+		[DOMAIN NAME] : dvfs_cpucl1
+			[Frequency] : (MAIN)2002000, (SUB)902000
+			[Frequency] : (MAIN)1924000, (SUB)902000
+			[Frequency] : (MAIN)1794000, (SUB)902000
+			[Frequency] : (MAIN)1690000, (SUB)902000
+			[Frequency] : (MAIN)1586000, (SUB)902000
+			[Frequency] : (MAIN)1482000, (SUB)902000
+			[Frequency] : (MAIN)1352000, (SUB)836000
+			[Frequency] : (MAIN)1248000, (SUB)836000
+			[Frequency] : (MAIN)1144000, (SUB)728000
+			[Frequency] : (MAIN)1014000, (SUB)728000
+			[Frequency] : (MAIN)902000, (SUB)676000
+			[Frequency] : (MAIN)839000, (SUB)546000
+			[Frequency] : (MAIN)757000, (SUB)546000
+			[Frequency] : (MAIN)676000, (SUB)451000
+			[Frequency] : (MAIN)546000, (SUB)451000
+			[Frequency] : (MAIN)449000, (SUB)0
+			[Frequency] : (MAIN)343000, (SUB)0

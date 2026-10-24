@@ -3,7 +3,7 @@ type: learning
 area: device
 perspective: agent
 created: 1792769192.281225
-edges: [{"target_id": "domain_target_device_sm_t585_2026_10_23", "edge_type": "related"}, {"target_id": "learning_tinyplay_alpine_2_0_broken_use_pcmplay_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_pmu_regmap_cat_hangs_device_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "domain_target_device_sm_t585_2026_10_23", "edge_type": "related"}, {"target_id": "learning_tinyplay_alpine_2_0_broken_use_pcmplay_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_pmu_regmap_cat_hangs_device_2026_10_23", "edge_type": "related"}, {"target_id": "learning_clk_summary_safe_on_mainline_dtschema_venv_2026_10_24", "edge_type": "related"}]
 cue: You are about to read debugfs or sysfs files on the running SM-T585 to inspect clocks or GPIOs.
 ---
 

@@ -3,6 +3,8 @@ type: domain
 area: goal
 perspective: user
 created: 1792769208.077887
+superseded_by: domain_priority_thermal_battery_before_bt_2026_10_24
+valid_until: 1792831297.91234
 edges: [{"target_id": "learning_mainline_73_exynos7870_gap_2026_10_23", "edge_type": "derived_from"}, {"target_id": "domain_t585_lean_linux_music_device_2026_10_23", "edge_type": "related"}, {"target_id": "todo_audio_analysis_lpass_i2s_2026_10_23", "edge_type": "related"}, {"target_id": "todo_bluetooth_then_dsi_panel_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_lpass_is_not_exynos5433_lpass_2026_10_23", "edge_type": "contradicts"}, {"target_id": "learning_t585_audio_path_rt5659_s1402x_gap_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_rt5659_codec_probes_mainline_2026_10_23", "edge_type": "related"}]
 cue: Touch works on the SM-T585 and you must pick the next subsystem: audio, Bluetooth or the real DSI panel.
 ---

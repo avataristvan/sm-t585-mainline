@@ -25,7 +25,7 @@ The user is self-supporting this device — no vendor support; upstream help is 
 ## Current state (2026-10-23)
 
 - **Mainline Linux 7.3 boots** on the device with our own board DTS
-  `src/mainline/arch/arm64/boot/dts/exynos/exynos7870-gtaxllte.dts` (passes `dtbs_check`;
+  `src/mainline/arch/arm64/boot/dts/exynos/exynos7870-gtaxllte.dts` (`dtbs_check`: clean except audio nodes without bindings; venv in `kernel/.venv`;
   binding entry added in `samsung-boards.yaml`).
 - Working: 8 CPUs, RAM, simpledrm framebuffer console (a8r8g8b8, colors correct), eMMC
   (25 MHz, HS200 not yet set), S2MPU05 PMIC regulators, keys + hall, USB gadget

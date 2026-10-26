@@ -1,5 +1,10 @@
 # Third-party ROM/GApps zips and the personal invoice.pdf
 /samsung galaxy tab a (2016)/
+/lineageOS/
+# U-Boot clone for the chainload work (2026-10-25); submodule/fork decision pending
+/src/u-boot/
+/uboot/build/
+/uboot/out/
 
 # Build output, regenerable with kernel/build-stage1.sh
 /kernel/build/
@@ -22,3 +27,4 @@
 
 # Python env for dtbs_check / acm-shell.py (pip install dtschema pyusb)
 kernel/.venv/
+/CLAUDE.local.md

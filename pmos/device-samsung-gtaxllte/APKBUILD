@@ -1,0 +1,46 @@
+# Reference: <https://postmarketos.org/devicepkg>
+maintainer="Istvan Lovas <avataristvan@googlemail.com>"
+pkgname=device-samsung-gtaxllte
+pkgdesc="Samsung Galaxy Tab A 10.1 (2016) LTE"
+pkgver=5
+pkgrel=2
+url="https://github.com/avataristvan/sm-t585-mainline"
+license="MIT"
+arch="aarch64"
+options="!check !archcheck"
+depends="
+	alsa-utils
+	bluez
+	linux-firmware-ath10k
+	linux-firmware-qca
+	linux-samsung-gtaxllte
+	postmarketos-base
+	systemd-boot
+	wireless-regdb
+"
+makedepends="devicepkg-dev"
+install="$pkgname.post-install"
+source="
+	deviceinfo
+	kernel-cmdline.conf
+	61-gtaxllte-keys.hwdb
+	device-samsung-gtaxllte.post-install
+"
+
+build() {
+	devicepkg_build $startdir $pkgname
+}
+
+package() {
+	devicepkg_package $startdir $pkgname
+
+	install -Dm644 "$srcdir"/61-gtaxllte-keys.hwdb \
+		"$pkgdir"/usr/lib/udev/hwdb.d/61-gtaxllte-keys.hwdb
+}
+
+sha512sums="
+6957f577bd220881a422ed5b17311c236243fa3a4fecc43ebbd8e9a380b73c7291806bf84c1485fb4298a3d2c9325a7368c0bcae2c19a5550f96a3851bce22f3  deviceinfo
+751ec21fae1592e4e19a242772fdc187bbef37dbd2b6df2742670fdb9bc98d0000954bbf246ee6824632ace35febfbea352a72d6d7989559f9a9dd3d747b15ee  kernel-cmdline.conf
+548bff221d0b2b921f346e95da21e3ad48abdb58a8d3e0fb6807923de093eac20dbe4debd64563fdfc013b6bc2c764817b9301f23b597c4323b96a5de23341a8  61-gtaxllte-keys.hwdb
+2a12498067815274bdc4919d1b60f1a88b945f89a3fa403920cef787f184c8548f02ae343ac37bd279853139e73a31c72b3a60c6b4d156b81e41154dad2a6b1c  device-samsung-gtaxllte.post-install
+"

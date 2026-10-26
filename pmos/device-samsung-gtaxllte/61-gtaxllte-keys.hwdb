@@ -1,0 +1,6 @@
+# The Home key is KEY_HOMEPAGE in the mainline DTS (gpio-keys, first child =
+# index 0), which GNOME maps to "open browser". Remap to the Super key so it
+# opens the overview. gpio-keys has no MSC_SCAN; the scancode is the button
+# index in the keymap (drivers/input/keyboard/gpio_keys.c).
+evdev:name:GPIO Keys:*
+ KEYBOARD_KEY_0=leftmeta

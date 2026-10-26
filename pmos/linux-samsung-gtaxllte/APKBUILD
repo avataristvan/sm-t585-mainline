@@ -1,0 +1,80 @@
+# Kernel config: kernel/build/.config from defconfig + kernel/gtaxllte-stage1.config
+# + kernel/gtaxllte-builtin.config + kernel/gtaxllte-pmos.config.
+# Build from the working tree: pmbootstrap build linux-samsung-gtaxllte --src=<src/mainline>
+maintainer="Istvan Lovas <avataristvan@googlemail.com>"
+pkgname=linux-samsung-gtaxllte
+pkgver=7.3.0
+pkgrel=6
+pkgdesc="Mainline kernel fork for the Samsung Galaxy Tab A 10.1 (2016) LTE"
+arch="aarch64"
+_carch="arm64"
+_flavor="samsung-gtaxllte"
+url="https://github.com/avataristvan/linux/tree/gtaxllte"
+license="GPL-2.0-only"
+options="!strip !check !tracedeps pmb:cross-native pmb:kconfigcheck-zram"
+makedepends="
+	bc
+	bison
+	clang
+	dtc
+	elfutils-dev
+	flex
+	linux-headers
+	lld
+	llvm
+	openssl-dev
+	pahole
+	perl
+	postmarketos-installkernel
+	python3
+	zstd
+"
+
+# Only built from the local tree for now (--src replaces builddir); a pinned
+# tarball of the fork comes once the work there is committed and pushed.
+_config="config-$_flavor.aarch64"
+source="
+	$_config
+	timeconst.bc
+"
+builddir="$srcdir/linux"
+
+prepare() {
+	default_prepare
+	cp "$srcdir/$_config" .config
+	# --src copies the tree with the kernel's .gitignore as rsync excludes;
+	# rsync ignores its "!kernel/time/timeconst.bc" exception to "*.bc".
+	[ -f kernel/time/timeconst.bc ] || cp "$srcdir"/timeconst.bc kernel/time/
+}
+
+build() {
+	unset LDFLAGS
+	make ARCH="$_carch" LLVM=1 HOSTLDFLAGS="-fuse-ld=lld" olddefconfig
+	make ARCH="$_carch" LLVM=1 HOSTLDFLAGS="-fuse-ld=lld" \
+		KBUILD_BUILD_VERSION="$((pkgrel + 1))-postmarketOS"
+}
+
+package() {
+	mkdir -p "$pkgdir"/boot
+
+	# Uncompressed Image: systemd-boot starts it through the EFI stub
+	make install dtbs_install modules_install \
+		ARCH="$_carch" \
+		LLVM=1 \
+		INSTALL_PATH="$pkgdir"/boot \
+		INSTALL_MOD_PATH="$pkgdir"/usr \
+		INSTALL_MOD_STRIP=1 \
+		INSTALL_DTBS_PATH="$pkgdir"/boot/dtbs
+	rm -f "$pkgdir"/usr/lib/modules/*/build "$pkgdir"/usr/lib/modules/*/source
+
+	install -D "$builddir"/include/config/kernel.release \
+		"$pkgdir"/usr/share/kernel/"$_flavor"/kernel.release
+
+	install -Dm644 "$builddir"/arch/"$_carch"/boot/Image \
+		"$pkgdir"/boot/vmlinuz
+}
+
+sha512sums="
+2c7c18a2037b515114c0a9e8cd88dbb2a0e47f84d49da4c206cdf5639596c5f0392b782175d53f05f22971c9c33be3fb998b52600c8da4fa2c9ccd3ee893c46e  config-samsung-gtaxllte.aarch64
+c3b69c3574b867b6fc3fae162f6c91593a2e351599037b38d6ebc25af13fd238edaa471352b689b05d961426bf148b7b0dbbdccd8a4622a5e89a5ed1ac5082e0  timeconst.bc
+"

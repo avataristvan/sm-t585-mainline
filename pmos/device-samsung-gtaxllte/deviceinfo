@@ -1,0 +1,25 @@
+# Reference: <https://postmarketos.org/deviceinfo>
+# Please use double quotes only. You can source this file in shell
+# scripts.
+
+deviceinfo_format_version="0"
+deviceinfo_name="Samsung Galaxy Tab A 10.1 (2016) LTE"
+deviceinfo_manufacturer="Samsung"
+deviceinfo_codename="samsung-gtaxllte"
+deviceinfo_year="2016"
+deviceinfo_arch="aarch64"
+
+# Device related
+deviceinfo_chassis="tablet"
+deviceinfo_external_storage="true"
+deviceinfo_screen_width="1200"
+deviceinfo_screen_height="1920"
+deviceinfo_drm="true"
+
+# Bootloader related: mainline U-Boot (uboot/build.sh) in BOOT, chainloaded by
+# S-Boot. U-Boot maps USERDATA as a disk (blkmap) and EFI-boots systemd-boot
+# from the FAT32 boot partition; it loads dtbs/<deviceinfo_dtb>.dtb from there.
+deviceinfo_boot_filesystem="fat32"
+deviceinfo_flash_method="fastboot"
+deviceinfo_dtb="exynos/exynos7870-gtaxllte"
+deviceinfo_initfs_compression="zstd:fast"

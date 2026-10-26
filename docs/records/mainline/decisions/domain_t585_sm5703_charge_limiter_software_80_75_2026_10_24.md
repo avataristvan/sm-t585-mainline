@@ -3,7 +3,9 @@ type: domain
 area: mainline
 perspective: user
 created: 1792859785.932253
-edges: [{"target_id": "domain_t585_sm5703_fuel_gauge_readonly_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_charger_base_verified_hw_kernel28_2026_10_24", "edge_type": "related"}]
+superseded_by: domain_t585_charge_limit_controlled_by_gnome_upower_default_100_2026_10_27
+valid_until: 1793051334.827611
+edges: [{"target_id": "domain_t585_sm5703_fuel_gauge_readonly_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_charger_base_verified_hw_kernel28_2026_10_24", "edge_type": "related"}, {"target_id": "domain_t585_sm5703_fg_status_from_charger_supplier_2026_10_27", "edge_type": "related"}]
 cue: You want to change, disable or debug the SM5703 80/75 percent charge limit, or charge_control_end_threshold returns EINVAL.
 ---
 

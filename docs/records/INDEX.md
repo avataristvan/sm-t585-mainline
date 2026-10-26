@@ -31,6 +31,8 @@
 | domain_t585_build_stage1_boot_image_letter_suffix_2026_10_24 | mainline | domain | Decision: kernel/build-stage1.sh copies every built image to kernel/out/boot-sta | active |
 | domain_t585_build_stage1_numbered_boot_images_2026_10_24 | mainline | domain | Decision: kernel/build-stage1.sh copies every built image to kernel/out/boot-sta | superseded_by: domain_t585_build_stage1_boot_image_letter_suffix_2026_10_24 |
 | domain_t585_camera_not_realistic_2026_10_25 | goal | domain | Decision: A camera is not a goal for the SM-T585 on mainline Linux. It is not re | active |
+| domain_t585_charge_limit_controlled_by_gnome_upower_default_100_2026_10_27 | mainline | domain | Decision (user, 2026-10-26): The charge limit is controlled by GNOME/upower ("Ba | active |
+| domain_t585_charge_limit_gnome_chunk2a_fg_thresholds_forwarded_udev_rule_2026_10_27 | mainline | domain | Decision: Chunk 2a is implemented and HW-verified. The fuel gauge exposes HEALTH | active |
 | domain_t585_cmu_cpucl_readonly_in_mainline_fork_2026_10_24 | mainline | domain | Decision: CMU_CPUCL0 (0x10900000) and CMU_CPUCL1 (0x10800000) are added to the m | active |
 | domain_t585_cooling_maps_both_clusters_2026_10_24 | mainline | domain | Decision: Cooling maps on soc-thermal bind both cpufreq cooling devices (cpu0 =  | active |
 | domain_t585_cpu_opp_table_asv7_2026_10_24 | mainline | domain | Decision: T585 CPU OPP table (both clusters identical, this chip, ASV group 7),  | active |
@@ -55,9 +57,11 @@
 | domain_t585_rootfs_image_in_lineage_userdata_2026_10_25 | goal | domain | Decision: With no working SD card, the Alpine rootfs lives as an ext4 image file | superseded_by: domain_t585_pmos_systemd_in_lineage_system_partition_2026_10_25 |
 | domain_t585_sm5703_battery_ntc_exynos_adc_chunk3c_2026_10_24 | mainline | domain | Decision: Next chunk 3c = battery NTC via the Exynos ADC, replacing the FG-tempe | active |
 | domain_t585_sm5703_battery_ntc_generic_adc_thermal_charger_zones_2026_10_24 | mainline | domain | Decision: Battery NTC = generic-adc-thermal node battery_ntc (#io-channel-cells  | active |
-| domain_t585_sm5703_charge_limiter_software_80_75_2026_10_24 | mainline | domain | Decision: The SM5703 charge limiter in sm5703_charger.c is software-only. The 5  | active |
+| domain_t585_sm5703_charge_limiter_software_80_75_2026_10_24 | mainline | domain | Decision: The SM5703 charge limiter in sm5703_charger.c is software-only. The 5  | superseded_by: domain_t585_charge_limit_controlled_by_gnome_upower_default_100_2026_10_27 |
 | domain_t585_sm5703_charger_cable_detect_muic_readonly_2026_10_24 | mainline | domain | Decision: The SM5703 charger driver detects the cable type by reading only the M | active |
 | domain_t585_sm5703_charger_temp_limit_fg_proxy_2026_10_24 | mainline | domain | Decision: Until the Exynos ADC battery thermistor is wired in mainline, the char | superseded_by: domain_t585_sm5703_battery_ntc_generic_adc_thermal_charger_zones_2026_10_24 |
+| domain_t585_sm5703_fg_keeps_external_power_changed_no_mod_delayed_work_2026_10_27 | mainline | domain | Decision: sm5703_fuel_gauge keeps `.external_power_changed = power_supply_change | active |
+| domain_t585_sm5703_fg_status_from_charger_supplier_2026_10_27 | mainline | domain | Decision: The SM5703 fuel-gauge battery STATUS derives from its supplier (the ch | active |
 | domain_t585_sm5703_fuel_gauge_readonly_2026_10_24 | mainline | domain | Decision: The SM5703 fuel gauge driver (drivers/power/supply/sm5703_fuel_gauge.c | active |
 | domain_t585_soc_thermal_trips_81_91_115_2026_10_24 | mainline | domain | Decision: soc-thermal trips in exynos7870.dtsi = passive soc-alert0 81 C, passiv | active |
 | domain_t585_standard_linux_interfaces_except_audio_2026_10_27 | goal | domain | Decision: Everything except the audio interfaces may follow standard Linux behav | active |
@@ -102,6 +106,7 @@
 | learning_pmbootstrap_sudo_timeout_when_user_away_2026_10_25 | workflow | learning | Observed: sudo inside pmbootstrap times out when the user is away from the termi | active |
 | learning_pmos_fstab_uuid_stale_after_recovery_zip_install_2026_10_25 | workflow | learning | Observed: The android-recovery-zip installer reformats the partitions, but /etc/ | active |
 | learning_pmos_home_dir_777_sshd_ignores_authorized_keys_2026_10_25 | workflow | learning | Observed: The android-recovery-zip installer creates /home/<user> with mode 777, | active |
+| learning_remote_command_rejected_during_hang_may_have_run_check_prev_boot_2026_10_27 | workflow | learning | Observed: a tool call the user "rejected" during a tablet hang had in fact alrea | active |
 | learning_rt5659_driver_gpio_names_unprefixed_2026_10_23 | mainline | learning | Observed: sound/soc/codecs/rt5659.c requests the GPIOs "ldo1-en" and "reset" (pr | active |
 | learning_speech_tests_user_starts_late_record_12s_2026_10_24 | workflow | learning | Observed: In speech tests the user only starts speaking once they read the chat  | active |
 | learning_stage1_busybox_lacks_telnetd_udhcpd_2026_10_23 | workflow | learning | Observed: The static Alpine busybox in the stage-1 initramfs (kernel/prebuilt/bu | superseded_by: learning_stage1_telnetd_udhcpd_via_busybox_extras_2026_10_23 |
@@ -126,6 +131,7 @@
 | learning_t585_audio_path_rt5659_s1402x_gap_2026_10_23 | mainline | learning | Observed: SM-T585 audio path: PL330 adma@14890000 -> I2S0@148A0000 -> s1402x int | active |
 | learning_t585_audio_roughness_not_player_or_dma_period_2026_10_23 | mainline | learning | Observed: The SM-T585 audio roughness ("ring-modulator") is not caused by the pl | active |
 | learning_t585_audio_roughness_volume_independent_open_2026_10_23 | mainline | learning | Observed: After the click fix the 440 Hz tone is rough ("ring modulator", "Amiga | superseded_by: learning_t585_i2s0_rclksrc_pclk_causes_roughness_2026_10_23 |
+| learning_t585_background_logger_dies_with_ssh_use_systemd_run_2026_10_27 | workflow | learning | Observed: On the pmOS tablet a background logger started via ssh with nohup/sets | active |
 | learning_t585_backlight_class_pulls_defconfig_panel_modules_off_in_pmos_config_2026_10_26 | mainline | learning | Observed: Enabling BACKLIGHT_CLASS_DEVICE in the T585 config exposes about 28-30 | active |
 | learning_t585_boot_on_only_enables_at_registration_cleanup_still_runs_2026_10_27 | mainline | learning | Observed: In the regulator core, regulator-boot-on only enables the rail at regi | active |
 | learning_t585_bootloader_fb_a8r8g8b8_2026_10_23 | mainline | learning | Observed: On mainline, the SM-T585 bootloader framebuffer at 0x67000000 is a8r8g | active |
@@ -164,6 +170,7 @@
 | learning_t585_gnome_mobile_power_button_backlight_2026_10_26 | device | learning | Observed: Under GNOME Mobile, gsd power-button-action defaulted to 'suspend' and | active |
 | learning_t585_hall_pwrkeyd_thermal_checked_fine_2026_10_27 | mainline | learning | Observed: audit found these already standard: the hall sensor is gpio-keys SW_LI | active |
 | learning_t585_headset_mic_in1_needs_ejd_ctrl_1_0x70c0_2026_10_24 | mainline | learning | Observed: Headset mic on SM-T585 = IN1 (single-ended) + MICBIAS1 (downstream DT  | active |
+| learning_t585_held_power_supply_reference_blocks_unregister_warn_2026_10_26 | mainline | learning | Observed: power_supply_unregister() WARN_ON(use_cnt) fired when the FG was remov | active |
 | learning_t585_i2cx_rt5659_register_access_2026_10_23 | workflow | learning | Observed: kernel/tools/i2cx writes RT5659 registers directly (16-bit register, 1 | active |
 | learning_t585_i2s0_is_exynos7_i2s1_three_clocks_2026_10_23 | mainline | learning | Observed: SM-T585 I2S0 matches the mainline `samsung,exynos7-i2s1` register layo | active |
 | learning_t585_i2s0_rclksrc_dtsi_fix_verified_2026_10_23 | mainline | learning | Observed: The permanent fix for the I2S0 RCLKSRC roughness is in the DTS, not at | active |
@@ -197,6 +204,7 @@
 | learning_t585_pmu_aud_sys_pwr_alone_gives_no_sound_2026_10_23 | mainline | learning | Observed: PMU 0x10481340 (GPIO_MODE_AUD_SYS_PWR) reads 0 on mainline; setting bi | active |
 | learning_t585_pmu_clkout_7870_mainline_wiring_2026_10_23 | mainline | learning | Observed: PMU CLKOUT on 7870 works via mainline drivers/clk/samsung/clk-exynos-c | active |
 | learning_t585_pmu_regmap_cat_hangs_device_2026_10_23 | device | learning | Observed: Under Lineage (downstream 3.18), `cat /d/regmap/10480000.system-contro | active |
+| learning_t585_power_supply_supplier_name_pointer_rmmod_oops_devlink_fix_2026_10_26 | mainline | learning | Observed: HW 2026-10-26: with the FG's `power-supplies = <&charger>`, `rmmod sm5 | active |
 | learning_t585_poweroff_f_works_stage1_2026_10_23 | mainline | learning | Observed: On stage 1 (mainline 7.3), `poweroff -f` from the shell switched the S | active |
 | learning_t585_pstore_needs_printk8_in_init_2026_10_24 | workflow | learning | Observed: S-Boot passes loglevel=4, so console-ramoops only recorded warnings; a | active |
 | learning_t585_rootfs_alpine_chroot_tmpfs_squashfs_2026_10_24 | workflow | learning | Observed: A userspace rootfs for the SM-T585 is built by kernel/tools/rootfs/bui | active |
@@ -224,6 +232,7 @@
 | learning_t585_sm5703_charger_zones_verified_temp_offset_2026_10_24 | mainline | learning | Observed: The SM5703 charger temperature zones work on the SM-T585 hardware. Deb | active |
 | learning_t585_sm5703_chunk3b_limiter_verified_module_swap_2026_10_24 | mainline | learning | Observed: Chunk 3b verified on HW by module swap only (no flash; kernel #28 stil | active |
 | learning_t585_sm5703_downstream_dt_pins_charger_params_2026_10_24 | mainline | learning | Observed: Downstream DT: SM5703 MFD @0x49 irq gpa2-7, mrstb gpc7-4, chg_en pin g | active |
+| learning_t585_sm5703_fg_status_follows_charger_verified_hw_2026_10_26 | mainline | learning | Observed: HW-verified 2026-10-26 (kernel 7.3.0-gtaxllte #7 pmOS, test FG module  | active |
 | learning_t585_sm5703_fg_temp_cycles_charge_useless_protection_2026_10_24 | mainline | learning | Observed: On the wall charger at about 1030 mA the FG temperature reaches 55 C i | active |
 | learning_t585_sm5703_fg_temp_follows_charger_heat_2026_10_24 | mainline | learning | Observed: The SM5703 fuel-gauge temperature register follows the charger's heat, | superseded_by: learning_t585_sm5703_fg_temp_cycles_charge_useless_protection_2026_10_24 |
 | learning_t585_sm5703_lineage_charge_reference_2026_10_24 | mainline | learning | Observed: Lineage downstream reference, logged under Lineage with kernel/tools/b | active |
@@ -250,6 +259,7 @@
 | learning_t585_uboot_fastboot_entry_vol_down_bootmenu_2026_10_26 | device | learning | Observed: Enter U-Boot fastboot: reboot, hold Vol-down alone right after the Sam | active |
 | learning_t585_uboot_hs400_off_reboot_stability_passed_2026_10_26 | device | learning | Observed: The HS200/HS400-off U-Boot build (uboot/gtaxllte.config, image sha1 a6 | active |
 | learning_t585_unused_regulator_cleanup_vdd_fixed_lcd_always_on_2026_10_26 | mainline | learning | Observed: A fixed regulator with regulator-boot-on but no active consumer is swi | active |
+| learning_t585_upower_191_charge_limit_udev_property_state_quirk_2026_10_27 | mainline | learning | Observed: upower 1.91 (up-device-supply-battery.c): (a) charge-limit support req | active |
 | learning_t585_vibrator_supply_sm5703_ldo2_no_regulator_haptic_2026_10_27 | mainline | learning | Observed: The T585 vibrator supply is SM5703 LDO2 ("VDD_MOTOR_3.3", register LDO | active |
 | learning_t585_wifi_dcdc_cycle_kills_sdio_and_bt_needs_always_on_2026_10_27 | mainline | learning | Observed: HW-verified 2026-10-27: ath10k_sdio probes (qca9377 hw1.1, firmware WL | active |
 | learning_t585_wifi_qca9377_sdio_firmware_board_bin_fallback_2026_10_26 | mainline | learning | Observed: linux-firmware QCA9377 hw1.0 board-2.bin contains only bus=pci entries | active |
@@ -293,12 +303,13 @@
 | todo_stmfts_pm_runtime_before_register_2026_10_23 | mainline | todo | TODO: Fix an upstream-style bug in mainline stmfts: input_register_device() runs | active |
 | todo_t585_alsa_ucm_profile_for_pipewire_2026_10_24 | mainline | todo | TODO: For the postmarketOS/PipeWire userspace (installed on the SM-T585 on 2026- | active |
 | todo_t585_dsi_decisions_after_hw_test_2026_10_26 | mainline | todo | TODO: The first DSI HW test (2026-10-27) hard-hung the tablet before GDM, so fir | active |
+| todo_t585_find_why_fw_devlink_skips_fg_power_supplies_link_2026_10_27 | mainline | todo | TODO (low priority, user confirmed): find out why fw_devlink does not create a d | active |
 | todo_t585_panfrost_mali_supply_opp_table_2026_10_24 | mainline | todo | TODO: Wire the GPU rail and frequencies for Panfrost on the SM-T585. (1) Add mal | active |
 | todo_t585_report_dsi_findings_to_kaustabh_2026_10_26 | mainline | todo | TODO: Report the two HW-verified SM-T585 DSI findings to Kaustabh Chakraborty <k | active |
 | todo_t585_sm5703_charger_review_findings_2026_10_24 | mainline | todo | TODO: Charger review findings, remaining optional points. Committed in src/mainl | active |
 | todo_t585_sm5703_ldo2_regulator_for_haptic_2026_10_27 | mainline | todo | TODO: Expose SM5703 LDO2 as a regulator from the sm5703 charger driver, then add | active |
 | todo_t585_speaker_lineage_reference_dump_2026_10_23 | mainline | todo | TODO: The Lineage reference dump is done and the speaker works at runtime (see l | active |
-| todo_t585_standard_interfaces_charger_gauge_stmfts_followups_2026_10_27 | mainline | todo | TODO (ranked, all need HW; from docs/standard-interfaces-audit-2026-10-27.md, un | active |
+| todo_t585_standard_interfaces_charger_gauge_stmfts_followups_2026_10_27 | mainline | todo | TODO (ranked, all need HW; numbers follow docs/standard-interfaces-audit-2026-10 | active |
 | todo_t585_thermal_followup_trips_cpufreq_2026_10_24 | mainline | todo | TODO: Thermal follow-up, remaining only: polling-delay 0 once the TMU IRQ is tru | active |
 | todo_t585_uboot_hang_after_no_ethernet_2026_10_26 | device | todo | TODO: Confirm the U-Boot eMMC fix with a multi-reboot stability test (several co | active |
 | user_skill_profile_hw_bringup | general | user | User (avataristvan) skill profile for the galaxy-rab-a-10 device bring-up projec | active |

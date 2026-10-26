@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792858886.16772
-edges: [{"target_id": "learning_t585_sm5703_lineage_charge_reference_2026_10_24", "edge_type": "confirms"}, {"target_id": "todo_sm5703_charger_fuel_gauge_2026_10_23", "edge_type": "related"}, {"target_id": "domain_t585_sm5703_charger_cable_detect_muic_readonly_2026_10_24", "edge_type": "related"}, {"target_id": "domain_t585_sm5703_charge_limiter_software_80_75_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_vibrator_supply_sm5703_ldo2_no_regulator_haptic_2026_10_27", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_sm5703_lineage_charge_reference_2026_10_24", "edge_type": "confirms"}, {"target_id": "todo_sm5703_charger_fuel_gauge_2026_10_23", "edge_type": "related"}, {"target_id": "domain_t585_sm5703_charger_cable_detect_muic_readonly_2026_10_24", "edge_type": "related"}, {"target_id": "domain_t585_sm5703_charge_limiter_software_80_75_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_vibrator_supply_sm5703_ldo2_no_regulator_haptic_2026_10_27", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_fg_status_follows_charger_verified_hw_2026_10_26", "edge_type": "related"}]
 cue: You are checking whether the SM5703 charger driver really charges the SM-T585 on stage 1, or what input current each cable type gets.
 ---
 

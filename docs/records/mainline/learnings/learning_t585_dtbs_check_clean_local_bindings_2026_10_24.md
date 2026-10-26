@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792862896.867481
-edges: [{"target_id": "learning_kernel_venv_ready_dtbs_check_audio_warnings_2026_10_24", "edge_type": "supersedes"}, {"target_id": "domain_t585_adc_vdd_supply_ldo3_2026_10_24", "edge_type": "related"}, {"target_id": "learning_rt5659_driver_gpio_names_unprefixed_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_kernel_venv_ready_dtbs_check_audio_warnings_2026_10_24", "edge_type": "supersedes"}, {"target_id": "domain_t585_adc_vdd_supply_ldo3_2026_10_24", "edge_type": "related"}, {"target_id": "learning_rt5659_driver_gpio_names_unprefixed_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_dtbtool_needs_model_info_props_fdtput_2026_10_25", "edge_type": "related"}]
 cue: You run dtbs_check on gtaxllte, wonder if it is clean, or touch the audio bindings (rt5659, s1402x, i2s, dispaud-reset).
 ---
 

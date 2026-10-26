@@ -3,7 +3,7 @@ type: domain
 area: mainline
 perspective: agent
 created: 1792832533.494677
-edges: [{"target_id": "domain_kernel_trim_chunk2_builtin_pins_by_reason_2026_10_24", "edge_type": "related"}, {"target_id": "domain_kernel_config_trim_policy_periph_net_2026_10_23", "edge_type": "derived_from"}]
+edges: [{"target_id": "domain_kernel_trim_chunk2_builtin_pins_by_reason_2026_10_24", "edge_type": "related"}, {"target_id": "domain_kernel_config_trim_policy_periph_net_2026_10_23", "edge_type": "derived_from"}, {"target_id": "learning_t585_pmos_kconfig_overrides_stage1_trims_image_size_2026_10_25", "edge_type": "related"}]
 cue: You wonder why the kernel image lacks EFI, Xen, other-SoC drivers, or want to re-add a bus or subsystem the arm64 defconfig had on.
 ---
 

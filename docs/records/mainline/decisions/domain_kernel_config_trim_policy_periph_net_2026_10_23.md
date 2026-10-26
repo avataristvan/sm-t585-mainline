@@ -3,7 +3,9 @@ type: domain
 area: mainline
 perspective: user
 created: 1792771168.303846
-edges: [{"target_id": "domain_kernel_config_trim_policy_bt_2026_10_23", "edge_type": "supersedes"}, {"target_id": "learning_defconfig_modules_pinned_builtin_2026_10_23", "edge_type": "derived_from"}, {"target_id": "domain_stage1_enable_modules_for_stmfts_2026_10_23", "edge_type": "related"}, {"target_id": "domain_t585_lean_linux_music_device_2026_10_23", "edge_type": "related"}, {"target_id": "todo_bluetooth_then_dsi_panel_2026_10_23", "edge_type": "related"}, {"target_id": "domain_kernel_trim_chunk1_foreign_sound_disabled_2026_10_24", "edge_type": "related"}, {"target_id": "domain_kernel_trim_chunk3_defconfig_ballast_off_2026_10_24", "edge_type": "related"}]
+superseded_by: domain_kernel_modules_allowed_where_sensible_2026_10_26
+valid_until: 1792974306.250823
+edges: [{"target_id": "domain_kernel_config_trim_policy_bt_2026_10_23", "edge_type": "supersedes"}, {"target_id": "learning_defconfig_modules_pinned_builtin_2026_10_23", "edge_type": "derived_from"}, {"target_id": "domain_stage1_enable_modules_for_stmfts_2026_10_23", "edge_type": "related"}, {"target_id": "domain_t585_lean_linux_music_device_2026_10_23", "edge_type": "related"}, {"target_id": "todo_bluetooth_then_dsi_panel_2026_10_23", "edge_type": "related"}, {"target_id": "domain_kernel_trim_chunk1_foreign_sound_disabled_2026_10_24", "edge_type": "related"}, {"target_id": "domain_kernel_trim_chunk3_defconfig_ballast_off_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_pmos_kconfig_overrides_stage1_trims_image_size_2026_10_25", "edge_type": "related"}]
 cue: You are about to add a kernel config option, or decide whether something should be =y, =m or dropped for the SM-T585 build.
 ---
 

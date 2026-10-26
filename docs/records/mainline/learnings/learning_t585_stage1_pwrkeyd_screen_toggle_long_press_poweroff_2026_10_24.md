@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792866501.575812
-edges: [{"target_id": "learning_t585_poweroff_f_works_stage1_2026_10_23", "edge_type": "related"}, {"target_id": "todo_bluetooth_then_dsi_panel_2026_10_23", "edge_type": "related"}, {"target_id": "domain_priority_dtbs_check_charger_zones_pwrbtn_panfrost_bt_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_s2mpu05_manual_reset_regs_2key_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_poweroff_f_works_stage1_2026_10_23", "edge_type": "related"}, {"target_id": "todo_bluetooth_then_dsi_panel_2026_10_23", "edge_type": "related"}, {"target_id": "domain_priority_dtbs_check_charger_zones_pwrbtn_panfrost_bt_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_s2mpu05_manual_reset_regs_2key_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_rootfs_image_made_on_device_no_usb_copy_2026_10_25", "edge_type": "related"}, {"target_id": "learning_t585_gnome_mobile_power_button_backlight_2026_10_26", "edge_type": "related"}]
 cue: You wonder what the power key does on stage 1, want the screen off, or hit that fb0/blank does nothing and the backlight stays on.
 ---
 

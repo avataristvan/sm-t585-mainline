@@ -3,7 +3,7 @@ type: domain
 area: mainline
 perspective: agent
 created: 1792831299.114203
-edges: [{"target_id": "domain_kernel_trim_chunk1_foreign_sound_disabled_2026_10_24", "edge_type": "related"}, {"target_id": "learning_dropping_drivers_removes_selected_core_options_2026_10_24", "edge_type": "derived_from"}, {"target_id": "domain_kernel_trim_chunk3_defconfig_ballast_off_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "domain_kernel_trim_chunk1_foreign_sound_disabled_2026_10_24", "edge_type": "related"}, {"target_id": "learning_dropping_drivers_removes_selected_core_options_2026_10_24", "edge_type": "derived_from"}, {"target_id": "domain_kernel_trim_chunk3_defconfig_ballast_off_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_lineage_userdata_ext4_quota_needs_qfmt_v2_2026_10_25", "edge_type": "related"}]
 cue: You wonder why a driver is pinned =y or "not set" in gtaxllte-builtin.config, or you plan the next kernel trim chunk or the thermal chunk.
 ---
 

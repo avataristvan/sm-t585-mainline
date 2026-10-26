@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792769207.606139
-edges: [{"target_id": "learning_mainline_stage1_boot_t585_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_mainline_stage1_boot_t585_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_unused_regulator_cleanup_vdd_fixed_lcd_always_on_2026_10_26", "edge_type": "related"}]
 cue: You are configuring simpledrm/framebuffer colors on the SM-T585 or worry about the red/blue swap seen in the old pmOS port.
 ---
 

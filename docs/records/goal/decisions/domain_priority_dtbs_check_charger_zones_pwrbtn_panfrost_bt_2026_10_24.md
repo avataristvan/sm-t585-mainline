@@ -3,7 +3,9 @@ type: domain
 area: goal
 perspective: user
 created: 1792862244.422471
-edges: [{"target_id": "domain_priority_thermal_battery_before_bt_2026_10_24", "edge_type": "supersedes"}, {"target_id": "todo_t585_sm5703_charger_review_findings_2026_10_24", "edge_type": "related"}, {"target_id": "todo_bluetooth_then_dsi_panel_2026_10_23", "edge_type": "related"}, {"target_id": "domain_t585_adc_vdd_supply_ldo3_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_stage1_pwrkeyd_screen_toggle_long_press_poweroff_2026_10_24", "edge_type": "related"}, {"target_id": "todo_t585_pmic_reset_test_numbered_images_flash_panfrost_2026_10_24", "edge_type": "related"}]
+superseded_by: domain_priority_wifi_dsi_before_nftables_panfrost_bt_2026_10_26
+valid_until: 1792973876.207803
+edges: [{"target_id": "domain_priority_thermal_battery_before_bt_2026_10_24", "edge_type": "supersedes"}, {"target_id": "todo_t585_sm5703_charger_review_findings_2026_10_24", "edge_type": "related"}, {"target_id": "todo_bluetooth_then_dsi_panel_2026_10_23", "edge_type": "related"}, {"target_id": "domain_t585_adc_vdd_supply_ldo3_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_stage1_pwrkeyd_screen_toggle_long_press_poweroff_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_panfrost_probes_on_mainline_2026_10_24", "edge_type": "related"}, {"target_id": "domain_t585_userspace_postmarketos_not_lineage_2026_10_24", "edge_type": "related"}, {"target_id": "todo_t585_panfrost_mali_supply_opp_table_2026_10_24", "edge_type": "related"}]
 cue: Battery chunk 3 is done on the SM-T585 and you choose what to work on next.
 ---
 

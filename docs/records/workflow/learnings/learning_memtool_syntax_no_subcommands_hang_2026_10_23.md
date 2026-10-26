@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: agent
 created: 1792788953.744183
-edges: [{"target_id": "learning_t585_memtool_bus_error_on_mixer_use_regmap_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_memtool_works_on_mixer_and_i2s0_during_audio_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_memtool_bus_error_on_mixer_use_regmap_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_memtool_works_on_mixer_and_i2s0_during_audio_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_t585_debug_delays_as_runtime_module_params_bisect_2026_10_26", "edge_type": "related"}]
 cue: You are about to poke a hardware register on the SM-T585 with memtool and assume r/w subcommands exist.
 ---
 

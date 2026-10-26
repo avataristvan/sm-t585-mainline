@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792772532.267338
-edges: [{"target_id": "learning_t585_touch_works_stmfts_fts1a096_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stmfts_fts1a096_not_command_compatible_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_touch_works_stmfts_fts1a096_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stmfts_fts1a096_not_command_compatible_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_stmfts_error_code_line_not_regression_2026_10_24", "edge_type": "related"}]
 cue: You see "0f ba d0 00 c0 de" or odd errors in stmfts logs on the SM-T585, or sysfs chip_id/fw values look wrong.
 ---
 

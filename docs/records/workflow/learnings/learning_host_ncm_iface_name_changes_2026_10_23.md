@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: agent
 created: 1792778220.052395
-edges: [{"target_id": "learning_host_ncm_iface_name_confirmed_again_2026_10_23", "edge_type": "related"}, {"target_id": "learning_host_nm_profile_t585_usb_bound_to_iface_name_2026_10_23", "edge_type": "related"}, {"target_id": "learning_host_nm_profile_t585_usb_match_by_driver_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_host_ncm_iface_name_confirmed_again_2026_10_23", "edge_type": "related"}, {"target_id": "learning_host_nm_profile_t585_usb_bound_to_iface_name_2026_10_23", "edge_type": "related"}, {"target_id": "learning_host_nm_profile_t585_usb_match_by_driver_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_internet_via_ncm_host_nat_forward_2026_10_25", "edge_type": "related"}, {"target_id": "pattern_t585_pmos_ssh_dedicated_key_2026_10_25", "edge_type": "related"}]
 cue: The host cannot reach the tablet at 172.16.42.1 after a replug and the NCM interface has a new name or a link-local address.
 ---
 

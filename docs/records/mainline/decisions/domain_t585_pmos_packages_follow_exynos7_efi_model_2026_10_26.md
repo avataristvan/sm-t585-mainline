@@ -1,0 +1,13 @@
+id: domain_t585_pmos_packages_follow_exynos7_efi_model_2026_10_26
+type: domain
+area: mainline
+perspective: agent
+created: 1792971054.418625
+edges: [{"target_id": "domain_t585_pmos_in_userdata_pmaports_model_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_pmos_edge_boots_via_uboot_systemd_boot_2026_10_26", "edge_type": "related"}, {"target_id": "domain_t585_own_pmos_packages_not_pmaports_2026_10_25", "edge_type": "supersedes"}, {"target_id": "learning_t585_pmos_kconfig_overrides_stage1_trims_image_size_2026_10_25", "edge_type": "related"}, {"target_id": "learning_t585_dtbtool_needs_model_info_props_fdtput_2026_10_25", "edge_type": "related"}, {"target_id": "learning_t585_sboot_ignores_cmdline_accepts_os_version_zero_2026_10_25", "edge_type": "related"}, {"target_id": "domain_kernel_modules_allowed_where_sensible_2026_10_26", "edge_type": "related"}, {"target_id": "domain_t585_pmos_plain_console_boot_no_splash_2026_10_27", "edge_type": "related"}]
+cue: You change the pmOS device or kernel package for the SM-T585, or wonder why there is no mkbootimg, dtbtool or 32 MiB size limit any more.
+---
+
+Decision: The pmOS packages stay our own (pmos/device-samsung-gtaxllte, pmos/linux-samsung-gtaxllte) but now follow the pmaports device-samsung-exynos7 EFI model. deviceinfo: boot_filesystem="fat32", flash_method="fastboot", deviceinfo_dtb kept, initfs zstd:fast. The device package depends on systemd-boot (dtbtool-exynos and mkbootimg dropped) and takes kernel-cmdline.conf from device-samsung-exynos7. The kernel package no longer fdtputs model_info or pads the DTB: U-Boot loads dtbs/exynos/exynos7870-gtaxllte.dtb from the ESP via fdtfile.
+Kernel config: kernel/gtaxllte-pmos.config re-enables CONFIG_EFI, EFI_STUB and EFIVAR_FS (trimmed in gtaxllte-stage1.config) and disables EFI_VARS_PSTORE so ramoops keeps pstore. The 32 MiB BOOT limit no longer constrains kernel or initramfs (only the small U-Boot image is in BOOT).
+Why: With U-Boot chainloaded and pmOS in USERDATA, the boot goes through EFI like upstream, so S-Boot-specific packaging (DTBH container, boot.img v0 fields, model_info props) is dead weight. The old reason for own packages (S-Boot boots BOOT directly) no longer holds; they stay own because the kernel comes from our working tree.
+Scope: pmos/ packages and kernel/gtaxllte-pmos.config. Supersedes domain_t585_own_pmos_packages_not_pmaports_2026_10_25. Layout: domain_t585_pmos_in_userdata_pmaports_model_2026_10_26. Obsoletes the size-headroom concern in learning_t585_pmos_kconfig_overrides_stage1_trims_image_size_2026_10_25 and the DTB prop trick in learning_t585_dtbtool_needs_model_info_props_fdtput_2026_10_25 (for the pmOS path).

@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792867151.281704
-edges: [{"target_id": "learning_t585_poweroff_f_works_stage1_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_stage1_pwrkeyd_screen_toggle_long_press_poweroff_2026_10_24", "edge_type": "related"}, {"target_id": "todo_t585_pmic_reset_test_numbered_images_flash_panfrost_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_poweroff_f_works_stage1_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_stage1_pwrkeyd_screen_toggle_long_press_poweroff_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_pmic_2key_reset_verified_on_hw_2026_10_24", "edge_type": "related"}]
 cue: You reason about why a long power-key press resets the SM-T585, or tune pwrkeyd long-press timing against the PMIC reset.
 ---
 

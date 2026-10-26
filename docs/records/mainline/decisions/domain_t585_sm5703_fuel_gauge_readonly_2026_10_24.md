@@ -3,7 +3,7 @@ type: domain
 area: mainline
 perspective: user
 created: 1792857713.533546
-edges: [{"target_id": "learning_t585_sm5703_lineage_charge_reference_2026_10_24", "edge_type": "derived_from"}, {"target_id": "domain_t585_sm5703_charger_temp_limit_fg_proxy_2026_10_24", "edge_type": "related"}, {"target_id": "domain_t585_sm5703_charge_limiter_software_80_75_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_sm5703_lineage_charge_reference_2026_10_24", "edge_type": "derived_from"}, {"target_id": "domain_t585_sm5703_charger_temp_limit_fg_proxy_2026_10_24", "edge_type": "related"}, {"target_id": "domain_t585_sm5703_charge_limiter_software_80_75_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_gauge_status_from_current_sign_wrong_2026_10_27", "edge_type": "related"}]
 cue: You are tempted to make the SM5703 fuel-gauge driver write init, battery tables or CURR_CAL, or report FG temperature as battery temp.
 ---
 

@@ -1,0 +1,12 @@
+id: learning_t585_rootfs_alpine_chroot_tmpfs_squashfs_2026_10_24
+type: learning
+area: workflow
+perspective: agent
+created: 1792876421.477453
+edges: [{"target_id": "domain_t585_userspace_postmarketos_not_lineage_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_panfrost_renders_kmscube_simpledrm_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_write_sd_wipefs_before_mkfs_exfat_probe_2026_10_25", "edge_type": "related"}, {"target_id": "learning_t585_worn_sd_card_discards_writes_reread_size_check_2026_10_25", "edge_type": "related"}, {"target_id": "domain_t585_rootfs_image_in_lineage_userdata_2026_10_25", "edge_type": "related"}, {"target_id": "learning_t585_rootfs_image_made_on_device_no_usb_copy_2026_10_25", "edge_type": "related"}, {"target_id": "learning_t585_sdl3_kmsdrm_pad_grid_multitouch_2026_10_25", "edge_type": "related"}, {"target_id": "learning_t585_sdl3_kmsdrm_segfault_without_libudev_2026_10_25", "edge_type": "related"}]
+cue: You want to try a userspace rootfs on the SM-T585 without an SD card or flashing, and need the build and mount steps.
+---
+
+Observed: A userspace rootfs for the SM-T585 is built by kernel/tools/rootfs/build.sh <work-dir> <out.sqfs> and tested from RAM, without an SD card and without flashing. The script uses Alpine v3.24: it downloads apk.static (apk-tools-static) and alpine-keys into <work-dir>/dl, installs the aarch64 packages into <work-dir>/root with `--arch aarch64 --usermode --no-scripts`, makes the busybox applet links from the package's /etc/busybox-paths.d/busybox list (busybox has no embedded applet paths), and writes the image with `mksquashfs ... -comp gzip`. No qemu on the host. Packages: alpine-base mesa-dri-gallium mesa-egl mesa-gbm kmscube libdrm-tests alsa-utils dropbear evtest; about 250 MB unpacked, about 91 MB squashfs (kernel/out/rootfs/alpine-gtaxllte.sqfs). On the device: wget the image into /tmp (tmpfs, 1.8 GB free), `mount -o loop,ro`, bind-mount dev, proc, sys and tmp, then `chroot`; `/bin/sh` works. Verified on HW 2026-10-24: Alpine 3.24.3, kmscube renderer "Mali-T830 MC1 (Panfrost)".
+Cause: our kernel has only CONFIG_SQUASHFS_ZLIB, so zstd squashfs fails to mount and gzip is required. bin/bbsuid (mode 4111) is unreadable as a user and not needed, so build.sh excludes it.
+Evidence: kernel/tools/rootfs/build.sh (script); kernel/out/rootfs/alpine-gtaxllte.sqfs (build artifact, not under docs/sources). The GPU test run from it is learning_t585_panfrost_renders_kmscube_simpledrm_2026_10_24.

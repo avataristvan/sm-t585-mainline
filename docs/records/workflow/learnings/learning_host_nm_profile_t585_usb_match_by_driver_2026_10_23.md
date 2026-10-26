@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: agent
 created: 1792791388.183191
-edges: [{"target_id": "learning_host_nm_profile_t585_usb_bound_to_iface_name_2026_10_23", "edge_type": "supersedes"}, {"target_id": "learning_host_ncm_iface_name_changes_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_telnetd_udhcpd_via_busybox_extras_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_host_nm_profile_t585_usb_bound_to_iface_name_2026_10_23", "edge_type": "supersedes"}, {"target_id": "learning_host_ncm_iface_name_changes_2026_10_23", "edge_type": "related"}, {"target_id": "learning_stage1_telnetd_udhcpd_via_busybox_extras_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_internet_via_ncm_host_nat_forward_2026_10_25", "edge_type": "related"}]
 cue: After a tablet reboot the host NCM NIC got a new name and NetworkManager no longer applies 172.16.42.2 via t585-usb.
 ---
 

@@ -23,6 +23,9 @@ dir /tmp 1777 0 0
 nod /dev/console 600 0 0 c 5 1
 file /bin/busybox $BUSYBOX 755 0 0
 file /init $HERE/initramfs/init 755 0 0
+file /bin/rootfs-up $HERE/initramfs/rootfs-up 755 0 0
+file /bin/rootsh $HERE/initramfs/rootsh 755 0 0
+dir /mnt 755 0 0
 dir /lib 755 0 0
 file /lib/ld-musl-aarch64.so.1 $HERE/prebuilt/alpine/ld-musl-aarch64.so.1 755 0 0
 slink /lib/libc.musl-aarch64.so.1 ld-musl-aarch64.so.1 777 0 0
@@ -34,6 +37,7 @@ EOF
 # SM5703 fuel gauge and charger. Modules, not built in, so they can still be reloaded with
 # other parameters at runtime.
 : > "$OUT"/modules.order
+mkdir -p "$OUT"/mods
 for m in sound/soundcore sound/core/snd sound/core/snd-timer \
 	sound/core/snd-pcm sound/core/snd-pcm-dmaengine sound/soc/snd-soc-core \
 	sound/soc/codecs/snd-soc-rl6231 sound/soc/codecs/snd-soc-rt5659 \
@@ -41,7 +45,9 @@ for m in sound/soundcore sound/core/snd sound/core/snd-timer \
 	sound/soc/samsung/snd-soc-idma sound/soc/samsung/snd-soc-i2s \
 	sound/soc/samsung/snd-soc-gtaxllte-rt5659 \
 	drivers/power/supply/sm5703_fuel_gauge drivers/power/supply/sm5703_charger; do
-	echo "file /lib/modules/${m##*/}.ko $KOUT/$m.ko 644 0 0"
+	# Without debug info (the pmOS config enables it for BTF)
+	llvm-strip --strip-debug -o "$OUT"/mods/${m##*/}.ko "$KOUT"/$m.ko
+	echo "file /lib/modules/${m##*/}.ko $OUT/mods/${m##*/}.ko 644 0 0"
 	echo "${m##*/}" >> "$OUT"/modules.order
 done >> "$OUT"/initramfs.list
 echo "file /lib/modules/modules.order $OUT/modules.order 644 0 0" >> "$OUT"/initramfs.list
@@ -67,3 +73,17 @@ python3 -I "$HERE"/mkbootimg-gtaxllte.py \
 	"$KOUT"/arch/arm64/boot/Image "$OUT"/gtaxllte.dtb \
 	"$OUT"/initramfs.cpio.gz "$OUT"/boot-stage1.img \
 	"console=tty0 console=ttySAC2,115200 loglevel=7"
+
+# Keep a numbered copy per kernel build (#N from the kernel's .version). A
+# DTB- or initramfs-only rebuild keeps #N, so it gets a letter suffix (k32b)
+# instead of overwriting an image that may be on BOOT.
+N=$(cat "$KOUT"/.version)
+for s in "" b c d e f g h i j k l m n o p q r s t u v w x y z; do
+	IMG="$OUT"/boot-stage1-k$N$s.img
+	if [ ! -e "$IMG" ]; then
+		cp "$OUT"/boot-stage1.img "$IMG"
+		break
+	fi
+	cmp -s "$OUT"/boot-stage1.img "$IMG" && break
+done
+echo "numbered copy: $IMG"

@@ -1,0 +1,60 @@
+#!/bin/busybox sh
+# Mount the Alpine rootfs at /mnt/root and run its autostart in a chroot.
+# Stage 1 stays PID 1 with its debug shells; enter the rootfs with "rootsh".
+#
+#   rootfs-up            the SD partition labelled gtaxl-root, else the image
+#                        gtaxl/rootfs.ext4 on Android's userdata (ext4, rw)
+#   rootfs-up <img>      a squashfs image, e.g. /tmp/alpine.sqfs (ro)
+set -eu
+
+R=/mnt/root
+
+log() {
+	echo "[rootfs] $*" > /dev/kmsg
+	# At boot init has no stdout; with set -e a failed echo would end the script.
+	echo "[rootfs] $*" 2>/dev/null || :
+}
+
+if mountpoint -q $R; then
+	log "already mounted"
+	exit 0
+fi
+mkdir -p $R
+
+if [ $# -gt 0 ]; then
+	mount -o loop,ro "$1" $R
+	# A read-only image still needs writable scratch space.
+	for d in tmp run var/tmp var/log root; do
+		mount -t tmpfs tmpfs $R/$d
+	done
+	log "image $1 mounted ro"
+else
+	if DEV=$(findfs LABEL=gtaxl-root 2>/dev/null); then
+		mount -t ext4 "$DEV" $R
+	else
+		# Lineage's userdata: FBE-encrypted, but our own directory is not.
+		D=/mnt/data
+		DATA=$(grep -l PARTNAME=USERDATA /sys/class/block/mmcblk0p*/uevent 2>/dev/null |
+			sed 's|.*/\(mmcblk0p[0-9]*\)/uevent|/dev/\1|')
+		[ -n "$DATA" ] || { log "no gtaxl-root partition, no USERDATA"; exit 1; }
+		mkdir -p $D
+		mountpoint -q $D || mount -t ext4 "$DATA" $D
+		[ -f $D/gtaxl/rootfs.ext4 ] || { log "no $D/gtaxl/rootfs.ext4"; exit 1; }
+		DEV=$D/gtaxl/rootfs.ext4
+		mount -t ext4 -o loop "$DEV" $R
+	fi
+	mount -t tmpfs tmpfs $R/tmp
+	mount -t tmpfs tmpfs $R/run
+	log "$DEV mounted rw"
+fi
+
+mount --bind /dev $R/dev
+mount --bind /dev/pts $R/dev/pts
+mount --bind /proc $R/proc
+mount --bind /sys $R/sys
+
+# Hook for whatever the rootfs should run (later: the GUI app).
+if [ -x $R/etc/gtaxl/autostart ]; then
+	setsid chroot $R /etc/gtaxl/autostart </dev/null >/dev/kmsg 2>&1 &
+	log "autostart started"
+fi

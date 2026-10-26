@@ -1,0 +1,6 @@
+#!/bin/busybox sh
+# Shell (or command) inside the rootfs mounted by rootfs-up.
+mountpoint -q /mnt/root || { echo "no rootfs, run rootfs-up first" >&2; exit 1; }
+[ $# -gt 0 ] || set -- /bin/sh -l
+exec chroot /mnt/root /usr/bin/env -i HOME=/root TERM="${TERM:-linux}" \
+	PATH=/usr/sbin:/usr/bin:/sbin:/bin "$@"

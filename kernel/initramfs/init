@@ -55,6 +55,8 @@ fi
 for n in usb0 usb1; do
 	ifconfig $n 172.16.42.1 netmask 255.255.255.0 up 2>/dev/null && log "$n: 172.16.42.1"
 done
+# Internet through the PC, when it NATs the USB net (kernel/tools/host-nat.sh)
+route add default gw 172.16.42.2 2>/dev/null
 
 cat > /etc/udhcpd.conf <<EOF
 start 172.16.42.2
@@ -86,6 +88,16 @@ SND_MACHINE_OPTS=""
 		insmod /lib/modules/$m.ko $opts || log "insmod $m failed"
 	done
 	log "audio: $(head -n1 /proc/asound/cards 2>/dev/null)"
+) &
+
+# Alpine rootfs from the SD card (label gtaxl-root), if one shows up. The
+# card probes late, so poll a few seconds.
+(
+	i=0
+	until findfs LABEL=gtaxl-root >/dev/null 2>&1 || [ $i -ge 10 ]; do
+		sleep 0.5; i=$((i + 1))
+	done
+	rootfs-up </dev/null >/dev/null 2>/dev/kmsg || log "no rootfs"
 ) &
 
 # Keep a shell on the framebuffer console too (keys are all we have).

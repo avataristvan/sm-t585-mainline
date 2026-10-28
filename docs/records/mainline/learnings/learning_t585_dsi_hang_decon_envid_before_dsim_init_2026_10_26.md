@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1793048762.296147
-edges: [{"target_id": "learning_t585_dsi_hang_narrowed_to_pre_enable_2026_10_27", "edge_type": "supersedes"}, {"target_id": "learning_t585_dsi_hang_in_first_exynos_drm_atomic_commit_2026_10_27", "edge_type": "related"}, {"target_id": "learning_t585_decon_dsi_enabled_hard_hangs_before_gdm_2026_10_27", "edge_type": "related"}, {"target_id": "todo_t585_report_dsi_findings_to_kaustabh_2026_10_26", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_dsi_hang_narrowed_to_pre_enable_2026_10_27", "edge_type": "supersedes"}, {"target_id": "learning_t585_dsi_hang_in_first_exynos_drm_atomic_commit_2026_10_27", "edge_type": "related"}, {"target_id": "learning_t585_decon_dsi_enabled_hard_hangs_before_gdm_2026_10_27", "edge_type": "related"}, {"target_id": "todo_t585_report_dsi_findings_to_kaustabh_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_dsi_reenable_serror_header_fifo_not_waited_fifoctrl_bits_2026_10_28", "edge_type": "related"}]
 cue: The SM-T585 hard-freezes in the first exynos-drm commit while the DSI panel is initialised, and you suspect DSIM, PLL or panel timing.
 ---
 

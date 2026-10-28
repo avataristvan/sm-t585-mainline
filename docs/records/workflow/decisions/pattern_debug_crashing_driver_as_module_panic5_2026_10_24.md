@@ -3,7 +3,7 @@ type: pattern
 area: workflow
 perspective: the-coder
 created: 1792848642.998854
-edges: [{"target_id": "learning_t585_tmu_clocked_by_cpucl0_gates_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_tmu_clocked_by_cpucl0_gates_2026_10_24", "edge_type": "related"}, {"target_id": "pattern_t585_crash_iteration_panic5_boot_entry_fb0_blank_pstore_2026_10_28", "edge_type": "related"}]
 cue: A built-in driver crashes the boot and each try costs a TWRP round-trip to reflash.
 ---
 

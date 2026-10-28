@@ -3,6 +3,8 @@ type: learning
 area: mainline
 perspective: user
 created: 1793045345.411883
+superseded_by: learning_t585_accel_mount_matrix_is_diag_minus1_all_not_downstream_2026_10_28
+valid_until: 1793226652.847518
 edges: [{"target_id": "domain_t585_accel_mount_matrix_hypothesis_2026_10_27", "edge_type": "confirms"}]
 cue: Checking or changing the T585 accelerometer mount-matrix, or doubting diag(1,1,-1) because its determinant is -1.
 ---

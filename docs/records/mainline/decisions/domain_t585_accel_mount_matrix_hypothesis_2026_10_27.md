@@ -3,6 +3,8 @@ type: domain
 area: mainline
 perspective: agent
 created: 1793002347.886455
+superseded_by: learning_t585_accel_mount_matrix_is_diag_minus1_all_not_downstream_2026_10_28
+valid_until: 1793226653.11769
 edges: [{"target_id": "learning_t585_sensors_accel_light_mainline_drivers_i2c7_2026_10_27", "edge_type": "derived_from"}, {"target_id": "learning_t585_sensors_lis2hh12_cm3323_probe_on_hw_2026_10_27", "edge_type": "related"}, {"target_id": "learning_t585_accel_mount_matrix_confirmed_on_hw_2026_10_27", "edge_type": "related"}]
 cue: The T585 screen rotation or accelerometer axes come out wrong or mirrored under iio-sensor-proxy.
 ---

@@ -3,7 +3,7 @@ type: learning
 area: device
 perspective: agent
 created: 1792973891.482993
-edges: [{"target_id": "learning_t585_stage1_pwrkeyd_screen_toggle_long_press_poweroff_2026_10_24", "edge_type": "related"}, {"target_id": "domain_t585_pmos_ui_gnome_mobile_2026_10_26", "edge_type": "related"}, {"target_id": "todo_t585_dsi_decisions_after_hw_test_2026_10_26", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_stage1_pwrkeyd_screen_toggle_long_press_poweroff_2026_10_24", "edge_type": "related"}, {"target_id": "domain_t585_pmos_ui_gnome_mobile_2026_10_26", "edge_type": "related"}, {"target_id": "todo_t585_dsi_decisions_after_hw_test_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_gnome_mobile_power_key_blank_not_suspend_logind_ignore_2026_10_28", "edge_type": "related"}]
 cue: You configure the power button or screen-off on GNOME Mobile on the SM-T585, or wonder why the backlight stays on.
 ---
 

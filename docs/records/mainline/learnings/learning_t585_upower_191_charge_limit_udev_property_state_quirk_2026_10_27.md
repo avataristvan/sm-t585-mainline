@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1793052083.530713
-edges: [{"target_id": "domain_t585_charge_limit_gnome_chunk2a_fg_thresholds_forwarded_udev_rule_2026_10_27", "edge_type": "derived_from"}]
+edges: [{"target_id": "domain_t585_charge_limit_gnome_chunk2a_fg_thresholds_forwarded_udev_rule_2026_10_27", "edge_type": "derived_from"}, {"target_id": "learning_t585_simple_battery_monitored_battery_design_props_upower_energy_2026_10_28", "edge_type": "related"}]
 cue: upower shows no charge-limit toggle, Discharging while plugged in, or 0 Wh energy for the SM-T585 battery.
 ---
 

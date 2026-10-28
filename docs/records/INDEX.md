@@ -25,7 +25,7 @@
 | domain_stage1_enable_modules_for_stmfts_2026_10_23 | mainline | domain | Decision: Enable CONFIG_MODULES in the stage-1 kernel and build stmfts as a modu | active |
 | domain_stmfts_fts1a096_variant_2026_10_23 | mainline | domain | Decision: Support the FTS1A096 by adding a chip variant to mainline stmfts (new  | active |
 | domain_stmfts_patches_not_upstreamed_2026_10_23 | mainline | domain | Decision: The stmfts (FTS1A096 variant), board DTS and binding patches are not s | active |
-| domain_t585_accel_mount_matrix_hypothesis_2026_10_27 | mainline | domain | Decision (hypothesis): The accel mount-matrix is diag(1,1,-1), derived from down | active |
+| domain_t585_accel_mount_matrix_hypothesis_2026_10_27 | mainline | domain | Decision (hypothesis): The accel mount-matrix is diag(1,1,-1), derived from down | superseded_by: learning_t585_accel_mount_matrix_is_diag_minus1_all_not_downstream_2026_10_28 |
 | domain_t585_adc_vdd_supply_ldo3_2026_10_24 | mainline | domain | Decision: The Exynos7870 ADC on the SM-T585 gets vdd-supply = vdd_ldo3 (S2MPU05  | active |
 | domain_t585_audio_modules_load_at_boot_from_initramfs_2026_10_24 | mainline | domain | Decision: Audio loads at boot. kernel/build-stage1.sh puts the 13 sound modules  | active |
 | domain_t585_build_stage1_boot_image_letter_suffix_2026_10_24 | mainline | domain | Decision: kernel/build-stage1.sh copies every built image to kernel/out/boot-sta | active |
@@ -33,6 +33,7 @@
 | domain_t585_camera_not_realistic_2026_10_25 | goal | domain | Decision: A camera is not a goal for the SM-T585 on mainline Linux. It is not re | active |
 | domain_t585_charge_limit_controlled_by_gnome_upower_default_100_2026_10_27 | mainline | domain | Decision (user, 2026-10-26): The charge limit is controlled by GNOME/upower ("Ba | active |
 | domain_t585_charge_limit_gnome_chunk2a_fg_thresholds_forwarded_udev_rule_2026_10_27 | mainline | domain | Decision: Chunk 2a is implemented and HW-verified. The fuel gauge exposes HEALTH | active |
+| domain_t585_cma_128mib_board_dts_exynos_drm_contiguous_2026_10_28 | mainline | domain | Decision: The board DTS gets a linux,cma shared-dma-pool of 128 MiB (reusable, l | active |
 | domain_t585_cmu_cpucl_readonly_in_mainline_fork_2026_10_24 | mainline | domain | Decision: CMU_CPUCL0 (0x10900000) and CMU_CPUCL1 (0x10800000) are added to the m | active |
 | domain_t585_cooling_maps_both_clusters_2026_10_24 | mainline | domain | Decision: Cooling maps on soc-thermal bind both cpufreq cooling devices (cpu0 =  | active |
 | domain_t585_cpu_opp_table_asv7_2026_10_24 | mainline | domain | Decision: T585 CPU OPP table (both clusters identical, this chip, ASV group 7),  | active |
@@ -119,7 +120,8 @@
 | learning_stage1_tmp_is_tmpfs_refetch_modules_2026_10_23 | workflow | learning | Observed: Files downloaded to /tmp on the stage-1 device (for example the sound  | active |
 | learning_stmfts_fts1a096_not_command_compatible_2026_10_23 | mainline | learning | Observed: The SM-T585 touch controller STM FTS1A096 (downstream fts7 driver, stm | active |
 | learning_stmfts_kbd_attach_error_only_on_runtime_insmod_2026_10_23 | mainline | learning | Observed: With stmfts built in (=y) the "failed to attach handler kbd ... -13" m | active |
-| learning_t585_accel_mount_matrix_confirmed_on_hw_2026_10_27 | mainline | learning | Observed: The LIS2HH12 mount-matrix diag(1,1,-1) ("1, 0, 0; 0, 1, 0; 0, 0, -1")  | active |
+| learning_t585_accel_mount_matrix_confirmed_on_hw_2026_10_27 | mainline | learning | Observed: The LIS2HH12 mount-matrix diag(1,1,-1) ("1, 0, 0; 0, 1, 0; 0, 0, -1")  | superseded_by: learning_t585_accel_mount_matrix_is_diag_minus1_all_not_downstream_2026_10_28 |
+| learning_t585_accel_mount_matrix_is_diag_minus1_all_not_downstream_2026_10_28 | mainline | learning | Observed: The correct LIS2HH12 mount-matrix is diag(-1,-1,-1), not the downstrea | active |
 | learning_t585_adc_loopback_zeros_dac_mix_mute_nopm_rt5659_2026_10_24 | mainline | learning | Observed: RT5659 ADC loopback (Stereo1 ADC1/ADC2 Source = "DAC MIX") returned ex | active |
 | learning_t585_adc_vdd_supply_switches_consumers_to_mv_2026_10_24 | mainline | learning | Observed: Giving the Exynos ADC a real vdd-supply changes what its consumers rea | active |
 | learning_t585_adma_bus_clock_apb_aud_2026_10_23 | mainline | learning | Observed: The Exynos7870 ADMA (PL330 @14890000) bus clock is APB_AUD, not APB_AU | active |
@@ -161,6 +163,7 @@
 | learning_t585_dsi_hang_narrowed_to_pre_enable_2026_10_27 | mainline | learning | Observed: HW-verified 2026-10-27. Ruled out as sole cause of the DSI hang: SysMM | superseded_by: learning_t585_dsi_hang_decon_envid_before_dsim_init_2026_10_26 |
 | learning_t585_dsi_panel_boe2_params_supplies_timings_2026_10_26 | mainline | learning | Observed: Panel id 0x827903 selects the downstream "BOE2" init table (BOE 8.5" f | active |
 | learning_t585_dsi_porch_pixels_not_byteclock_edge_strip_2026_10_26 | mainline | learning | Observed: HW-verified 2026-10-26. A 1-2 px flickering strip at the line start (l | active |
+| learning_t585_dsi_reenable_serror_header_fifo_not_waited_fifoctrl_bits_2026_10_28 | mainline | learning | Observed: OPEN BUG. Blank works; unblank gives an SError panic in samsung_dsim_t | active |
 | learning_t585_dtbs_check_clean_local_bindings_2026_10_24 | mainline | learning | Observed: dtbs_check of exynos7870-gtaxllte.dtb is clean (2026-10-24) after loca | active |
 | learning_t585_dtbtool_needs_model_info_props_fdtput_2026_10_25 | mainline | learning | Observed: dtbtool-exynos takes chip and hw_rev from the DT properties model_info | active |
 | learning_t585_dvfs_stress_60s_4200_transitions_ok_2026_10_24 | mainline | learning | Observed: DVFS stress kernel/out/dvfsstress.sh (8 cpuloop busy loops plus a rand | active |
@@ -168,6 +171,7 @@
 | learning_t585_exynos_thermal_selects_max8973_2026_10_24 | mainline | learning | Observed: EXYNOS_THERMAL selects REGULATOR_MAX8973 (dead weight on this board);  | superseded_by: learning_t585_max8973_comes_from_defconfig_depends_2026_10_24 |
 | learning_t585_gauge_status_from_current_sign_wrong_2026_10_27 | mainline | learning | Observed: "Discharging" from sm5703-fuel-gauge on an SDP port (about 450 mA) whi | active |
 | learning_t585_gnome_mobile_power_button_backlight_2026_10_26 | device | learning | Observed: Under GNOME Mobile, gsd power-button-action defaulted to 'suspend' and | active |
+| learning_t585_gnome_mobile_power_key_blank_not_suspend_logind_ignore_2026_10_28 | mainline | learning | Observed: GNOME Mobile does the system action 'blank' on a short power-key press | active |
 | learning_t585_hall_pwrkeyd_thermal_checked_fine_2026_10_27 | mainline | learning | Observed: audit found these already standard: the hall sensor is gpio-keys SW_LI | active |
 | learning_t585_headset_mic_in1_needs_ejd_ctrl_1_0x70c0_2026_10_24 | mainline | learning | Observed: Headset mic on SM-T585 = IN1 (single-ended) + MICBIAS1 (downstream DT  | active |
 | learning_t585_held_power_supply_reference_blocks_unregister_warn_2026_10_26 | mainline | learning | Observed: power_supply_unregister() WARN_ON(use_cnt) fired when the FG was remov | active |
@@ -227,6 +231,7 @@
 | learning_t585_sdl3_kmsdrm_segfault_without_libudev_2026_10_25 | workflow | learning | Observed: Without libudev (package eudev-libs) SDL3's kmsdrm init segfaults in S | active |
 | learning_t585_sensors_accel_light_mainline_drivers_i2c7_2026_10_27 | mainline | learning | Observed: The K2HH accelerometer is an ST LIS2HH12 (compatible st,lis2hh12, driv | active |
 | learning_t585_sensors_lis2hh12_cm3323_probe_on_hw_2026_10_27 | mainline | learning | Observed: HW-verified 2026-10-27: sensors probe. lis2hh12 (iio:device3) reads ab | active |
+| learning_t585_simple_battery_monitored_battery_design_props_upower_energy_2026_10_28 | mainline | learning | Observed: Chunk 2b is done and HW-verified. A simple-battery node (from downstre | active |
 | learning_t585_sm5703_charger_base_verified_hw_kernel28_2026_10_24 | mainline | learning | Observed: The SM5703 charger driver (drivers/power/supply/sm5703_charger.c, CONF | active |
 | learning_t585_sm5703_charger_teardown_race_fixed_temp_enodata_2026_10_24 | mainline | learning | Observed: Charger review findings fixed in sm5703_charger.c (commit aa17ce4a9 in | active |
 | learning_t585_sm5703_charger_zones_verified_temp_offset_2026_10_24 | mainline | learning | Observed: The SM5703 charger temperature zones work on the SM-T585 hardware. Deb | active |
@@ -247,6 +252,7 @@
 | learning_t585_stmfts_error_code_line_not_regression_2026_10_24 | mainline | learning | Observed: On the SM-T585, stmfts logs "error code: 0x0dec00d0ba" twice during pr | active |
 | learning_t585_sustained_load_reaches_81c_trip_2026_10_24 | mainline | learning | Observed: On SM-T585 mainline at 1690 MHz on all 8 cores (busy loops) the SoC zo | active |
 | learning_t585_sx9306_grip_sensors_no_mainline_driver_2026_10_27 | mainline | learning | Observed: The sx9306 grip/SAR sensors have no mainline driver (the sx9310 family | active |
+| learning_t585_test_kernel_changes_vmlinux_btf_modules_fail_allow_mismatch_2026_10_28 | workflow | learning | Observed: Test kernels with built-in driver changes, a struct change in samsung- | active |
 | learning_t585_tmu_clocked_by_cpucl0_gates_2026_10_24 | mainline | learning | Observed: The 7870 TMU register block at 0x10130000 is clocked by the CPUCL0 gat | active |
 | learning_t585_tmu_irq_rise_fall_works_2026_10_24 | mainline | learning | Observed: TMU interrupt path works on mainline 7870. The exynos7 set_trips windo | active |
 | learning_t585_touch_keys_event_0e_swapped_2026_10_23 | mainline | learning | Observed: The capacitive touch keys left and right of the physical Home key repo | active |
@@ -271,6 +277,7 @@
 | learning_tinyplay_alpine_2_0_broken_use_pcmplay_2026_10_23 | mainline | learning | Observed: The "tinyplay returns rc=0 instantly" symptom was a userland problem,  | active |
 | learning_trim_check_selected_subsystems_vanish_2026_10_24 | mainline | learning | Observed: Second occurrence, worse. In trim chunk 3, dropping defconfig =y optio | active |
 | learning_uboot_serial_loses_last_char_from_sboot_2026_10_25 | device | learning | Observed: U-Boot's serial# taken from S-Boot's androidboot.serialno loses its la | active |
+| learning_until_ssh_uptime_loops_hang_on_slow_boot_bound_waits_2026_10_28 | workflow | learning | Observed: `until ssh ... 'uptime < N'` style loops miss slow boots (the uptime w | active |
 | learning_usb_cable_fake_reboots_2026_10_23 | workflow | learning | Observed: A crumbling USB cable produced fake "reboots" (ttyACM re-enumeration). | active |
 | pattern_check_iio_consumer_values_after_provider_dt_change_2026_10_24 | mainline | pattern | Rule: After a DT change that alters an IIO provider (supply, scale), read the co | active |
 | pattern_debug_crashing_driver_as_module_panic5_2026_10_24 | workflow | pattern | Rule: To debug a driver that crashes the boot, build it =m temporarily. The kern | active |
@@ -286,6 +293,7 @@
 | pattern_stage1_background_script_no_stdout_set_e_2026_10_25 | workflow | pattern | Rule: A script that stage-1 init starts must not depend on stdout or stderr. Red | active |
 | pattern_t585_bt_hciuart_unhides_vendor_hci_drivers_off_in_pmos_config_2026_10_27 | mainline | pattern | Rule: When enabling a subsystem in the T585 kernel config, expect the arm64 defc | active |
 | pattern_t585_charger_test_without_shell_setsid_dcpzones_2026_10_24 | mainline | pattern | Rule: For a test that needs the wall charger or no USB host, run a script that w | active |
+| pattern_t585_crash_iteration_panic5_boot_entry_fb0_blank_pstore_2026_10_28 | workflow | pattern | Rule: Put panic=5 on the options line of the pmos.conf boot entry, then trigger  | active |
 | pattern_t585_debug_delays_as_runtime_module_params_bisect_2026_10_26 | workflow | pattern | Rule: Make debug delays and overrides runtime-switchable via module_param, also  | active |
 | pattern_t585_fast_kernel_iteration_scp_vmlinuz_modules_tar_2026_10_27 | workflow | pattern | Rule: Build on the host, run `make modules_install INSTALL_MOD_PATH=<dir>` and t | active |
 | pattern_t585_panel_power_test_variant_dtb_plus_second_boot_entry_2026_10_27 | mainline | pattern | Rule: Test panel power with a variant DTB and a second systemd-boot entry. kerne | active |
@@ -304,14 +312,17 @@
 | todo_t585_alsa_ucm_profile_for_pipewire_2026_10_24 | mainline | todo | TODO: For the postmarketOS/PipeWire userspace (installed on the SM-T585 on 2026- | active |
 | todo_t585_dsi_decisions_after_hw_test_2026_10_26 | mainline | todo | TODO: The first DSI HW test (2026-10-27) hard-hung the tablet before GDM, so fir | active |
 | todo_t585_find_why_fw_devlink_skips_fg_power_supplies_link_2026_10_27 | mainline | todo | TODO (low priority, user confirmed): find out why fw_devlink does not create a d | active |
+| todo_t585_free_cont_splash_mem_once_dsi_reliable_2026_10_28 | mainline | todo | TODO (low): Free the 9 MiB cont_splash_mem reserved region once DSI is reliable  | active |
 | todo_t585_panfrost_mali_supply_opp_table_2026_10_24 | mainline | todo | TODO: Wire the GPU rail and frequencies for Panfrost on the SM-T585. (1) Add mal | active |
-| todo_t585_report_dsi_findings_to_kaustabh_2026_10_26 | mainline | todo | TODO: Report the two HW-verified SM-T585 DSI findings to Kaustabh Chakraborty <k | active |
+| todo_t585_report_dsi_findings_to_kaustabh_2026_10_26 | mainline | todo | TODO: Report the HW-verified SM-T585 DSI findings to Kaustabh Chakraborty <kausc | active |
 | todo_t585_sm5703_charger_review_findings_2026_10_24 | mainline | todo | TODO: Charger review findings, remaining optional points. Committed in src/mainl | active |
 | todo_t585_sm5703_ldo2_regulator_for_haptic_2026_10_27 | mainline | todo | TODO: Expose SM5703 LDO2 as a regulator from the sm5703 charger driver, then add | active |
 | todo_t585_speaker_lineage_reference_dump_2026_10_23 | mainline | todo | TODO: The Lineage reference dump is done and the speaker works at runtime (see l | active |
 | todo_t585_standard_interfaces_charger_gauge_stmfts_followups_2026_10_27 | mainline | todo | TODO (ranked, all need HW; numbers follow docs/standard-interfaces-audit-2026-10 | active |
+| todo_t585_test_kernel_infrastructure_btf_build_dir_swap_script_2026_10_28 | mainline | todo | TODO (suggested): Test-kernel infrastructure: a separate build dir with CONFIG_M | active |
 | todo_t585_thermal_followup_trips_cpufreq_2026_10_24 | mainline | todo | TODO: Thermal follow-up, remaining only: polling-delay 0 once the TMU IRQ is tru | active |
 | todo_t585_uboot_hang_after_no_ethernet_2026_10_26 | device | todo | TODO: Confirm the U-Boot eMMC fix with a multi-reboot stability test (several co | active |
+| user_hw_debug_wants_written_plan_and_desk_research_first_2026_10_28 | general | user | The user wants a written plan up front for hardware debugging: hypotheses, the d | active |
 | user_skill_profile_hw_bringup | general | user | User (avataristvan) skill profile for the galaxy-rab-a-10 device bring-up projec | active |
 | user_wants_hardware_explanations_2026_10_24 | general | user | The user is learning a lot about the hardware through this bring-up ("ich lerne  | active |
 | user_welcomes_host_package_install_requests_2026_10_25 | general | user | The user welcomes being asked to install host packages via pacman/trizen instead | active |

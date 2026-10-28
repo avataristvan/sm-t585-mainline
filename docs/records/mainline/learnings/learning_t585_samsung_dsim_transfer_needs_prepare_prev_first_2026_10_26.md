@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792976190.275604
-edges: [{"target_id": "domain_t585_dsi_panel_own_driver_hx8279d_2026_10_26", "edge_type": "related"}]
+edges: [{"target_id": "domain_t585_dsi_panel_own_driver_hx8279d_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_dsi_reenable_serror_header_fifo_not_waited_fifoctrl_bits_2026_10_28", "edge_type": "related"}]
 cue: Your DSI panel sends DCS or vendor commands in prepare and the transfer fails or times out on samsung-dsim.
 ---
 

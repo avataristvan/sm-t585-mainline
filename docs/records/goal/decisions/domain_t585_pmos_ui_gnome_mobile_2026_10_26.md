@@ -3,7 +3,7 @@ type: domain
 area: goal
 perspective: user
 created: 1792973875.25019
-edges: [{"target_id": "domain_t585_pmos_ui_console_2026_10_25", "edge_type": "supersedes"}, {"target_id": "domain_t585_pmos_in_userdata_pmaports_model_2026_10_26", "edge_type": "related"}]
+edges: [{"target_id": "domain_t585_pmos_ui_console_2026_10_25", "edge_type": "supersedes"}, {"target_id": "domain_t585_pmos_in_userdata_pmaports_model_2026_10_26", "edge_type": "related"}, {"target_id": "domain_t585_cma_128mib_board_dts_exynos_drm_contiguous_2026_10_28", "edge_type": "related"}]
 cue: You choose or change the UI on the running postmarketOS of the SM-T585 (GNOME Mobile vs Phosh vs console).
 ---
 

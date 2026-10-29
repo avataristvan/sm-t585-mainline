@@ -4,7 +4,7 @@
 maintainer="Istvan Lovas <avataristvan@googlemail.com>"
 pkgname=linux-samsung-gtaxllte
 pkgver=7.3.0
-pkgrel=9
+pkgrel=10
 pkgdesc="Mainline kernel fork for the Samsung Galaxy Tab A 10.1 (2016) LTE"
 arch="aarch64"
 _carch="arm64"

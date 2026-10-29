@@ -3,6 +3,8 @@ type: learning
 area: workflow
 perspective: agent
 created: 1793308183.473656
+superseded_by: learning_t585_s2idle_resume_works_after_charger_poll_freezable_wq_2026_10_29
+valid_until: 1793311953.755448
 edges: [{"target_id": "learning_t585_s2idle_suspend_was_cover_closed_logind_lid_holdoff_2026_10_29", "edge_type": "related"}]
 cue: You test or rely on s2idle suspend and resume on the SM-T585 and wonder whether it comes back, and how fast.
 ---

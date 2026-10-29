@@ -197,6 +197,7 @@
 | learning_t585_memtool_bus_error_on_mixer_use_regmap_2026_10_23 | mainline | learning | Observed: kernel/tools/memtool (/dev/mem) gave "Bus error" on the mixer register | active |
 | learning_t585_memtool_works_on_mixer_and_i2s0_during_audio_2026_10_23 | mainline | learning | Observed: memtool works on the s1402x mixer (e.g. 0x14880058) and on I2S0 (0x148 | active |
 | learning_t585_monitor_sensor_needs_logind_seat_2026_10_27 | mainline | learning | Observed: monitor-sensor (iio-sensor-proxy client) run from an ssh session fails | active |
+| learning_t585_never_rmmod_charger_host_built_module_fails_btf_package_kernel_2026_10_29 | workflow | learning | Observed: Host-built modules (kernel/build) do not load into a pmbootstrap-built | active |
 | learning_t585_ntc_vs_fg_temp_wall_charger_hw_kernel30_2026_10_24 | mainline | learning | Observed: Verified on HW, kernel #30. NTC reads 24.0 C at room temp. On the wall | active |
 | learning_t585_opp_microvolt_triplet_shared_buck1_2026_10_24 | mainline | learning | Observed: With exact opp-microvolt (<v v v>) the two cpufreq-dt policies on the  | active |
 | learning_t585_panel_remove_must_disable_unprepare_before_panel_remove_2026_10_27 | mainline | learning | Observed: A drm panel driver's .remove must call drm_panel_disable and drm_panel | active |
@@ -224,10 +225,13 @@
 | learning_t585_rt5659_pll1_from_bclk1_silent_mclk_asrc_works_2026_10_23 | mainline | learning | Observed: PLL1 sourced from BCLK1 (codec_bfs = 64 or 32 at 48 kHz) gave silence  | active |
 | learning_t585_rt5659_pll1_from_mclk_26mhz_pmu_clkout_2026_10_23 | mainline | learning | Observed: On the SM-T585 the RT5659 PLL1 at 48 kHz is fed from a 26 MHz MCLK, NO | active |
 | learning_t585_rt5659_remove_leaves_regcache_stale_fixed_2026_10_24 | mainline | learning | Observed: After rmmod/insmod of the machine module snd-soc-gtaxllte-rt5659 playb | active |
+| learning_t585_rtcwake_freeze_needs_foreground_ssh_count_temp_hot_line_2026_10_29 | workflow | learning | Observed: `rtcwake -m freeze` started with nohup or in the background from an ss | active |
 | learning_t585_s1402x_mixer_driver_works_2026_10_23 | mainline | learning | Observed: The local s1402x mixer driver works: src/mainline/sound/soc/samsung/s1 | active |
 | learning_t585_s1402x_mixer_needs_dmix1_doutmx1_hal_state_2026_10_23 | mainline | learning | Observed: Headphones stayed silent on mainline although the whole RT5659 DAPM pa | active |
 | learning_t585_s1402x_mixer_same_for_capture_and_playback_2026_10_24 | mainline | learning | Observed: The s1402x mixer registers are identical under Lineage during capture  | active |
-| learning_t585_s2idle_resume_works_5s_overnight_suspend_not_back_2026_10_29 | workflow | learning | Observed: s2idle resume works in principle: a 5 s suspend (cover removed) resume | active |
+| learning_t585_s2idle_keeps_monotonic_clock_running_journald_udevd_watchdog_2026_10_29 | mainline | learning | Observed: After s2idle suspends longer than 3 min, systemd restarts journald and | active |
+| learning_t585_s2idle_resume_works_5s_overnight_suspend_not_back_2026_10_29 | workflow | learning | Observed: s2idle resume works in principle: a 5 s suspend (cover removed) resume | superseded_by: learning_t585_s2idle_resume_works_after_charger_poll_freezable_wq_2026_10_29 |
+| learning_t585_s2idle_resume_works_after_charger_poll_freezable_wq_2026_10_29 | mainline | learning | Observed: After src/mainline 479f8fe10 (sm5703 charger and fuel gauge poll works | active |
 | learning_t585_s2idle_suspend_was_cover_closed_logind_lid_holdoff_2026_10_29 | workflow | learning | Observed: The s2idle suspends that looked unexplained were caused by the cover:  | active |
 | learning_t585_s2mpu05_manual_reset_regs_2key_2026_10_24 | mainline | learning | Observed: S2MPU05 registers on kernel #31 (i2c-0 0x66, read-only with i2cx): CTR | active |
 | learning_t585_samsung_dsim_transfer_needs_prepare_prev_first_2026_10_26 | mainline | learning | Observed: samsung-dsim host_transfer only works after the host's pre_enable (sta | active |
@@ -241,7 +245,7 @@
 | learning_t585_sm5703_charger_base_verified_hw_kernel28_2026_10_24 | mainline | learning | Observed: The SM5703 charger driver (drivers/power/supply/sm5703_charger.c, CONF | active |
 | learning_t585_sm5703_charger_teardown_race_fixed_temp_enodata_2026_10_24 | mainline | learning | Observed: Charger review findings fixed in sm5703_charger.c (commit aa17ce4a9 in | active |
 | learning_t585_sm5703_charger_zones_verified_temp_offset_2026_10_24 | mainline | learning | Observed: The SM5703 charger temperature zones work on the SM-T585 hardware. Deb | active |
-| learning_t585_sm5703_chg_poll_runs_during_suspend_i2c_warn_temp_hot_2026_10_29 | mainline | learning | Observed: In our sm5703_charger the sm5703_chg_poll delayed work keeps running d | active |
+| learning_t585_sm5703_chg_poll_runs_during_suspend_i2c_warn_temp_hot_2026_10_29 | mainline | learning | Observed: In our sm5703_charger the sm5703_chg_poll delayed work kept running du | active |
 | learning_t585_sm5703_chunk3b_limiter_verified_module_swap_2026_10_24 | mainline | learning | Observed: Chunk 3b verified on HW by module swap only (no flash; kernel #28 stil | active |
 | learning_t585_sm5703_downstream_dt_pins_charger_params_2026_10_24 | mainline | learning | Observed: Downstream DT: SM5703 MFD @0x49 irq gpa2-7, mrstb gpc7-4, chg_en pin g | active |
 | learning_t585_sm5703_fg_status_follows_charger_verified_hw_2026_10_26 | mainline | learning | Observed: HW-verified 2026-10-26 (kernel 7.3.0-gtaxllte #7 pmOS, test FG module  | active |
@@ -257,6 +261,7 @@
 | learning_t585_speaker_silent_dac_mux_stereo_dac_mixer_2026_10_24 | mainline | learning | Observed: SM-T585 mainline speakers were silent (class-D hiss only) because RT56 | active |
 | learning_t585_stage1_pwrkeyd_screen_toggle_long_press_poweroff_2026_10_24 | mainline | learning | Observed: kernel/tools/pwrkeyd (nolibc, built by build-stage1.sh, started from i | active |
 | learning_t585_stmfts_error_code_line_not_regression_2026_10_24 | mainline | learning | Observed: On the SM-T585, stmfts logs "error code: 0x0dec00d0ba" twice during pr | active |
+| learning_t585_stmfts_logs_error_code_on_every_resume_harmless_2026_10_29 | mainline | learning | Observed: stmfts logs "error code: 0x0dec00d0ba" once on every resume; touch kee | active |
 | learning_t585_sustained_load_reaches_81c_trip_2026_10_24 | mainline | learning | Observed: On SM-T585 mainline at 1690 MHz on all 8 cores (busy loops) the SoC zo | active |
 | learning_t585_sx9306_grip_sensors_no_mainline_driver_2026_10_27 | mainline | learning | Observed: The sx9306 grip/SAR sensors have no mainline driver (the sx9310 family | active |
 | learning_t585_test_kernel_changes_vmlinux_btf_modules_fail_allow_mismatch_2026_10_28 | workflow | learning | Observed: Test kernels with built-in driver changes, a struct change in samsung- | active |
@@ -325,7 +330,7 @@
 | todo_t585_free_cont_splash_mem_once_dsi_reliable_2026_10_28 | mainline | todo | TODO (low): Free the 9 MiB cont_splash_mem reserved region once DSI is reliable  | active |
 | todo_t585_panfrost_mali_supply_opp_table_2026_10_24 | mainline | todo | TODO: Wire the GPU rail and frequencies for Panfrost on the SM-T585. (1) Add mal | active |
 | todo_t585_report_dsi_findings_to_kaustabh_2026_10_26 | mainline | todo | TODO: Report the HW-verified SM-T585 DSI findings to Kaustabh Chakraborty <kausc | active |
-| todo_t585_s2idle_resume_debug_plan_charger_poll_fix_rtcwake_2026_10_29 | workflow | todo | TODO (confirmed by the user): s2idle resume. In this order: (1) debug plan first | active |
+| todo_t585_s2idle_resume_debug_plan_charger_poll_fix_rtcwake_2026_10_29 | workflow | todo | TODO (confirmed by the user): s2idle resume. Status 2026-10-29 night: (1) debug  | active |
 | todo_t585_set_gnome_blank_screen_back_from_never_2026_10_29 | mainline | todo | TODO: Set GNOME "Blank Screen" on the tablet back from the interim "Never" (r9 w | active |
 | todo_t585_sm5703_charger_review_findings_2026_10_24 | mainline | todo | TODO: Charger review findings, remaining optional points. Committed in src/mainl | active |
 | todo_t585_sm5703_ldo2_regulator_for_haptic_2026_10_27 | mainline | todo | TODO: Expose SM5703 LDO2 as a regulator from the sm5703 charger driver, then add | active |

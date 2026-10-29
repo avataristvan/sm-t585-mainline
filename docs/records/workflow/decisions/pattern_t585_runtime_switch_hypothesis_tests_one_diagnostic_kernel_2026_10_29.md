@@ -3,7 +3,7 @@ type: pattern
 area: workflow
 perspective: agent
 created: 1793306202.247288
-edges: [{"target_id": "pattern_t585_debug_delays_as_runtime_module_params_bisect_2026_10_26", "edge_type": "related"}]
+edges: [{"target_id": "pattern_t585_debug_delays_as_runtime_module_params_bisect_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_planned_debugging_solved_dsi_reenable_in_one_session_2026_10_29", "edge_type": "related"}]
 cue: You must decide between several competing hypotheses on the SM-T585 and each would need its own kernel build and flash.
 ---
 

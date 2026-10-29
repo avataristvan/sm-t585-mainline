@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1793226618.125097
-edges: [{"target_id": "learning_t585_gnome_mobile_power_button_backlight_2026_10_26", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_gnome_mobile_power_button_backlight_2026_10_26", "edge_type": "related"}, {"target_id": "domain_t585_no_custom_power_key_console_handling_2026_10_29", "edge_type": "related"}]
 cue: You wonder why the SM-T585 power key blanks instead of suspending, or does nothing when GNOME is not running.
 ---
 

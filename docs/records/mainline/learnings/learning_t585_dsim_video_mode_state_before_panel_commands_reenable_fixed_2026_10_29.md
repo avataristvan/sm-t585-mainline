@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1793306201.909956
-edges: [{"target_id": "pattern_t585_runtime_switch_hypothesis_tests_one_diagnostic_kernel_2026_10_29", "edge_type": "derived_from"}, {"target_id": "learning_t585_dsi_reenable_serror_header_fifo_not_waited_fifoctrl_bits_2026_10_28", "edge_type": "supersedes"}, {"target_id": "todo_t585_report_dsi_findings_to_kaustabh_2026_10_26", "edge_type": "related"}]
+edges: [{"target_id": "pattern_t585_runtime_switch_hypothesis_tests_one_diagnostic_kernel_2026_10_29", "edge_type": "derived_from"}, {"target_id": "learning_t585_dsi_reenable_serror_header_fifo_not_waited_fifoctrl_bits_2026_10_28", "edge_type": "supersedes"}, {"target_id": "todo_t585_report_dsi_findings_to_kaustabh_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_planned_debugging_solved_dsi_reenable_in_one_session_2026_10_29", "edge_type": "related"}, {"target_id": "learning_t585_dsim_first_boot_state_matches_stuck_state_unexplained_2026_10_29", "edge_type": "related"}, {"target_id": "todo_t585_package_linux_r9_dsi_reenable_remove_blank_never_2026_10_29", "edge_type": "related"}]
 cue: SM-T585 DSI panel unblank or re-enable hits FIFO timeouts or SError, or you reorder samsung_dsim init versus panel prepare.
 ---
 

@@ -46,6 +46,7 @@
 | domain_t585_lean_linux_music_device_2026_10_23 | goal | domain | Decision: Revive the SM-T585 as a lean-Linux music device (reopened explicitly b | superseded_by: domain_t585_general_lean_tablet_not_music_only_2026_10_25 |
 | domain_t585_mic_panning_summing_in_software_2026_10_24 | mainline | domain | Decision (user, 2026-10-24): Mic panning and summing is done in software, not in | active |
 | domain_t585_mics_fixed_mono_tracks_2026_10_24 | mainline | domain | Decision (user, 2026-10-24): The mics are fixed mono tracks like on a mixing des | active |
+| domain_t585_no_custom_power_key_console_handling_2026_10_29 | goal | domain | Decision: No custom power-key handling for the text console (user, agent advised | active |
 | domain_t585_own_machine_driver_for_audio_2026_10_23 | mainline | domain | Decision: A small own machine driver for gtaxllte (src/mainline/sound/soc/samsun | active |
 | domain_t585_own_pmos_packages_not_pmaports_2026_10_25 | mainline | domain | Decision: The pmOS device and kernel are our own packages in this repo: pmos/dev | superseded_by: domain_t585_pmos_packages_follow_exynos7_efi_model_2026_10_26 |
 | domain_t585_pmos_in_userdata_pmaports_model_2026_10_26 | goal | domain | Decision (user, 2026-10-25): postmarketOS moves from SYSTEM (mmcblk0p19) to USER | active |
@@ -164,6 +165,7 @@
 | learning_t585_dsi_panel_boe2_params_supplies_timings_2026_10_26 | mainline | learning | Observed: Panel id 0x827903 selects the downstream "BOE2" init table (BOE 8.5" f | active |
 | learning_t585_dsi_porch_pixels_not_byteclock_edge_strip_2026_10_26 | mainline | learning | Observed: HW-verified 2026-10-26. A 1-2 px flickering strip at the line start (l | active |
 | learning_t585_dsi_reenable_serror_header_fifo_not_waited_fifoctrl_bits_2026_10_28 | mainline | learning | Observed: OPEN BUG. Blank works; unblank gives an SError panic in samsung_dsim_t | superseded_by: learning_t585_dsim_video_mode_state_before_panel_commands_reenable_fixed_2026_10_29 |
+| learning_t585_dsim_first_boot_state_matches_stuck_state_unexplained_2026_10_29 | mainline | learning | Observed: OPEN, not needed for the fix. At the end of samsung_dsim_init the DSIM | active |
 | learning_t585_dsim_video_mode_state_before_panel_commands_reenable_fixed_2026_10_29 | mainline | learning | Observed: The Exynos7870 DSIM in video mode keeps the first command packet heade | active |
 | learning_t585_dtbs_check_clean_local_bindings_2026_10_24 | mainline | learning | Observed: dtbs_check of exynos7870-gtaxllte.dtb is clean (2026-10-24) after loca | active |
 | learning_t585_dtbtool_needs_model_info_props_fdtput_2026_10_25 | mainline | learning | Observed: dtbtool-exynos takes chip and hw_rev from the DT properties model_info | active |
@@ -200,6 +202,7 @@
 | learning_t585_panel_remove_must_disable_unprepare_before_panel_remove_2026_10_27 | mainline | learning | Observed: A drm panel driver's .remove must call drm_panel_disable and drm_panel | active |
 | learning_t585_panfrost_probes_on_mainline_2026_10_24 | mainline | learning | Observed: On the SM-T585 mainline stage 1, Panfrost probes with only `&gpu { sta | active |
 | learning_t585_panfrost_renders_kmscube_simpledrm_2026_10_24 | mainline | learning | Observed: On the SM-T585 with the stage-1 image boot-stage1-k32b.img, `kmscube - | active |
+| learning_t585_planned_debugging_solved_dsi_reenable_in_one_session_2026_10_29 | workflow | learning | Observed: The DSI re-enable bug was solved in one session by planned debugging:  | active |
 | learning_t585_playback_pops_were_test_wav_not_hardware_2026_10_24 | mainline | learning | Observed: The playback start/end pops heard on headphones were in the test WAV ( | active |
 | learning_t585_pmic_2key_reset_verified_on_hw_2026_10_24 | mainline | learning | Observed: On hardware, kernel #31, with pwrkeyd stopped: holding only Power for  | active |
 | learning_t585_pmos_boot_entry_conf_editable_for_one_off_cmdline_2026_10_27 | workflow | learning | Observed: /boot/loader/entries/pmos.conf can be edited directly for one-off cmdl | active |
@@ -315,8 +318,10 @@
 | todo_stmfts_pm_runtime_before_register_2026_10_23 | mainline | todo | TODO: Fix an upstream-style bug in mainline stmfts: input_register_device() runs | active |
 | todo_t585_alsa_ucm_profile_for_pipewire_2026_10_24 | mainline | todo | TODO: For the postmarketOS/PipeWire userspace (installed on the SM-T585 on 2026- | active |
 | todo_t585_dsi_decisions_after_hw_test_2026_10_26 | mainline | todo | TODO: The first DSI HW test (2026-10-27) hard-hung the tablet before GDM, so fir | active |
+| todo_t585_find_s2idle_suspend_trigger_2026_10_29 | workflow | todo | TODO: Find the trigger of the s2idle suspend about 13 min after boot with gdm of | active |
 | todo_t585_find_why_fw_devlink_skips_fg_power_supplies_link_2026_10_27 | mainline | todo | TODO (low priority, user confirmed): find out why fw_devlink does not create a d | active |
 | todo_t585_free_cont_splash_mem_once_dsi_reliable_2026_10_28 | mainline | todo | TODO (low): Free the 9 MiB cont_splash_mem reserved region once DSI is reliable  | active |
+| todo_t585_package_linux_r9_dsi_reenable_remove_blank_never_2026_10_29 | mainline | todo | TODO: Build and install linux-samsung-gtaxllte r9 with src/mainline 273a0b9d8 +  | active |
 | todo_t585_panfrost_mali_supply_opp_table_2026_10_24 | mainline | todo | TODO: Wire the GPU rail and frequencies for Panfrost on the SM-T585. (1) Add mal | active |
 | todo_t585_report_dsi_findings_to_kaustabh_2026_10_26 | mainline | todo | TODO: Report the HW-verified SM-T585 DSI findings to Kaustabh Chakraborty <kausc | active |
 | todo_t585_sm5703_charger_review_findings_2026_10_24 | mainline | todo | TODO: Charger review findings, remaining optional points. Committed in src/mainl | active |

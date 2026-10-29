@@ -3,6 +3,7 @@ type: learning
 area: workflow
 perspective: agent
 created: 1793306202.615945
+edges: [{"target_id": "todo_t585_find_s2idle_suspend_trigger_2026_10_29", "edge_type": "related"}, {"target_id": "domain_t585_no_custom_power_key_console_handling_2026_10_29", "edge_type": "related"}]
 cue: You start an unattended test run or long job on the SM-T585 pmOS without gdm, or USB NCM and WiFi vanish minutes after boot.
 ---
 

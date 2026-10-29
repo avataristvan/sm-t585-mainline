@@ -65,7 +65,7 @@ user is around.
 - Fix src/mainline 479f8fe10 (poll works on system_freezable_power_efficient_wq), packaged as
   linux-samsung-gtaxllte r10: RTC runs 20 s, 2 min, 10 min, cover wakes (74 s, 13 s), power-key
   wake with the cover closed — all came back, no I2C warnings, zone stays normal, WiFi and
-  display back. H1 fixed, H2 excluded; 1 h / overnight left to everyday use.
+  display back. H1 fixed, H2 excluded. No overnight/1 h run (user decision: duration-dependent effects would already show within minutes); the original overnight failure is not reproduced.
 - Side findings: stmfts logs "error code 0x0dec00d0ba" once per resume (harmless so far); after
   suspends longer than 3 min systemd restarts journald/udevd on watchdog timeout — the kernel
   clock keeps running through s2idle (no cpuidle driver), so frozen services look hung.

@@ -330,7 +330,6 @@
 | todo_t585_free_cont_splash_mem_once_dsi_reliable_2026_10_28 | mainline | todo | TODO (low): Free the 9 MiB cont_splash_mem reserved region once DSI is reliable  | active |
 | todo_t585_panfrost_mali_supply_opp_table_2026_10_24 | mainline | todo | TODO: Wire the GPU rail and frequencies for Panfrost on the SM-T585. (1) Add mal | active |
 | todo_t585_report_dsi_findings_to_kaustabh_2026_10_26 | mainline | todo | TODO: Report the HW-verified SM-T585 DSI findings to Kaustabh Chakraborty <kausc | active |
-| todo_t585_s2idle_resume_debug_plan_charger_poll_fix_rtcwake_2026_10_29 | workflow | todo | TODO (confirmed by the user): s2idle resume. Status 2026-10-29 night: (1) debug  | active |
 | todo_t585_set_gnome_blank_screen_back_from_never_2026_10_29 | mainline | todo | TODO: Set GNOME "Blank Screen" on the tablet back from the interim "Never" (r9 w | active |
 | todo_t585_sm5703_charger_review_findings_2026_10_24 | mainline | todo | TODO: Charger review findings, remaining optional points. Committed in src/mainl | active |
 | todo_t585_sm5703_ldo2_regulator_for_haptic_2026_10_27 | mainline | todo | TODO: Expose SM5703 LDO2 as a regulator from the sm5703 charger driver, then add | active |

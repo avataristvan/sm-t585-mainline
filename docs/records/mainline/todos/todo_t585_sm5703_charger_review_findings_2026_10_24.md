@@ -3,7 +3,7 @@ type: todo
 area: mainline
 perspective: reviewer
 created: 1792862244.21048
-edges: [{"target_id": "todo_sm5703_charger_fuel_gauge_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_charger_teardown_race_fixed_temp_enodata_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_charger_zones_verified_temp_offset_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "todo_sm5703_charger_fuel_gauge_2026_10_23", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_charger_teardown_race_fixed_temp_enodata_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_charger_zones_verified_temp_offset_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_chg_poll_runs_during_suspend_i2c_warn_temp_hot_2026_10_29", "edge_type": "related"}]
 cue: You touch sm5703_charger.c again or plan rmmod-heavy charger tests on the SM-T585.
 ---
 

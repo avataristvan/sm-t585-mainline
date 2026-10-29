@@ -227,6 +227,8 @@
 | learning_t585_s1402x_mixer_driver_works_2026_10_23 | mainline | learning | Observed: The local s1402x mixer driver works: src/mainline/sound/soc/samsung/s1 | active |
 | learning_t585_s1402x_mixer_needs_dmix1_doutmx1_hal_state_2026_10_23 | mainline | learning | Observed: Headphones stayed silent on mainline although the whole RT5659 DAPM pa | active |
 | learning_t585_s1402x_mixer_same_for_capture_and_playback_2026_10_24 | mainline | learning | Observed: The s1402x mixer registers are identical under Lineage during capture  | active |
+| learning_t585_s2idle_resume_works_5s_overnight_suspend_not_back_2026_10_29 | workflow | learning | Observed: s2idle resume works in principle: a 5 s suspend (cover removed) resume | active |
+| learning_t585_s2idle_suspend_was_cover_closed_logind_lid_holdoff_2026_10_29 | workflow | learning | Observed: The s2idle suspends that looked unexplained were caused by the cover:  | active |
 | learning_t585_s2mpu05_manual_reset_regs_2key_2026_10_24 | mainline | learning | Observed: S2MPU05 registers on kernel #31 (i2c-0 0x66, read-only with i2cx): CTR | active |
 | learning_t585_samsung_dsim_transfer_needs_prepare_prev_first_2026_10_26 | mainline | learning | Observed: samsung-dsim host_transfer only works after the host's pre_enable (sta | active |
 | learning_t585_sboot_ignores_cmdline_accepts_os_version_zero_2026_10_25 | mainline | learning | Observed: S-Boot accepted the pmOS boot.img with os_version=0 (our stage-1 image | active |
@@ -239,6 +241,7 @@
 | learning_t585_sm5703_charger_base_verified_hw_kernel28_2026_10_24 | mainline | learning | Observed: The SM5703 charger driver (drivers/power/supply/sm5703_charger.c, CONF | active |
 | learning_t585_sm5703_charger_teardown_race_fixed_temp_enodata_2026_10_24 | mainline | learning | Observed: Charger review findings fixed in sm5703_charger.c (commit aa17ce4a9 in | active |
 | learning_t585_sm5703_charger_zones_verified_temp_offset_2026_10_24 | mainline | learning | Observed: The SM5703 charger temperature zones work on the SM-T585 hardware. Deb | active |
+| learning_t585_sm5703_chg_poll_runs_during_suspend_i2c_warn_temp_hot_2026_10_29 | mainline | learning | Observed: In our sm5703_charger the sm5703_chg_poll delayed work keeps running d | active |
 | learning_t585_sm5703_chunk3b_limiter_verified_module_swap_2026_10_24 | mainline | learning | Observed: Chunk 3b verified on HW by module swap only (no flash; kernel #28 stil | active |
 | learning_t585_sm5703_downstream_dt_pins_charger_params_2026_10_24 | mainline | learning | Observed: Downstream DT: SM5703 MFD @0x49 irq gpa2-7, mrstb gpc7-4, chg_en pin g | active |
 | learning_t585_sm5703_fg_status_follows_charger_verified_hw_2026_10_26 | mainline | learning | Observed: HW-verified 2026-10-26 (kernel 7.3.0-gtaxllte #7 pmOS, test FG module  | active |
@@ -269,7 +272,7 @@
 | learning_t585_uboot_emmc_flaky_reads_hs400_2026_10_26 | device | learning | Observed: U-Boot eMMC reads were flaky. Several boots hung after "No ethernet fo | active |
 | learning_t585_uboot_fastboot_entry_vol_down_bootmenu_2026_10_26 | device | learning | Observed: Enter U-Boot fastboot: reboot, hold Vol-down alone right after the Sam | active |
 | learning_t585_uboot_hs400_off_reboot_stability_passed_2026_10_26 | device | learning | Observed: The HS200/HS400-off U-Boot build (uboot/gtaxllte.config, image sha1 a6 | active |
-| learning_t585_unexplained_s2idle_suspend_after_boot_never_resumed_2026_10_29 | workflow | learning | Observed: OPEN, to investigate. With gdm disabled, pmOS on the SM-T585 entered s | active |
+| learning_t585_unexplained_s2idle_suspend_after_boot_never_resumed_2026_10_29 | workflow | learning | Observed: OPEN, to investigate. With gdm disabled, pmOS on the SM-T585 entered s | superseded_by: learning_t585_s2idle_suspend_was_cover_closed_logind_lid_holdoff_2026_10_29 |
 | learning_t585_unused_regulator_cleanup_vdd_fixed_lcd_always_on_2026_10_26 | mainline | learning | Observed: A fixed regulator with regulator-boot-on but no active consumer is swi | active |
 | learning_t585_upower_191_charge_limit_udev_property_state_quirk_2026_10_27 | mainline | learning | Observed: upower 1.91 (up-device-supply-battery.c): (a) charge-limit support req | active |
 | learning_t585_vibrator_supply_sm5703_ldo2_no_regulator_haptic_2026_10_27 | mainline | learning | Observed: The T585 vibrator supply is SM5703 LDO2 ("VDD_MOTOR_3.3", register LDO | active |
@@ -318,12 +321,12 @@
 | todo_stmfts_pm_runtime_before_register_2026_10_23 | mainline | todo | TODO: Fix an upstream-style bug in mainline stmfts: input_register_device() runs | active |
 | todo_t585_alsa_ucm_profile_for_pipewire_2026_10_24 | mainline | todo | TODO: For the postmarketOS/PipeWire userspace (installed on the SM-T585 on 2026- | active |
 | todo_t585_dsi_decisions_after_hw_test_2026_10_26 | mainline | todo | TODO: The first DSI HW test (2026-10-27) hard-hung the tablet before GDM, so fir | active |
-| todo_t585_find_s2idle_suspend_trigger_2026_10_29 | workflow | todo | TODO: Find the trigger of the s2idle suspend about 13 min after boot with gdm of | active |
 | todo_t585_find_why_fw_devlink_skips_fg_power_supplies_link_2026_10_27 | mainline | todo | TODO (low priority, user confirmed): find out why fw_devlink does not create a d | active |
 | todo_t585_free_cont_splash_mem_once_dsi_reliable_2026_10_28 | mainline | todo | TODO (low): Free the 9 MiB cont_splash_mem reserved region once DSI is reliable  | active |
-| todo_t585_package_linux_r9_dsi_reenable_remove_blank_never_2026_10_29 | mainline | todo | TODO: Build and install linux-samsung-gtaxllte r9 with src/mainline 273a0b9d8 +  | active |
 | todo_t585_panfrost_mali_supply_opp_table_2026_10_24 | mainline | todo | TODO: Wire the GPU rail and frequencies for Panfrost on the SM-T585. (1) Add mal | active |
 | todo_t585_report_dsi_findings_to_kaustabh_2026_10_26 | mainline | todo | TODO: Report the HW-verified SM-T585 DSI findings to Kaustabh Chakraborty <kausc | active |
+| todo_t585_s2idle_resume_debug_plan_charger_poll_fix_rtcwake_2026_10_29 | workflow | todo | TODO (confirmed by the user): s2idle resume. In this order: (1) debug plan first | active |
+| todo_t585_set_gnome_blank_screen_back_from_never_2026_10_29 | mainline | todo | TODO: Set GNOME "Blank Screen" on the tablet back from the interim "Never" (r9 w | active |
 | todo_t585_sm5703_charger_review_findings_2026_10_24 | mainline | todo | TODO: Charger review findings, remaining optional points. Committed in src/mainl | active |
 | todo_t585_sm5703_ldo2_regulator_for_haptic_2026_10_27 | mainline | todo | TODO: Expose SM5703 LDO2 as a regulator from the sm5703 charger driver, then add | active |
 | todo_t585_speaker_lineage_reference_dump_2026_10_23 | mainline | todo | TODO: The Lineage reference dump is done and the speaker works at runtime (see l | active |

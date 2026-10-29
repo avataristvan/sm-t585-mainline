@@ -3,7 +3,7 @@ type: todo
 area: mainline
 perspective: user
 created: 1793050044.158613
-edges: [{"target_id": "learning_t585_dsi_hang_decon_envid_before_dsim_init_2026_10_26", "edge_type": "derived_from"}, {"target_id": "learning_t585_dsi_porch_pixels_not_byteclock_edge_strip_2026_10_26", "edge_type": "derived_from"}, {"target_id": "learning_t585_dsi_reenable_serror_header_fifo_not_waited_fifoctrl_bits_2026_10_28", "edge_type": "related"}, {"target_id": "learning_t585_dsim_video_mode_state_before_panel_commands_reenable_fixed_2026_10_29", "edge_type": "related"}, {"target_id": "todo_t585_package_linux_r9_dsi_reenable_remove_blank_never_2026_10_29", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_dsi_hang_decon_envid_before_dsim_init_2026_10_26", "edge_type": "derived_from"}, {"target_id": "learning_t585_dsi_porch_pixels_not_byteclock_edge_strip_2026_10_26", "edge_type": "derived_from"}, {"target_id": "learning_t585_dsi_reenable_serror_header_fifo_not_waited_fifoctrl_bits_2026_10_28", "edge_type": "related"}, {"target_id": "learning_t585_dsim_video_mode_state_before_panel_commands_reenable_fixed_2026_10_29", "edge_type": "related"}]
 cue: You work on SM-T585 DSI upstreaming or the Exynos 7870 DSIM series and wonder what is still to be reported or sent to its author.
 ---
 

@@ -3,7 +3,7 @@ type: pattern
 area: workflow
 perspective: agent
 created: 1793048762.738477
-edges: [{"target_id": "learning_t585_dsi_hang_decon_envid_before_dsim_init_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_dsi_porch_pixels_not_byteclock_edge_strip_2026_10_26", "edge_type": "related"}, {"target_id": "learning_memtool_syntax_no_subcommands_hang_2026_10_23", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_dsi_hang_decon_envid_before_dsim_init_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_dsi_porch_pixels_not_byteclock_edge_strip_2026_10_26", "edge_type": "related"}, {"target_id": "learning_memtool_syntax_no_subcommands_hang_2026_10_23", "edge_type": "related"}, {"target_id": "pattern_t585_runtime_switch_hypothesis_tests_one_diagnostic_kernel_2026_10_29", "edge_type": "related"}]
 cue: You bisect a hang or timing bug on the SM-T585 and every experiment would mean a kernel rebuild and flash.
 ---
 

@@ -3,6 +3,8 @@ type: learning
 area: mainline
 perspective: agent
 created: 1793226641.640804
+superseded_by: learning_t585_dsim_video_mode_state_before_panel_commands_reenable_fixed_2026_10_29
+valid_until: 1793306207.215268
 edges: [{"target_id": "learning_t585_samsung_dsim_transfer_needs_prepare_prev_first_2026_10_26", "edge_type": "related"}, {"target_id": "todo_t585_report_dsi_findings_to_kaustabh_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_dsi_hang_decon_envid_before_dsim_init_2026_10_26", "edge_type": "related"}, {"target_id": "pattern_t585_crash_iteration_panic5_boot_entry_fb0_blank_pstore_2026_10_28", "edge_type": "related"}]
 cue: SM-T585 panel unblank panics with SError in samsung_dsim_transfer_start, or you touch the 7870 DSIM header FIFO wait.
 ---

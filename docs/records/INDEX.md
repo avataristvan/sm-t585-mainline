@@ -163,7 +163,8 @@
 | learning_t585_dsi_hang_narrowed_to_pre_enable_2026_10_27 | mainline | learning | Observed: HW-verified 2026-10-27. Ruled out as sole cause of the DSI hang: SysMM | superseded_by: learning_t585_dsi_hang_decon_envid_before_dsim_init_2026_10_26 |
 | learning_t585_dsi_panel_boe2_params_supplies_timings_2026_10_26 | mainline | learning | Observed: Panel id 0x827903 selects the downstream "BOE2" init table (BOE 8.5" f | active |
 | learning_t585_dsi_porch_pixels_not_byteclock_edge_strip_2026_10_26 | mainline | learning | Observed: HW-verified 2026-10-26. A 1-2 px flickering strip at the line start (l | active |
-| learning_t585_dsi_reenable_serror_header_fifo_not_waited_fifoctrl_bits_2026_10_28 | mainline | learning | Observed: OPEN BUG. Blank works; unblank gives an SError panic in samsung_dsim_t | active |
+| learning_t585_dsi_reenable_serror_header_fifo_not_waited_fifoctrl_bits_2026_10_28 | mainline | learning | Observed: OPEN BUG. Blank works; unblank gives an SError panic in samsung_dsim_t | superseded_by: learning_t585_dsim_video_mode_state_before_panel_commands_reenable_fixed_2026_10_29 |
+| learning_t585_dsim_video_mode_state_before_panel_commands_reenable_fixed_2026_10_29 | mainline | learning | Observed: The Exynos7870 DSIM in video mode keeps the first command packet heade | active |
 | learning_t585_dtbs_check_clean_local_bindings_2026_10_24 | mainline | learning | Observed: dtbs_check of exynos7870-gtaxllte.dtb is clean (2026-10-24) after loca | active |
 | learning_t585_dtbtool_needs_model_info_props_fdtput_2026_10_25 | mainline | learning | Observed: dtbtool-exynos takes chip and hw_rev from the DT properties model_info | active |
 | learning_t585_dvfs_stress_60s_4200_transitions_ok_2026_10_24 | mainline | learning | Observed: DVFS stress kernel/out/dvfsstress.sh (8 cpuloop busy loops plus a rand | active |
@@ -253,6 +254,7 @@
 | learning_t585_sustained_load_reaches_81c_trip_2026_10_24 | mainline | learning | Observed: On SM-T585 mainline at 1690 MHz on all 8 cores (busy loops) the SoC zo | active |
 | learning_t585_sx9306_grip_sensors_no_mainline_driver_2026_10_27 | mainline | learning | Observed: The sx9306 grip/SAR sensors have no mainline driver (the sx9310 family | active |
 | learning_t585_test_kernel_changes_vmlinux_btf_modules_fail_allow_mismatch_2026_10_28 | workflow | learning | Observed: Test kernels with built-in driver changes, a struct change in samsung- | active |
+| learning_t585_test_kernel_localversion_empty_reuse_package_modules_2026_10_29 | workflow | learning | Observed: A test kernel built in a separate build dir (kernel/build-diag, copy o | active |
 | learning_t585_tmu_clocked_by_cpucl0_gates_2026_10_24 | mainline | learning | Observed: The 7870 TMU register block at 0x10130000 is clocked by the CPUCL0 gat | active |
 | learning_t585_tmu_irq_rise_fall_works_2026_10_24 | mainline | learning | Observed: TMU interrupt path works on mainline 7870. The exynos7 set_trips windo | active |
 | learning_t585_touch_keys_event_0e_swapped_2026_10_23 | mainline | learning | Observed: The capacitive touch keys left and right of the physical Home key repo | active |
@@ -264,6 +266,7 @@
 | learning_t585_uboot_emmc_flaky_reads_hs400_2026_10_26 | device | learning | Observed: U-Boot eMMC reads were flaky. Several boots hung after "No ethernet fo | active |
 | learning_t585_uboot_fastboot_entry_vol_down_bootmenu_2026_10_26 | device | learning | Observed: Enter U-Boot fastboot: reboot, hold Vol-down alone right after the Sam | active |
 | learning_t585_uboot_hs400_off_reboot_stability_passed_2026_10_26 | device | learning | Observed: The HS200/HS400-off U-Boot build (uboot/gtaxllte.config, image sha1 a6 | active |
+| learning_t585_unexplained_s2idle_suspend_after_boot_never_resumed_2026_10_29 | workflow | learning | Observed: OPEN, to investigate. With gdm disabled, pmOS on the SM-T585 entered s | active |
 | learning_t585_unused_regulator_cleanup_vdd_fixed_lcd_always_on_2026_10_26 | mainline | learning | Observed: A fixed regulator with regulator-boot-on but no active consumer is swi | active |
 | learning_t585_upower_191_charge_limit_udev_property_state_quirk_2026_10_27 | mainline | learning | Observed: upower 1.91 (up-device-supply-battery.c): (a) charge-limit support req | active |
 | learning_t585_vibrator_supply_sm5703_ldo2_no_regulator_haptic_2026_10_27 | mainline | learning | Observed: The T585 vibrator supply is SM5703 LDO2 ("VDD_MOTOR_3.3", register LDO | active |
@@ -302,6 +305,7 @@
 | pattern_t585_pmos_ssh_dedicated_key_2026_10_25 | workflow | pattern | Rule: Reach pmOS with the dedicated, passphrase-less key ~/.ssh/id_ed25519_gtaxl | active |
 | pattern_t585_recover_boot_via_twrp_stage1_image_2026_10_25 | workflow | pattern | Rule: Recover with TWRP: Power + Vol-down, then Vol-up + Home + Power to enter T | active |
 | pattern_t585_reload_audio_modules_from_host_2026_10_24 | mainline | pattern | Rule: Use kernel/out/alsa/reload.sh to reload the codec and machine modules from | active |
+| pattern_t585_runtime_switch_hypothesis_tests_one_diagnostic_kernel_2026_10_29 | workflow | pattern | Rule: Build one diagnostic kernel with one module_param per hypothesis variant o | active |
 | pattern_t585_twrp_dtb_bisect_swap_in_pmos_boot_2026_10_27 | workflow | pattern | Rule: In TWRP, losetup -o $((2048*512)) on mmcblk0p23 and mount the vfat pmOS_bo | active |
 | pattern_user_runs_audio_test_with_timed_register_write_2026_10_24 | workflow | pattern | Rule: When the user tests audio, let them run the test commands themselves via " | active |
 | todo_audio_analysis_lpass_i2s_2026_10_23 | mainline | todo | TODO: Audio analysis: compare downstream lpass-exynos7870.c + i2s.c with mainlin | active |

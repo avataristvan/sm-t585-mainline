@@ -130,6 +130,68 @@ WiFi, panel/DSI supplies after blank, always-on regulators; CPD/SICD out of scop
 Measurement pitfall: a script started with `setsid nohup` over ssh dies at logout (logind
 session scope); use `systemd-run --unit=…`.
 
+### E7 result: r11 with C2 from boot is NOT stable (2026-10-30)
+
+- r11 (C2 on all CPUs from boot) ran ~14 min, then hung during shutdown (journal ends after
+  `systemd-shutdown: Sending SIGTERM`, "Journal stopped"). The rebuilt r11 (same behaviour after
+  /simplify) hung ~14 s into boot; after a reset the screen looped
+  `dwmmc_exynos 13550000.mmc: Interrupt latency, state … (watched …)`.
+- That warning (dw_mmc watchdog) means the eMMC completion interrupt is latched in MINTSTS but its
+  handler never runs; hrtimers still fire. So with C2 a **device interrupt (SPI) is lost** —
+  the earlier E3–E6 runs were mostly idle with little eMMC traffic, so it did not show.
+- Recovery: TWRP, `cpuidle.off=1` added to `loader/entries/pmos.conf` (local workaround; the
+  kernel package hook rewrites the file). Then r12: `CONFIG_CPU_IDLE` off again (config identical
+  to r10); PMU notifier and DT state stay (inert without cpuidle).
+
+### Desk research after E7: PMU CPU options differ from downstream
+
+Downstream `pwrcal/S5E7870/S5E7870-syspwr.c` `syspwr_init()` (pm_init at boot) programs, which
+mainline never does: per-CPU `CPUx_OPTION` (0x2008 + n*0x80) |= `USE_SMPEN` (b28),
+`USE_STANDBYWFI` (b16), `USE_MEMPWRDOWN_FEEDBACK` (b3), `USE_SC_COUNTER` (b0), &= ~`USE_STANDBYWFE`
+(b24), ~`USE_SC_FEEDBACK` (b1); `CPUx_DURATION0` fields; `CPUCLx_NONCPU_OPTION`;
+`CPUCLx_L2_OPTION` (`USE_STANDBYWFIL2`, no auto flush/retention); `UP_SCHEDULER` |= 3.
+
+Read on the running r11 (cpuidle off, read-only):
+
+| reg | cpu0 | cpu1–7 | downstream wants |
+|---|---|---|---|
+| OPTION | `0x01010109` | `0x10010101` | SMPEN, STANDBYWFI, MEMPWRDOWN_FB, SC_COUNTER; no WFE |
+| → SMPEN b28 | **0** | 1 | 1 |
+| → STANDBYWFE b24 | **1** | 0 | 0 |
+| → MEMPWRDOWN_FB b3 | 1 | **0** | 1 |
+| DURATION0 | `0xffffffff` | cl0 `0xffffffff`, cl1 `0xffff0fff` | fields 0x3 at [11:8], [7:4] |
+| L2_OPTION cl0/cl1 | `0x0` | | `USE_STANDBYWFIL2` |
+| NONCPU_OPTION | `0x161` both | | SC_COUNTER, no SC_FEEDBACK |
+| UP_SCHEDULER | `0x0` | | `0x3` |
+| CPUSEQ_OPTION | `0` both (fresh boot) | | 0 except during cluster down |
+
+cpu0 — the CPU all SPIs target by default — may be powered down on **WFE** (arm64 spinlock waits
+use WFE) once LOCAL_PWR_CFG is cleared, and the PMU does not wait for SMPEN low.
+
+## Debug plan 2 (next session, user present; each hang needs a reset)
+
+Hypotheses:
+- **H4** cpu0's bootloader OPTION (STANDBYWFE on, SMPEN off) lets the PMU power cpu0 down at a
+  WFE or while still coherent → lost IRQ state / hang. Only cpu0 is affected.
+- **H5** the missing downstream PMU init in general (MEMPWRDOWN_FEEDBACK on cpu1–7, durations,
+  L2 option) makes C2 racy on any CPU.
+- **H6** SPI wakeup from C2 is lost independent of the options (GIC/firmware), on any CPU that
+  receives device IRQs.
+
+Experiments (test kernel with `CONFIG_CPU_IDLE=y`, C2 default-off via the debug hack, enabled per
+CPU through sysfs; eMMC stress e.g. `dd`/`find /` + `sync` loops, 10 min each, with
+`cpuidle.off=1` kept as the boot fallback entry):
+
+| # | Change | H4 predicts | H5 | H6 |
+|---|---|---|---|---|
+| F1 | C2 on cpu1–7 only, IRQs on cpu0 | stable | may hang | stable (no IRQ target in C2) |
+| F2 | F1 + move the eMMC IRQ to cpu5 (`/proc/irq/N/smp_affinity`) | stable | may hang | hangs |
+| F3 | write downstream OPTION for cpu0 only (devmem-style from a module param), C2 on all | stable | may hang | hangs |
+| F4 | full downstream `syspwr_init` CPU/L2/NONCPU/UP_SCHEDULER init in exynos-pmu probe, C2 all | stable | stable | hangs |
+
+Stop: F1+F2 hang → H6, compare downstream GIC handling (wakeup via PMU `INTR_SPREAD`,
+`CPUCLx_INTR_SPREAD_USE_STANDBYWFI` in CMU) before more HW runs.
+
 Stop criterion: E2 and E3 both hang → stop, record, fall back to "no cpuidle"
 (watchdog restarts stay harmless).
 

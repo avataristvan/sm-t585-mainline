@@ -3,7 +3,7 @@ type: pattern
 area: workflow
 perspective: agent
 created: 1792956373.708088
-edges: [{"target_id": "learning_t585_pstore_needs_printk8_in_init_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_pstore_needs_printk8_in_init_2026_10_24", "edge_type": "related"}, {"target_id": "pattern_t585_pmos_no_root_use_initramfs_logs_and_acm_shell_2026_10_30", "edge_type": "related"}]
 cue: postmarketOS on the SM-T585 does not reach ssh and you need its boot log or journal while the device has no shell.
 ---
 

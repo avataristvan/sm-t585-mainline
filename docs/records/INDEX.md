@@ -43,6 +43,7 @@
 | domain_t585_cpuidle_stays_off_until_irq_loss_fixed_2026_10_30 | mainline | domain | Decision: cpuidle stays off (CONFIG_CPU_IDLE off in kernel/gtaxllte-pmos.config, | superseded_by: domain_t585_cpuidle_on_again_r13_with_pmu_init_2026_10_30 |
 | domain_t585_default_audio_routing_in_machine_driver_2026_10_24 | mainline | domain | Decision: Default audio routing lives in the machine driver: DAC1 -> Stereo DAC  | active |
 | domain_t585_dsi_panel_own_driver_hx8279d_2026_10_26 | mainline | domain | Decision: The HX8279D panel of the gtaxllte gets its own driver drivers/gpu/drm/ | active |
+| domain_t585_emmc_ddr52_clock_frequency_cap_highspeed_2026_10_30 | mainline | domain | Decision: The board DTS mmc0 carries `cap-mmc-highspeed` and `clock-frequency =  | active |
 | domain_t585_general_lean_tablet_not_music_only_2026_10_25 | goal | domain | Decision: The SM-T585 becomes a general lean tablet: a light desktop environment | active |
 | domain_t585_jack_detect_gpio_only_2026_10_24 | mainline | domain | Decision (user, 2026-10-24): Jack detection option (a), GPIO-only. Machine drive | active |
 | domain_t585_jack_switch_module_param_2026_10_24 | mainline | domain | Decision (user, 2026-10-24): Autoswitching on jack events is configurable by mod | active |
@@ -106,6 +107,7 @@
 | learning_memtool_syntax_no_subcommands_hang_2026_10_23 | workflow | learning | Observed: kernel/tools/memtool syntax is `memtool <hex-addr> [hex-value]` (read, | active |
 | learning_module_new_device_test_before_flash_2026_10_24 | workflow | learning | Observed: With CONFIG_LOCALVERSION_AUTO off, a new driver built as a module afte | active |
 | learning_name_physical_controls_in_hw_tests_2026_10_23 | workflow | learning | Observed: When asking the user to press "the keys" during a hardware test, name  | active |
+| learning_pkill_f_in_bash_tool_kills_own_shell_2026_10_30 | workflow | learning | Observed: `pkill -f <name>` run from a Bash tool call killed its own shell (exit | active |
 | learning_pmbootstrap_build_src_rsync_skips_timeconst_bc_2026_10_25 | mainline | learning | Observed: `pmbootstrap build --src` rsyncs the tree with the kernel's .gitignore | active |
 | learning_pmbootstrap_init_keeps_device_qemu_2026_10_25 | workflow | learning | Observed: A second `pmbootstrap init` kept device=qemu-aarch64. `pmbootstrap con | active |
 | learning_pmbootstrap_sudo_timeout_when_user_away_2026_10_25 | workflow | learning | Observed: sudo inside pmbootstrap times out when the user is away from the termi | active |
@@ -190,6 +192,8 @@
 | learning_t585_hang_without_panic_leaves_pstore_empty_2026_10_30 | workflow | learning | Observed: A hang without a panic leaves pstore empty on this device, both after  | active |
 | learning_t585_headset_mic_in1_needs_ejd_ctrl_1_0x70c0_2026_10_24 | mainline | learning | Observed: Headset mic on SM-T585 = IN1 (single-ended) + MICBIAS1 (downstream DT  | active |
 | learning_t585_held_power_supply_reference_blocks_unregister_warn_2026_10_26 | mainline | learning | Observed: power_supply_unregister() WARN_ON(use_cnt) fired when the FG was remov | active |
+| learning_t585_hs200_data_reads_fail_mainline_2026_10_30 | mainline | learning | Observed: HS200 on the 7870 in mainline fails beyond DT. Card init and tuning su | active |
+| learning_t585_hw_test_duration_by_data_volume_not_minutes_2026_10_30 | workflow | learning | Observed: A 10-minute load test was copied from the cpuidle work for the eMMC sp | active |
 | learning_t585_i2cx_rt5659_register_access_2026_10_23 | workflow | learning | Observed: kernel/tools/i2cx writes RT5659 registers directly (16-bit register, 1 | active |
 | learning_t585_i2s0_is_exynos7_i2s1_three_clocks_2026_10_23 | mainline | learning | Observed: SM-T585 I2S0 matches the mainline `samsung,exynos7-i2s1` register layo | active |
 | learning_t585_i2s0_rclksrc_dtsi_fix_verified_2026_10_23 | mainline | learning | Observed: The permanent fix for the I2S0 RCLKSRC roughness is in the DTS, not at | active |
@@ -329,6 +333,7 @@
 | pattern_t585_on_device_measurement_scripts_systemd_run_usb_unplugged_2026_10_30 | workflow | pattern | Rule: Start on-device measurement scripts over ssh as a transient unit (`systemd | active |
 | pattern_t585_panel_power_test_variant_dtb_plus_second_boot_entry_2026_10_27 | mainline | pattern | Rule: Test panel power with a variant DTB and a second systemd-boot entry. kerne | active |
 | pattern_t585_pmos_install_via_recovery_zip_2026_10_25 | goal | pattern | Rule: Install pmOS into Lineage's SYSTEM partition with pmbootstrap install --an | active |
+| pattern_t585_pmos_no_root_use_initramfs_logs_and_acm_shell_2026_10_30 | workflow | pattern | Rule: When a pmOS test boot cannot find its root partition, use the initramfs fa | active |
 | pattern_t585_pmos_post_install_checklist_2026_10_25 | workflow | pattern | Rule: After the recovery-zip install, before trusting the result: (1) in /etc/fs | active |
 | pattern_t585_pmos_ssh_dedicated_key_2026_10_25 | workflow | pattern | Rule: Reach pmOS with the dedicated, passphrase-less key ~/.ssh/id_ed25519_gtaxl | active |
 | pattern_t585_read_pmu_registers_python_mmap_dev_mem_2026_10_30 | workflow | pattern | Rule: Read Exynos PMU registers on the running pmOS with python3 mmap of /dev/me | active |
@@ -340,7 +345,7 @@
 | pattern_user_runs_audio_test_with_timed_register_write_2026_10_24 | workflow | pattern | Rule: When the user tests audio, let them run the test commands themselves via " | active |
 | todo_audio_analysis_lpass_i2s_2026_10_23 | mainline | todo | TODO: Audio analysis: compare downstream lpass-exynos7870.c + i2s.c with mainlin | active |
 | todo_bluetooth_then_dsi_panel_2026_10_23 | mainline | todo | TODO: Bluetooth (hci_qca + "tf" firmware), then the real DSI panel (hx8279 varia | active |
-| todo_emmc_hs200_vmmc_ldo26_2026_10_23 | mainline | todo | TODO: eMMC: enable HS200 in the board DTS and pin vmmc (LDO26) to 2.85 V like An | active |
+| todo_emmc_hs200_vmmc_ldo26_2026_10_23 | mainline | todo | TODO: eMMC HS200 in the driver (low priority, DDR52 already gives 3.5x): desk re | active |
 | todo_sm5703_charger_fuel_gauge_2026_10_23 | mainline | todo | TODO: SM5703 charger and fuel gauge drivers. Chunk 1 (raw read) is DONE 2026-10- | active |
 | todo_stmfts_pm_runtime_before_register_2026_10_23 | mainline | todo | TODO: Fix an upstream-style bug in mainline stmfts: input_register_device() runs | active |
 | todo_t585_alsa_ucm_profile_for_pipewire_2026_10_24 | mainline | todo | TODO: For the postmarketOS/PipeWire userspace (installed on the SM-T585 on 2026- | active |

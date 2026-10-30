@@ -3,7 +3,7 @@ type: learning
 area: device
 perspective: agent
 created: 1792973892.53481
-edges: [{"target_id": "todo_t585_uboot_hang_after_no_ethernet_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_uboot_fastboot_entry_vol_down_bootmenu_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_uboot_hs400_off_reboot_stability_passed_2026_10_26", "edge_type": "related"}]
+edges: [{"target_id": "todo_t585_uboot_hang_after_no_ethernet_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_uboot_fastboot_entry_vol_down_bootmenu_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_uboot_hs400_off_reboot_stability_passed_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_hs200_data_reads_fail_mainline_2026_10_30", "edge_type": "related"}]
 cue: U-Boot on the SM-T585 hangs after "No ethernet found.", or fastboot getvar partition-size fails or says unknown partition table type.
 ---
 

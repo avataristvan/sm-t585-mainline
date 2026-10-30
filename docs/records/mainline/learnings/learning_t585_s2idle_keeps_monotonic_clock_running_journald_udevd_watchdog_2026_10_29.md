@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1793311936.303683
-edges: [{"target_id": "learning_t585_s2idle_resume_works_after_charger_poll_freezable_wq_2026_10_29", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_s2idle_resume_works_after_charger_poll_freezable_wq_2026_10_29", "edge_type": "related"}, {"target_id": "learning_t585_psci_cpu_suspend_needs_pmu_cpu_local_pwr_cfg_clear_2026_10_30", "edge_type": "related"}, {"target_id": "learning_t585_cpuidle_c2_freezes_s2idle_timekeeping_watchdog_cause_resolved_2026_10_30", "edge_type": "related"}]
 cue: journald or udevd show "Failed with result watchdog" after resume, or you decide whether to add PSCI cpuidle idle-states.
 ---
 

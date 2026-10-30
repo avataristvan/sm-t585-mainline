@@ -143,6 +143,7 @@
 | learning_t585_bt_qca9377_works_on_hw_firmware_3mbaud_2026_10_27 | mainline | learning | Observed: HW-verified 2026-10-27: BT QCA9377 on serial1 via hci_qca works. SOC 0 | active |
 | learning_t585_bt_uart_serial1_hci_qca_wiring_2026_10_27 | mainline | learning | Observed: Downstream serial_0 (uart@13810000) is mainline &serial1, because main | active |
 | learning_t585_build_stage1_same_version_overwrites_boot_image_2026_10_24 | mainline | learning | Observed: The first version of the numbered copy in kernel/build-stage1.sh named | active |
+| learning_t585_c2_saves_only_8ma_idle_baseline_1_7w_screen_off_2026_10_30 | mainline | learning | Observed: C2 (core-only power-down) saves only ~8 mA (~2 %, within noise) at idl | active |
 | learning_t585_capture_not_running_i2s0_rx_needed_2026_10_23 | mainline | learning | Observed: Capture on the mainline SM-T585 card does not run yet. tinycap -t 5 re | superseded_by: learning_t585_capture_runs_realtime_use_pcmrec_i2s0_rx_zeros_2026_10_23 |
 | learning_t585_capture_open_delay_every_open_not_latency_2026_10_24 | mainline | learning | Observed: The 200 ms adc_power_delay hits every capture open, not only at boot.  | active |
 | learning_t585_capture_runs_realtime_use_pcmrec_i2s0_rx_zeros_2026_10_23 | mainline | learning | Observed: Capture DOES run in real time on the mainline SM-T585 card; the instan | active |
@@ -154,6 +155,8 @@
 | learning_t585_cpu_numbering_cmu_and_cpuloop_tool_2026_10_24 | mainline | learning | Observed: CPUs 0-3 (MPIDR 0x0xx) = CMU_CPUCL0 (0x10900000); CPUs 4-7 (MPIDR 0x1x | active |
 | learning_t585_cpucl_pll_14170_rates_dividers_cmu_missing_2026_10_24 | mainline | learning | Observed: CPUCL0/1 PLL is type 14170 (ECT), 26 MHz osc, P/M/S per level in ect-p | active |
 | learning_t585_cpufreq_dt_first_transition_undervolt_fix_2026_10_24 | mainline | learning | Observed: A cpufreq-dt policy registers its regulator request only on its first  | active |
+| learning_t585_cpuidle_c2_freezes_s2idle_timekeeping_watchdog_cause_resolved_2026_10_30 | mainline | learning | Observed: With PSCI C2 enabled on all CPUs (test kernel #9, PMU notifier), s2idl | active |
+| learning_t585_cpuidle_psci_all_or_nothing_staged_test_needs_two_cpus_2026_10_30 | mainline | learning | Observed: Mainline cpuidle-psci is all-or-nothing: if any present CPU has no cpu | active |
 | learning_t585_dapm_delay_event_on_both_widgets_skip_if_done_2026_10_24 | mainline | learning | Observed: Putting the PRE_PMU adc_power_delay only on "Stereo1 ADC Volume L" bro | active |
 | learning_t585_dapm_delay_event_on_one_widget_only_2026_10_24 | mainline | learning | Observed: With the delay event on both the L and R widgets of the same register, | superseded_by: learning_t585_dapm_delay_event_on_both_widgets_skip_if_done_2026_10_24 |
 | learning_t585_decon_dsi_enabled_hard_hangs_before_gdm_2026_10_27 | mainline | learning | Observed: HW-verified 2026-10-27 (pmOS, linux-samsung-gtaxllte r5): enabling &de | active |
@@ -176,6 +179,7 @@
 | learning_t585_gnome_mobile_power_button_backlight_2026_10_26 | device | learning | Observed: Under GNOME Mobile, gsd power-button-action defaulted to 'suspend' and | active |
 | learning_t585_gnome_mobile_power_key_blank_not_suspend_logind_ignore_2026_10_28 | mainline | learning | Observed: GNOME Mobile does the system action 'blank' on a short power-key press | active |
 | learning_t585_hall_pwrkeyd_thermal_checked_fine_2026_10_27 | mainline | learning | Observed: audit found these already standard: the hall sensor is gpio-keys SW_LI | active |
+| learning_t585_hang_without_panic_leaves_pstore_empty_2026_10_30 | workflow | learning | Observed: A hang without a panic leaves pstore empty on this device, both after  | active |
 | learning_t585_headset_mic_in1_needs_ejd_ctrl_1_0x70c0_2026_10_24 | mainline | learning | Observed: Headset mic on SM-T585 = IN1 (single-ended) + MICBIAS1 (downstream DT  | active |
 | learning_t585_held_power_supply_reference_blocks_unregister_warn_2026_10_26 | mainline | learning | Observed: power_supply_unregister() WARN_ON(use_cnt) fired when the FG was remov | active |
 | learning_t585_i2cx_rt5659_register_access_2026_10_23 | workflow | learning | Observed: kernel/tools/i2cx writes RT5659 registers directly (16-bit register, 1 | active |
@@ -215,6 +219,7 @@
 | learning_t585_pmu_regmap_cat_hangs_device_2026_10_23 | device | learning | Observed: Under Lineage (downstream 3.18), `cat /d/regmap/10480000.system-contro | active |
 | learning_t585_power_supply_supplier_name_pointer_rmmod_oops_devlink_fix_2026_10_26 | mainline | learning | Observed: HW 2026-10-26: with the FG's `power-supplies = <&charger>`, `rmmod sm5 | active |
 | learning_t585_poweroff_f_works_stage1_2026_10_23 | mainline | learning | Observed: On stage 1 (mainline 7.3), `poweroff -f` from the shell switched the S | active |
+| learning_t585_psci_cpu_suspend_needs_pmu_cpu_local_pwr_cfg_clear_2026_10_30 | mainline | learning | Observed: On the SM-T585 (Exynos7870, Samsung EL3 firmware, PSCI v0.1) plain PSC | active |
 | learning_t585_pstore_needs_printk8_in_init_2026_10_24 | workflow | learning | Observed: S-Boot passes loglevel=4, so console-ramoops only recorded warnings; a | active |
 | learning_t585_rootfs_alpine_chroot_tmpfs_squashfs_2026_10_24 | workflow | learning | Observed: A userspace rootfs for the SM-T585 is built by kernel/tools/rootfs/bui | active |
 | learning_t585_rootfs_image_made_on_device_no_usb_copy_2026_10_25 | workflow | learning | Observed: The 4 GiB rootfs image was created on the device itself, so nothing cr | active |
@@ -310,10 +315,12 @@
 | pattern_t585_crash_iteration_panic5_boot_entry_fb0_blank_pstore_2026_10_28 | workflow | pattern | Rule: Put panic=5 on the options line of the pmos.conf boot entry, then trigger  | active |
 | pattern_t585_debug_delays_as_runtime_module_params_bisect_2026_10_26 | workflow | pattern | Rule: Make debug delays and overrides runtime-switchable via module_param, also  | active |
 | pattern_t585_fast_kernel_iteration_scp_vmlinuz_modules_tar_2026_10_27 | workflow | pattern | Rule: Build on the host, run `make modules_install INSTALL_MOD_PATH=<dir>` and t | active |
+| pattern_t585_on_device_measurement_scripts_systemd_run_usb_unplugged_2026_10_30 | workflow | pattern | Rule: Start on-device measurement scripts over ssh as a transient unit (`systemd | active |
 | pattern_t585_panel_power_test_variant_dtb_plus_second_boot_entry_2026_10_27 | mainline | pattern | Rule: Test panel power with a variant DTB and a second systemd-boot entry. kerne | active |
 | pattern_t585_pmos_install_via_recovery_zip_2026_10_25 | goal | pattern | Rule: Install pmOS into Lineage's SYSTEM partition with pmbootstrap install --an | active |
 | pattern_t585_pmos_post_install_checklist_2026_10_25 | workflow | pattern | Rule: After the recovery-zip install, before trusting the result: (1) in /etc/fs | active |
 | pattern_t585_pmos_ssh_dedicated_key_2026_10_25 | workflow | pattern | Rule: Reach pmOS with the dedicated, passphrase-less key ~/.ssh/id_ed25519_gtaxl | active |
+| pattern_t585_read_pmu_registers_python_mmap_dev_mem_2026_10_30 | workflow | pattern | Rule: Read Exynos PMU registers on the running pmOS with python3 mmap of /dev/me | active |
 | pattern_t585_recover_boot_via_twrp_stage1_image_2026_10_25 | workflow | pattern | Rule: Recover with TWRP: Power + Vol-down, then Vol-up + Home + Power to enter T | active |
 | pattern_t585_reload_audio_modules_from_host_2026_10_24 | mainline | pattern | Rule: Use kernel/out/alsa/reload.sh to reload the codec and machine modules from | active |
 | pattern_t585_runtime_switch_hypothesis_tests_one_diagnostic_kernel_2026_10_29 | workflow | pattern | Rule: Build one diagnostic kernel with one module_param per hypothesis variant o | active |
@@ -328,6 +335,7 @@
 | todo_t585_dsi_decisions_after_hw_test_2026_10_26 | mainline | todo | TODO: The first DSI HW test (2026-10-27) hard-hung the tablet before GDM, so fir | active |
 | todo_t585_find_why_fw_devlink_skips_fg_power_supplies_link_2026_10_27 | mainline | todo | TODO (low priority, user confirmed): find out why fw_devlink does not create a d | active |
 | todo_t585_free_cont_splash_mem_once_dsi_reliable_2026_10_28 | mainline | todo | TODO (low): Free the 9 MiB cont_splash_mem reserved region once DSI is reliable  | active |
+| todo_t585_investigate_screen_off_idle_baseline_1_7w_2026_10_30 | mainline | todo | TODO: Investigate the ~1.7 W (~420 mA at ~4.05 V) idle baseline with the screen  | active |
 | todo_t585_panfrost_mali_supply_opp_table_2026_10_24 | mainline | todo | TODO: Wire the GPU rail and frequencies for Panfrost on the SM-T585. (1) Add mal | active |
 | todo_t585_report_dsi_findings_to_kaustabh_2026_10_26 | mainline | todo | TODO: Report the HW-verified SM-T585 DSI findings to Kaustabh Chakraborty <kausc | active |
 | todo_t585_set_gnome_blank_screen_back_from_never_2026_10_29 | mainline | todo | TODO: Set GNOME "Blank Screen" on the tablet back from the interim "Never" (r9 w | active |

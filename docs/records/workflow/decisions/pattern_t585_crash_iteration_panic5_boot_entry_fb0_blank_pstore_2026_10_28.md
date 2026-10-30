@@ -3,7 +3,7 @@ type: pattern
 area: workflow
 perspective: agent
 created: 1793226635.411112
-edges: [{"target_id": "learning_t585_test_kernel_changes_vmlinux_btf_modules_fail_allow_mismatch_2026_10_28", "edge_type": "related"}, {"target_id": "learning_t585_dsi_reenable_serror_header_fifo_not_waited_fifoctrl_bits_2026_10_28", "edge_type": "related"}, {"target_id": "pattern_debug_crashing_driver_as_module_panic5_2026_10_24", "edge_type": "related"}, {"target_id": "pattern_t585_fast_kernel_iteration_scp_vmlinuz_modules_tar_2026_10_27", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_test_kernel_changes_vmlinux_btf_modules_fail_allow_mismatch_2026_10_28", "edge_type": "related"}, {"target_id": "learning_t585_dsi_reenable_serror_header_fifo_not_waited_fifoctrl_bits_2026_10_28", "edge_type": "related"}, {"target_id": "pattern_debug_crashing_driver_as_module_panic5_2026_10_24", "edge_type": "related"}, {"target_id": "pattern_t585_fast_kernel_iteration_scp_vmlinuz_modules_tar_2026_10_27", "edge_type": "related"}, {"target_id": "learning_t585_hang_without_panic_leaves_pstore_empty_2026_10_30", "edge_type": "related"}]
 cue: You iterate on a kernel change that panics the SM-T585 on a runtime action (blank/unblank) and each crash needs a manual reset.
 ---
 

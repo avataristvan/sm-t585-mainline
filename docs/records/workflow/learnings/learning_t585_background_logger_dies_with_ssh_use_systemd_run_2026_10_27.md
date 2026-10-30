@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: agent
 created: 1793051249.718683
-edges: [{"target_id": "domain_private_access_details_not_in_public_records_2026_10_27", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_fg_status_follows_charger_verified_hw_2026_10_26", "edge_type": "related"}]
+edges: [{"target_id": "domain_private_access_details_not_in_public_records_2026_10_27", "edge_type": "related"}, {"target_id": "learning_t585_sm5703_fg_status_follows_charger_verified_hw_2026_10_26", "edge_type": "related"}, {"target_id": "pattern_t585_on_device_measurement_scripts_systemd_run_usb_unplugged_2026_10_30", "edge_type": "related"}]
 cue: You start a background logger on the pmOS tablet over ssh for a user-driven hardware test and need it to survive the session.
 ---
 

@@ -101,3 +101,10 @@ assistant (Anthropic's Claude, via Claude Code): research in the vendor kernel, 
 code and commit messages were developed in that collaboration, hardware tests and decisions
 were mine. Commits made with assistance carry a `Co-Authored-By: Claude` trailer. The
 `docs/records/` folder is the shared memory of that process.
+
+## License
+
+The scripts, tools, packages and documentation in this repository are under the
+[MIT License](LICENSE). Files with their own `SPDX-License-Identifier` (for example the U-Boot
+device trees) keep that license, and the submodules keep theirs (the kernel is GPL-2.0).
+`device-dump/` holds data read from a stock Samsung device; it is not covered by this license.

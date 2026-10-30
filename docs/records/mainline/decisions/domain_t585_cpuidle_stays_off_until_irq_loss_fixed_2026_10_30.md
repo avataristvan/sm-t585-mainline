@@ -3,6 +3,8 @@ type: domain
 area: mainline
 perspective: agent
 created: 1793322709.938658
+superseded_by: domain_t585_cpuidle_on_again_r13_with_pmu_init_2026_10_30
+valid_until: 1793341591.42761
 edges: [{"target_id": "learning_t585_cpuidle_c2_loses_device_irqs_under_io_2026_10_30", "edge_type": "derived_from"}]
 cue: You are deciding whether to re-enable cpuidle on the SM-T585 or revert the C2 commits.
 ---

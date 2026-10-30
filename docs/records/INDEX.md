@@ -38,7 +38,8 @@
 | domain_t585_cooling_maps_both_clusters_2026_10_24 | mainline | domain | Decision: Cooling maps on soc-thermal bind both cpufreq cooling devices (cpu0 =  | active |
 | domain_t585_cpu_opp_table_asv7_2026_10_24 | mainline | domain | Decision: T585 CPU OPP table (both clusters identical, this chip, ASV group 7),  | active |
 | domain_t585_cpufreq_dt_cluster_clocks_userspace_governor_2026_10_24 | mainline | domain | Decision: T585 cpufreq = cpufreq-dt on new cluster clocks CLK_CLUSTER0/1_SCLK (c | active |
-| domain_t585_cpuidle_stays_off_until_irq_loss_fixed_2026_10_30 | mainline | domain | Decision: cpuidle stays off (CONFIG_CPU_IDLE off in kernel/gtaxllte-pmos.config, | active |
+| domain_t585_cpuidle_on_again_r13_with_pmu_init_2026_10_30 | mainline | domain | Decision: cpuidle (C2) is on again in package r13, together with exynos7870_pmu_ | active |
+| domain_t585_cpuidle_stays_off_until_irq_loss_fixed_2026_10_30 | mainline | domain | Decision: cpuidle stays off (CONFIG_CPU_IDLE off in kernel/gtaxllte-pmos.config, | superseded_by: domain_t585_cpuidle_on_again_r13_with_pmu_init_2026_10_30 |
 | domain_t585_default_audio_routing_in_machine_driver_2026_10_24 | mainline | domain | Decision: Default audio routing lives in the machine driver: DAC1 -> Stereo DAC  | active |
 | domain_t585_dsi_panel_own_driver_hx8279d_2026_10_26 | mainline | domain | Decision: The HX8279D panel of the gtaxllte gets its own driver drivers/gpu/drm/ | active |
 | domain_t585_general_lean_tablet_not_music_only_2026_10_25 | goal | domain | Decision: The SM-T585 becomes a general lean tablet: a light desktop environment | active |
@@ -145,6 +146,7 @@
 | learning_t585_bt_qca9377_works_on_hw_firmware_3mbaud_2026_10_27 | mainline | learning | Observed: HW-verified 2026-10-27: BT QCA9377 on serial1 via hci_qca works. SOC 0 | active |
 | learning_t585_bt_uart_serial1_hci_qca_wiring_2026_10_27 | mainline | learning | Observed: Downstream serial_0 (uart@13810000) is mainline &serial1, because main | active |
 | learning_t585_build_stage1_same_version_overwrites_boot_image_2026_10_24 | mainline | learning | Observed: The first version of the numbered copy in kernel/build-stage1.sh named | active |
+| learning_t585_c2_irq_loss_fixed_by_cpu0_pmu_option_vendor_value_2026_10_30 | mainline | learning | Observed: The C2 interrupt loss is caused by cpu0's bootloader PMU OPTION (0x010 | active |
 | learning_t585_c2_saves_only_8ma_idle_baseline_1_7w_screen_off_2026_10_30 | mainline | learning | Observed: C2 (core-only power-down) saves only ~8 mA (~2 %, within noise) at idl | active |
 | learning_t585_capture_not_running_i2s0_rx_needed_2026_10_23 | mainline | learning | Observed: Capture on the mainline SM-T585 card does not run yet. tinycap -t 5 re | superseded_by: learning_t585_capture_runs_realtime_use_pcmrec_i2s0_rx_zeros_2026_10_23 |
 | learning_t585_capture_open_delay_every_open_not_latency_2026_10_24 | mainline | learning | Observed: The 200 ms adc_power_delay hits every capture open, not only at boot.  | active |
@@ -162,6 +164,7 @@
 | learning_t585_cpuidle_psci_all_or_nothing_staged_test_needs_two_cpus_2026_10_30 | mainline | learning | Observed: Mainline cpuidle-psci is all-or-nothing: if any present CPU has no cpu | active |
 | learning_t585_dapm_delay_event_on_both_widgets_skip_if_done_2026_10_24 | mainline | learning | Observed: Putting the PRE_PMU adc_power_delay only on "Stereo1 ADC Volume L" bro | active |
 | learning_t585_dapm_delay_event_on_one_widget_only_2026_10_24 | mainline | learning | Observed: With the delay event on both the L and R widgets of the same register, | superseded_by: learning_t585_dapm_delay_event_on_both_widgets_skip_if_done_2026_10_24 |
+| learning_t585_debug_plan_with_predictions_decided_c2_hypotheses_in_90_min_2026_10_30 | workflow | learning | Observed: The "debug plan before HW experiments" practice (hypotheses + predicti | active |
 | learning_t585_decon_dsi_enabled_hard_hangs_before_gdm_2026_10_27 | mainline | learning | Observed: HW-verified 2026-10-27 (pmOS, linux-samsung-gtaxllte r5): enabling &de | active |
 | learning_t585_dispaud_reset_pulse_needed_2026_10_23 | mainline | learning | Observed: DISPAUD_CFG (0x148F1000) audio soft resets (bit0 mixer, 1 MI2S, 2 AMP, | active |
 | learning_t585_downstream_kernel_source_and_roms_2026_10_23 | device | learning | Observed: Working downstream kernel for gtaxllte/gtaxlwifi: github.com/Exynos787 | active |
@@ -176,6 +179,7 @@
 | learning_t585_dtbs_check_clean_local_bindings_2026_10_24 | mainline | learning | Observed: dtbs_check of exynos7870-gtaxllte.dtb is clean (2026-10-24) after loca | active |
 | learning_t585_dtbtool_needs_model_info_props_fdtput_2026_10_25 | mainline | learning | Observed: dtbtool-exynos takes chip and hw_rev from the DT properties model_info | active |
 | learning_t585_dvfs_stress_60s_4200_transitions_ok_2026_10_24 | mainline | learning | Observed: DVFS stress kernel/out/dvfsstress.sh (8 cpuloop busy loops plus a rand | active |
+| learning_t585_dwmmc_irq_map_interrupt_latency_once_at_13s_is_baseline_2026_10_30 | mainline | learning | Observed: Correction: the r11 "Interrupt latency" endless loop was on 13550000.m | active |
 | learning_t585_exynos7870_adc_mainline_support_2026_10_24 | mainline | learning | Observed: Exynos7870 ADC works in mainline with a new compatible samsung,exynos7 | active |
 | learning_t585_exynos_thermal_selects_max8973_2026_10_24 | mainline | learning | Observed: EXYNOS_THERMAL selects REGULATOR_MAX8973 (dead weight on this board);  | superseded_by: learning_t585_max8973_comes_from_defconfig_depends_2026_10_24 |
 | learning_t585_gauge_status_from_current_sign_wrong_2026_10_27 | mainline | learning | Observed: "Discharging" from sm5703-fuel-gauge on an SDP port (about 450 mA) whi | active |
@@ -224,6 +228,7 @@
 | learning_t585_power_supply_supplier_name_pointer_rmmod_oops_devlink_fix_2026_10_26 | mainline | learning | Observed: HW 2026-10-26: with the FG's `power-supplies = <&charger>`, `rmmod sm5 | active |
 | learning_t585_poweroff_f_works_stage1_2026_10_23 | mainline | learning | Observed: On stage 1 (mainline 7.3), `poweroff -f` from the shell switched the S | active |
 | learning_t585_psci_cpu_suspend_needs_pmu_cpu_local_pwr_cfg_clear_2026_10_30 | mainline | learning | Observed: On the SM-T585 (Exynos7870, Samsung EL3 firmware, PSCI v0.1) plain PSC | active |
+| learning_t585_psci_wakeup_from_c2_works_on_non_boot_cpu_gic_hypothesis_refuted_2026_10_30 | mainline | learning | Observed: SPI wakeup from C2 works on a non-boot CPU. With the eMMC and WiFi IRQ | active |
 | learning_t585_pstore_needs_printk8_in_init_2026_10_24 | workflow | learning | Observed: S-Boot passes loglevel=4, so console-ramoops only recorded warnings; a | active |
 | learning_t585_rootfs_alpine_chroot_tmpfs_squashfs_2026_10_24 | workflow | learning | Observed: A userspace rootfs for the SM-T585 is built by kernel/tools/rootfs/bui | active |
 | learning_t585_rootfs_image_made_on_device_no_usb_copy_2026_10_25 | workflow | learning | Observed: The 4 GiB rootfs image was created on the device itself, so nothing cr | active |
@@ -319,6 +324,7 @@
 | pattern_t585_crash_iteration_panic5_boot_entry_fb0_blank_pstore_2026_10_28 | workflow | pattern | Rule: Put panic=5 on the options line of the pmos.conf boot entry, then trigger  | active |
 | pattern_t585_debug_delays_as_runtime_module_params_bisect_2026_10_26 | workflow | pattern | Rule: Make debug delays and overrides runtime-switchable via module_param, also  | active |
 | pattern_t585_fast_kernel_iteration_scp_vmlinuz_modules_tar_2026_10_27 | workflow | pattern | Rule: Build on the host, run `make modules_install INSTALL_MOD_PATH=<dir>` and t | active |
+| pattern_t585_idle_psci_experiments_load_control_reverting_run_staged_enable_2026_10_30 | workflow | pattern | Rule: Test idle/PSCI changes with a reproducible load and a control: 10 min rand | active |
 | pattern_t585_on_device_measurement_scripts_systemd_run_usb_unplugged_2026_10_30 | workflow | pattern | Rule: Start on-device measurement scripts over ssh as a transient unit (`systemd | active |
 | pattern_t585_panel_power_test_variant_dtb_plus_second_boot_entry_2026_10_27 | mainline | pattern | Rule: Test panel power with a variant DTB and a second systemd-boot entry. kerne | active |
 | pattern_t585_pmos_install_via_recovery_zip_2026_10_25 | goal | pattern | Rule: Install pmOS into Lineage's SYSTEM partition with pmbootstrap install --an | active |
@@ -337,12 +343,13 @@
 | todo_sm5703_charger_fuel_gauge_2026_10_23 | mainline | todo | TODO: SM5703 charger and fuel gauge drivers. Chunk 1 (raw read) is DONE 2026-10- | active |
 | todo_stmfts_pm_runtime_before_register_2026_10_23 | mainline | todo | TODO: Fix an upstream-style bug in mainline stmfts: input_register_device() runs | active |
 | todo_t585_alsa_ucm_profile_for_pipewire_2026_10_24 | mainline | todo | TODO: For the postmarketOS/PipeWire userspace (installed on the SM-T585 on 2026- | active |
-| todo_t585_cpuidle_c2_debug_plan_2_2026_10_30 | mainline | todo | TODO: cpuidle C2 debug plan 2, user present for every run: F1 C2 on cpu1-7 only  | active |
+| todo_t585_cpuidle_c2_day_of_real_use_after_r13_2026_10_30 | mainline | todo | TODO: after r13 is installed, a day of real use (incl. cover suspend) before cal | active |
 | todo_t585_dsi_decisions_after_hw_test_2026_10_26 | mainline | todo | TODO: The first DSI HW test (2026-10-27) hard-hung the tablet before GDM, so fir | active |
 | todo_t585_find_why_fw_devlink_skips_fg_power_supplies_link_2026_10_27 | mainline | todo | TODO (low priority, user confirmed): find out why fw_devlink does not create a d | active |
 | todo_t585_free_cont_splash_mem_once_dsi_reliable_2026_10_28 | mainline | todo | TODO (low): Free the 9 MiB cont_splash_mem reserved region once DSI is reliable  | active |
 | todo_t585_investigate_screen_off_idle_baseline_1_7w_2026_10_30 | mainline | todo | TODO: Investigate the ~1.7 W (~420 mA at ~4.05 V) idle baseline with the screen  | active |
 | todo_t585_panfrost_mali_supply_opp_table_2026_10_24 | mainline | todo | TODO: Wire the GPU rail and frequencies for Panfrost on the SM-T585. (1) Add mal | active |
+| todo_t585_rebase_mainline_onto_v7_4_rc1_after_c2_commit_2026_10_30 | mainline | todo | TODO: once v7.4-rc1 is tagged, rebase src/mainline branch gtaxllte onto it (shal | active |
 | todo_t585_report_dsi_findings_to_kaustabh_2026_10_26 | mainline | todo | TODO: Report the HW-verified SM-T585 DSI findings to Kaustabh Chakraborty <kausc | active |
 | todo_t585_set_gnome_blank_screen_back_from_never_2026_10_29 | mainline | todo | TODO: Set GNOME "Blank Screen" on the tablet back from the interim "Never" (r9 w | active |
 | todo_t585_sm5703_charger_review_findings_2026_10_24 | mainline | todo | TODO: Charger review findings, remaining optional points. Committed in src/mainl | active |

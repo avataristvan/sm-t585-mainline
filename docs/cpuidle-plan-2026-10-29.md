@@ -195,6 +195,32 @@ Stop: F1+F2 hang → H6, compare downstream GIC handling (wakeup via PMU `INTR_S
 Stop criterion: E2 and E3 both hang → stop, record, fall back to "no cpuidle"
 (watchdog restarts stay harmless).
 
+### Debug plan 2 results (2026-10-30)
+
+Load per run, 10 min: random 32 MiB `O_DIRECT` reads from mmcblk0 + 16 MiB `fsync` writes
+(on the tablet), plus ~1.3–1.9 GB of ssh traffic over WiFi in both directions (from the host).
+IRQ map: 47 = `13540000.mmc` (mmc0, eMMC), 45 = `13550000.mmc` (mmc1, WiFi SDIO; the r11 loop
+was on this one), 46 = `13560000.mmc` (mmc2, SD).
+
+| Run | Setup | Result |
+|---|---|---|
+| Control | r12, no cpuidle | stable, no new latency warning |
+| F1 | C2 on cpu1–7, IRQs on cpu0 | stable, ~600k C2 entries |
+| F2 | F1 + IRQ 45/47 on cpu5 | stable; cpu5 handled 2M+140k IRQs, ~270k C2 entries |
+| F3 | C2 on all CPUs, IRQs on cpu0, cpu0 OPTION written to `0x10010109` at runtime | stable; cpu0 ~380k C2 entries |
+| F3b | F3 with cpu0 OPTION written back to `0x01010109` | **hang after ~40 s** (pstore empty) |
+| F4 | `exynos7870_pmu_init()` sets the downstream OPTION bits on all CPUs, C2 on all | stable; cpu0 ~370k C2 entries |
+| F5 | F4 without the default-off hack (C2 from boot) | 3 reboots clean (journal stopped cleanly each time); load run stable; RTC-woken s2idle (`rtcwake -m freeze -s 60`) resumes, monotonic advanced 8 s over ~60 s, no watchdog timeouts |
+
+Verdict: **H4 confirmed, H6 refuted** (a C2 CPU is woken by device SPIs fine, F2); H5 is not
+needed beyond the cpu0 OPTION (cpu1–7 were stable with the bootloader values, F1). The
+OPTION init goes into the exynos-pmu `pmu_init` hook. Which of the two cpu0 bits
+(STANDBYWFE, SMPEN) is decisive is not separated; the vendor kernel sets both.
+
+A single `dwmmc_exynos 13540000.mmc: Interrupt latency, state 1` at ~13.6 s of boot (right after
+exynos-drm's deferred probe timeout) also appears without cpuidle (r12, and 6 of 84 older
+boots) and is not a C2 symptom. The C2 symptom was the endless loop / hang.
+
 ## Safety / restore
 
 - Test kernel per pattern_t585_fast_kernel_iteration_scp_vmlinuz_modules_tar_2026_10_27

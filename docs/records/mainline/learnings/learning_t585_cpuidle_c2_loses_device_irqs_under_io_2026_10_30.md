@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1793322709.468391
-edges: [{"target_id": "learning_t585_pmu_cpu_options_not_programmed_mainline_vs_downstream_syspwr_init_2026_10_30", "edge_type": "related"}, {"target_id": "learning_t585_psci_cpu_suspend_needs_pmu_cpu_local_pwr_cfg_clear_2026_10_30", "edge_type": "contradicts"}, {"target_id": "learning_t585_cpuidle_c2_freezes_s2idle_timekeeping_watchdog_cause_resolved_2026_10_30", "edge_type": "contradicts"}]
+edges: [{"target_id": "learning_t585_pmu_cpu_options_not_programmed_mainline_vs_downstream_syspwr_init_2026_10_30", "edge_type": "related"}, {"target_id": "learning_t585_psci_cpu_suspend_needs_pmu_cpu_local_pwr_cfg_clear_2026_10_30", "edge_type": "contradicts"}, {"target_id": "learning_t585_cpuidle_c2_freezes_s2idle_timekeeping_watchdog_cause_resolved_2026_10_30", "edge_type": "contradicts"}, {"target_id": "learning_t585_c2_irq_loss_fixed_by_cpu0_pmu_option_vendor_value_2026_10_30", "edge_type": "related"}, {"target_id": "learning_t585_dwmmc_irq_map_interrupt_latency_once_at_13s_is_baseline_2026_10_30", "edge_type": "contradicts"}]
 cue: You are enabling cpuidle C2 on the SM-T585 again, or see dw_mmc "Interrupt latency" warnings, a boot hang at ~14 s or a shutdown hang.
 ---
 

@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: user
 created: 1793307030.627392
-edges: [{"target_id": "user_hw_debug_wants_written_plan_and_desk_research_first_2026_10_28", "edge_type": "confirms"}, {"target_id": "pattern_t585_runtime_switch_hypothesis_tests_one_diagnostic_kernel_2026_10_29", "edge_type": "related"}, {"target_id": "learning_t585_dsim_video_mode_state_before_panel_commands_reenable_fixed_2026_10_29", "edge_type": "related"}]
+edges: [{"target_id": "user_hw_debug_wants_written_plan_and_desk_research_first_2026_10_28", "edge_type": "confirms"}, {"target_id": "pattern_t585_runtime_switch_hypothesis_tests_one_diagnostic_kernel_2026_10_29", "edge_type": "related"}, {"target_id": "learning_t585_dsim_video_mode_state_before_panel_commands_reenable_fixed_2026_10_29", "edge_type": "related"}, {"target_id": "learning_t585_debug_plan_with_predictions_decided_c2_hypotheses_in_90_min_2026_10_30", "edge_type": "related"}]
 cue: You are about to build a test kernel or flash an experiment on the tablet and it is tempting to just try something.
 ---
 

@@ -3,7 +3,7 @@ type: pattern
 area: workflow
 perspective: agent
 created: 1793322710.417536
-edges: [{"target_id": "learning_t585_cpuidle_c2_loses_device_irqs_under_io_2026_10_30", "edge_type": "derived_from"}]
+edges: [{"target_id": "learning_t585_cpuidle_c2_loses_device_irqs_under_io_2026_10_30", "edge_type": "derived_from"}, {"target_id": "pattern_t585_idle_psci_experiments_load_control_reverting_run_staged_enable_2026_10_30", "edge_type": "related"}]
 cue: You are about to declare a cpuidle or power-management change stable on hardware.
 ---
 

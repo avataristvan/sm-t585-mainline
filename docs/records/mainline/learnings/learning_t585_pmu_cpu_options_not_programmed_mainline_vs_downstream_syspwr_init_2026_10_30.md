@@ -3,6 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1793322709.706158
+edges: [{"target_id": "learning_t585_c2_irq_loss_fixed_by_cpu0_pmu_option_vendor_value_2026_10_30", "edge_type": "related"}]
 cue: You are debugging C2 hangs or any PMU-driven CPU power-down on the Exynos 7870 and wonder what downstream sets that mainline does not.
 ---
 

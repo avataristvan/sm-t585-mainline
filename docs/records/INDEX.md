@@ -62,7 +62,8 @@
 | domain_t585_pmos_ui_console_2026_10_25 | goal | domain | Decision: The pmOS UI on the SM-T585 is "console" (the pmOS UI choice, no graphi | superseded_by: domain_t585_pmos_ui_gnome_mobile_2026_10_26 |
 | domain_t585_pmos_ui_gnome_mobile_2026_10_26 | goal | domain | Decision: The pmOS UI on the SM-T585 is GNOME Mobile, installed into the running | active |
 | domain_t585_polling_delay_1000_tmu_irq_edge_2026_10_24 | mainline | domain | Decision: polling-delay of soc-thermal stays 1000 ms for now (not 0). Revisit la | active |
-| domain_t585_repo_as_portfolio_root_cause_fixes_upstream_order_2026_10_30 | goal | domain | Decision (user, 2026-10-30): The public repo (sm-t585-mainline plus the kernel f | active |
+| domain_t585_public_history_left_as_is_no_rewrite_2026_10_30 | goal | domain | Decision (user, 2026-10-30): The tablet-user mention in the public main-repo his | active |
+| domain_t585_repo_as_portfolio_root_cause_fixes_upstream_order_2026_10_30 | goal | domain | Decision (user, 2026-10-30): The public repo (sm-t585-mainline plus the kernel f | superseded_by: domain_t585_upstream_postponed_reference_first_push_then_readme_2026_10_30 |
 | domain_t585_rootfs_image_in_lineage_userdata_2026_10_25 | goal | domain | Decision: With no working SD card, the Alpine rootfs lives as an ext4 image file | superseded_by: domain_t585_pmos_systemd_in_lineage_system_partition_2026_10_25 |
 | domain_t585_sm5703_battery_ntc_exynos_adc_chunk3c_2026_10_24 | mainline | domain | Decision: Next chunk 3c = battery NTC via the Exynos ADC, replacing the FG-tempe | active |
 | domain_t585_sm5703_battery_ntc_generic_adc_thermal_charger_zones_2026_10_24 | mainline | domain | Decision: Battery NTC = generic-adc-thermal node battery_ntc (#io-channel-cells  | active |
@@ -78,6 +79,7 @@
 | domain_t585_tmu_exynos7870_mainline_support_2026_10_24 | mainline | domain | Decision: The Exynos 7870 TMU (TEM1455X) is supported in mainline exynos_tmu.c a | active |
 | domain_t585_touch_keys_menu_left_back_right_2026_10_23 | mainline | domain | Decision: On the SM-T585 the left capacitive key (left of Home) is KEY_MENU and  | active |
 | domain_t585_uboot_env_bootmenu_timeout_power_off_2026_10_26 | device | domain | Decision: U-Boot env override uboot/env/gtaxllte.env, selected by fragment uboot | active |
+| domain_t585_upstream_postponed_reference_first_push_then_readme_2026_10_30 | goal | domain | Decision (user, 2026-10-30): Upstream submission is postponed; the repo as a ref | active |
 | domain_t585_userspace_postmarketos_not_lineage_2026_10_24 | goal | domain | Decision: The SM-T585 userspace is not LineageOS on our mainline kernel. The pat | superseded_by: domain_t585_rootfs_image_in_lineage_userdata_2026_10_25 |
 | domain_t585_wifi_mmc1_pwrseq_fixed_regulator_no_ath10k_node_2026_10_26 | mainline | domain | Decision: T585 WiFi on mmc1 is modelled as mmc-pwrseq-simple (WLAN_EN gpd3-6, ac | active |
 | domain_target_device_sm_t585_2026_10_23 | device | domain | Decision: The physical test device is a Samsung SM-T585 (gtaxllte, LTE, board "G | active |
@@ -211,6 +213,7 @@
 | learning_t585_i2s_mainline_sysclk_calls_opclk_rclksrc_2026_10_23 | mainline | learning | Observed: In the mainline machine driver gtaxllte_rt5659.c: (1) snd_soc_dai_set_ | active |
 | learning_t585_internet_via_ncm_host_nat_forward_2026_10_25 | workflow | learning | Observed: The SM-T585 reaches the internet over the USB NCM link (device 172.16. | active |
 | learning_t585_jack_detect_gpa0_5_active_low_verified_2026_10_24 | mainline | learning | Observed: SM-T585 jack detect is gpa0-5, verified on mainline stage 1 with /tmp/ | active |
+| learning_t585_kernel_assisted_by_trailer_no_ai_signed_off_by_2026_10_30 | mainline | learning | Observed: The kernel requires an "Assisted-by: LLM [tools]" trailer on AI-assist | active |
 | learning_t585_lineage_capture_dump_procedure_2026_10_24 | workflow | learning | Observed: Lineage capture-dump procedure: script kernel/out/alsa/lineage-capdump | active |
 | learning_t585_lineage_cpu_dvfs_tables_in_sysfs_ect_2026_10_24 | mainline | learning | Observed: Lineage 3.18 on the T585 exposes the real per-chip CPU DVFS table at / | active |
 | learning_t585_lineage_userdata_ext4_quota_needs_qfmt_v2_2026_10_25 | mainline | learning | Observed: Lineage 21 userdata (mmcblk0p23) is ext4 with the quota feature (incom | active |
@@ -379,7 +382,7 @@
 | todo_t585_thermal_followup_trips_cpufreq_2026_10_24 | mainline | todo | TODO: Thermal follow-up, remaining only: polling-delay 0 once the TMU IRQ is tru | active |
 | todo_t585_uboot_emmc_tmout_format_check_2026_10_30 | device | todo | TODO: Check whether the U-Boot HS200/HS400 flaky reads have the same cause as th | active |
 | todo_t585_uboot_hang_after_no_ethernet_2026_10_26 | device | todo | TODO: Confirm the U-Boot eMMC fix with a multi-reboot stability test (several co | active |
-| todo_t585_upstream_dwmmc_exynos_extended_tmout_fix_2026_10_30 | mainline | todo | TODO: Send the dw_mmc-exynos extended-TMOUT fix (src/mainline 9e129452c) upstrea | active |
+| todo_t585_upstream_dwmmc_exynos_extended_tmout_fix_2026_10_30 | mainline | todo | TODO: Send the dw_mmc-exynos extended-TMOUT fix upstream to linux-mmc, cc Kausta | active |
 | user_hw_debug_wants_written_plan_and_desk_research_first_2026_10_28 | general | user | The user wants a written plan up front for hardware debugging: hypotheses, the d | active |
 | user_skill_profile_hw_bringup | general | user | User (avataristvan) skill profile for the galaxy-rab-a-10 device bring-up projec | active |
 | user_wants_hardware_explanations_2026_10_24 | general | user | The user is learning a lot about the hardware through this bring-up ("ich lerne  | active |

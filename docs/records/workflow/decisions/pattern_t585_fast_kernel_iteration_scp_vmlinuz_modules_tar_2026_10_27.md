@@ -3,7 +3,7 @@ type: pattern
 area: workflow
 perspective: agent
 created: 1793045943.545259
-edges: [{"target_id": "learning_t585_dsi_hang_narrowed_to_pre_enable_2026_10_27", "edge_type": "related"}, {"target_id": "pattern_t585_recover_boot_via_twrp_stage1_image_2026_10_25", "edge_type": "related"}, {"target_id": "pattern_t585_crash_iteration_panic5_boot_entry_fb0_blank_pstore_2026_10_28", "edge_type": "related"}, {"target_id": "learning_t585_test_kernel_changes_vmlinux_btf_modules_fail_allow_mismatch_2026_10_28", "edge_type": "related"}, {"target_id": "learning_t585_test_kernel_localversion_empty_reuse_package_modules_2026_10_29", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_dsi_hang_narrowed_to_pre_enable_2026_10_27", "edge_type": "related"}, {"target_id": "pattern_t585_recover_boot_via_twrp_stage1_image_2026_10_25", "edge_type": "related"}, {"target_id": "pattern_t585_crash_iteration_panic5_boot_entry_fb0_blank_pstore_2026_10_28", "edge_type": "related"}, {"target_id": "learning_t585_test_kernel_changes_vmlinux_btf_modules_fail_allow_mismatch_2026_10_28", "edge_type": "related"}, {"target_id": "learning_t585_test_kernel_localversion_empty_reuse_package_modules_2026_10_29", "edge_type": "related"}, {"target_id": "domain_t585_public_history_left_as_is_no_rewrite_2026_10_30", "edge_type": "related"}]
 cue: You want to test a freshly built mainline kernel on the SM-T585 pmOS without a pmbootstrap build and flash.
 ---
 

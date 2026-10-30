@@ -3,6 +3,8 @@ type: domain
 area: goal
 perspective: user
 created: 1793380707.200238
+superseded_by: domain_t585_upstream_postponed_reference_first_push_then_readme_2026_10_30
+valid_until: 1793386848.800674
 edges: [{"target_id": "todo_t585_upstream_dwmmc_exynos_extended_tmout_fix_2026_10_30", "edge_type": "related"}, {"target_id": "todo_t585_report_dsi_findings_to_kaustabh_2026_10_26", "edge_type": "related"}, {"target_id": "domain_public_repo_gitignore_and_privacy_2026_10_24", "edge_type": "related"}, {"target_id": "domain_private_access_details_not_in_public_records_2026_10_27", "edge_type": "related"}]
 cue: Prioritising work, writing commits or docs, or deciding on upstreaming or history rewrites in the public sm-t585-mainline repo.
 ---

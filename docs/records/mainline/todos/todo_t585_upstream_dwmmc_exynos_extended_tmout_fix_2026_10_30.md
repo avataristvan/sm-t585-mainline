@@ -3,7 +3,7 @@ type: todo
 area: mainline
 perspective: agent
 created: 1793375793.399486
-edges: [{"target_id": "domain_t585_emmc_hs200_exynos7870_drv_data_extended_tmout_2026_10_30", "edge_type": "related"}, {"target_id": "todo_t585_report_dsi_findings_to_kaustabh_2026_10_26", "edge_type": "related"}]
+edges: [{"target_id": "domain_t585_emmc_hs200_exynos7870_drv_data_extended_tmout_2026_10_30", "edge_type": "related"}, {"target_id": "todo_t585_report_dsi_findings_to_kaustabh_2026_10_26", "edge_type": "related"}, {"target_id": "domain_t585_repo_as_portfolio_root_cause_fixes_upstream_order_2026_10_30", "edge_type": "related"}]
 cue: You prepare an upstreaming batch for the SM-T585 or are next in contact with Kaustabh Chakraborty about Exynos7870 support.
 ---
 

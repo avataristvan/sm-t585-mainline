@@ -2734,7 +2734,7 @@ CONFIG_DRM_SAMSUNG_DSIM=y
 # end of Display Interface Bridges
 
 # CONFIG_DRM_ETNAVIV is not set
-CONFIG_DRM_EXYNOS=y
+CONFIG_DRM_EXYNOS=m
 
 #
 # CRTCs

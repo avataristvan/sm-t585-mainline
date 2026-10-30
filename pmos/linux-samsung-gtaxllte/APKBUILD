@@ -4,7 +4,7 @@
 maintainer="Istvan Lovas <avataristvan@googlemail.com>"
 pkgname=linux-samsung-gtaxllte
 pkgver=7.3.0
-pkgrel=15
+pkgrel=17
 pkgdesc="Mainline kernel fork for the Samsung Galaxy Tab A 10.1 (2016) LTE"
 arch="aarch64"
 _carch="arm64"
@@ -75,6 +75,6 @@ package() {
 }
 
 sha512sums="
-7ac39a0308fbf951f8cf78ea5b671e169bf3bdb1758cf8d8507c8ddba61a8d40ad8de2656f4ebb0a53f1fa5541b1ff52aad2fc5a3a52e16f3eb1a1daa7601114  config-samsung-gtaxllte.aarch64
+303b0b4967adbbcffb73cfbca70aa6d061e15fec7af2cca6b05f23094884f96ebc53f5c7a18394bdf582ee80ed8a9d88aa50704dc36e2a96b6f1f657337d33eb  config-samsung-gtaxllte.aarch64
 c3b69c3574b867b6fc3fae162f6c91593a2e351599037b38d6ebc25af13fd238edaa471352b689b05d961426bf148b7b0dbbdccd8a4622a5e89a5ed1ac5082e0  timeconst.bc
 "

@@ -3,7 +3,7 @@ type: domain
 area: mainline
 perspective: agent
 created: 1792976189.833338
-edges: [{"target_id": "todo_bluetooth_then_dsi_panel_2026_10_23", "edge_type": "related"}, {"target_id": "domain_priority_wifi_dsi_before_nftables_panfrost_bt_2026_10_26", "edge_type": "related"}, {"target_id": "pattern_t585_panel_power_test_variant_dtb_plus_second_boot_entry_2026_10_27", "edge_type": "related"}, {"target_id": "learning_t585_panel_remove_must_disable_unprepare_before_panel_remove_2026_10_27", "edge_type": "related"}, {"target_id": "learning_t585_decon_dsi_enabled_hard_hangs_before_gdm_2026_10_27", "edge_type": "related"}, {"target_id": "todo_t585_report_dsi_findings_to_kaustabh_2026_10_26", "edge_type": "related"}]
+edges: [{"target_id": "todo_bluetooth_then_dsi_panel_2026_10_23", "edge_type": "related"}, {"target_id": "domain_priority_wifi_dsi_before_nftables_panfrost_bt_2026_10_26", "edge_type": "related"}, {"target_id": "pattern_t585_panel_power_test_variant_dtb_plus_second_boot_entry_2026_10_27", "edge_type": "related"}, {"target_id": "learning_t585_panel_remove_must_disable_unprepare_before_panel_remove_2026_10_27", "edge_type": "related"}, {"target_id": "learning_t585_decon_dsi_enabled_hard_hangs_before_gdm_2026_10_27", "edge_type": "related"}, {"target_id": "todo_t585_report_dsi_findings_to_kaustabh_2026_10_26", "edge_type": "related"}, {"target_id": "learning_t585_panel_module_in_initramfs_fixes_black_screen_h1_h2_prepared_2026_10_30", "edge_type": "related"}]
 cue: You are about to add or change the SM-T585 DSI panel driver and wonder whether to extend panel-himax-hx8279.
 ---
 

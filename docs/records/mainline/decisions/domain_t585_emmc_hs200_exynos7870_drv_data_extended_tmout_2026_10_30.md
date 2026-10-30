@@ -3,7 +3,7 @@ type: domain
 area: mainline
 perspective: agent
 created: 1793375792.377113
-edges: [{"target_id": "learning_t585_hs200_drto_samsung_extended_tmout_format_cause_2026_10_30", "edge_type": "derived_from"}, {"target_id": "domain_t585_emmc_ddr52_clock_frequency_cap_highspeed_2026_10_30", "edge_type": "supersedes"}]
+edges: [{"target_id": "learning_t585_hs200_drto_samsung_extended_tmout_format_cause_2026_10_30", "edge_type": "derived_from"}, {"target_id": "domain_t585_emmc_ddr52_clock_frequency_cap_highspeed_2026_10_30", "edge_type": "supersedes"}, {"target_id": "learning_t585_black_screen_after_hs200_decon_sysmmu_panel_module_simpledrm_2026_10_30", "edge_type": "related"}]
 cue: You tune eMMC speed on the SM-T585 or any Exynos7870 board, or wonder why the eMMC runs HS200 and not DDR52.
 ---
 

@@ -3,7 +3,7 @@ type: todo
 area: mainline
 perspective: user
 created: 1792876910.710767
-edges: [{"target_id": "learning_t585_panfrost_probes_on_mainline_2026_10_24", "edge_type": "derived_from"}, {"target_id": "learning_t585_panfrost_renders_kmscube_simpledrm_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_panfrost_probes_on_mainline_2026_10_24", "edge_type": "derived_from"}, {"target_id": "learning_t585_panfrost_renders_kmscube_simpledrm_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_gpu_supply_is_buck2_shared_mif_int_disp_cam_not_buck3_2026_10_30", "edge_type": "contradicts"}, {"target_id": "learning_t585_gpu_pll_rate_table_and_devfreq_works_d1_d2_2026_10_30", "edge_type": "related"}]
 cue: You enable Panfrost on the SM-T585 and dmesg warns "supply mali not found, using dummy regulator", deciding what the GPU needs next.
 ---
 

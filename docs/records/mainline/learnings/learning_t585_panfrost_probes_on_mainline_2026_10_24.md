@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1792875769.923356
-edges: [{"target_id": "domain_priority_dtbs_check_charger_zones_pwrbtn_panfrost_bt_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_panfrost_renders_kmscube_simpledrm_2026_10_24", "edge_type": "related"}, {"target_id": "todo_t585_panfrost_mali_supply_opp_table_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_pmos_edge_boots_verified_over_usb_ssh_2026_10_25", "edge_type": "related"}]
+edges: [{"target_id": "domain_priority_dtbs_check_charger_zones_pwrbtn_panfrost_bt_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_panfrost_renders_kmscube_simpledrm_2026_10_24", "edge_type": "related"}, {"target_id": "todo_t585_panfrost_mali_supply_opp_table_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_pmos_edge_boots_verified_over_usb_ssh_2026_10_25", "edge_type": "related"}, {"target_id": "learning_t585_gpu_supply_is_buck2_shared_mif_int_disp_cam_not_buck3_2026_10_30", "edge_type": "contradicts"}, {"target_id": "learning_t585_gpu_fixed_343mhz_slow_gnome_js_faults_bt_panel_2026_10_30", "edge_type": "related"}]
 cue: You enable Panfrost on the SM-T585 mainline kernel and wonder whether the GPU works without a power-domain driver or a regulator.
 ---
 

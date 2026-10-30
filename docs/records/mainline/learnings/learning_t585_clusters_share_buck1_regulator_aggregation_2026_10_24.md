@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: the-coder
 created: 1792850174.184426
-edges: [{"target_id": "learning_t585_opp_microvolt_triplet_shared_buck1_2026_10_24", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_opp_microvolt_triplet_shared_buck1_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_gpu_supply_is_buck2_shared_mif_int_disp_cam_not_buck3_2026_10_30", "edge_type": "related"}]
 cue: Wiring cpu-supply for two cpufreq-dt policies (cl0/cl1) on the T585 and wondering about the shared regulator.
 ---
 

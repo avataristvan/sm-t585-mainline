@@ -3,7 +3,7 @@ type: learning
 area: workflow
 perspective: agent
 created: 1793229150.824412
-edges: [{"target_id": "pattern_t585_fast_kernel_iteration_scp_vmlinuz_modules_tar_2026_10_27", "edge_type": "related"}, {"target_id": "learning_t585_test_kernel_changes_vmlinux_btf_modules_fail_allow_mismatch_2026_10_28", "edge_type": "related"}]
+edges: [{"target_id": "pattern_t585_fast_kernel_iteration_scp_vmlinuz_modules_tar_2026_10_27", "edge_type": "related"}, {"target_id": "learning_t585_test_kernel_changes_vmlinux_btf_modules_fail_allow_mismatch_2026_10_28", "edge_type": "related"}, {"target_id": "learning_t585_test_kernel_built_without_btf_mismatch_librarian_not_asked_2026_10_30", "edge_type": "related"}]
 cue: You built a test kernel for the SM-T585 from the dirty tree and its release ends in "+", so no modules dir matches on the tablet.
 ---
 

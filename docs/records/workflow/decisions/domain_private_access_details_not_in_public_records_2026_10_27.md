@@ -3,7 +3,7 @@ type: domain
 area: workflow
 perspective: user
 created: 1793046122.982816
-edges: [{"target_id": "domain_public_repo_gitignore_and_privacy_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_background_logger_dies_with_ssh_use_systemd_run_2026_10_27", "edge_type": "related"}]
+edges: [{"target_id": "domain_public_repo_gitignore_and_privacy_2026_10_24", "edge_type": "related"}, {"target_id": "learning_t585_background_logger_dies_with_ssh_use_systemd_run_2026_10_27", "edge_type": "related"}, {"target_id": "domain_t585_repo_as_portfolio_root_cause_fixes_upstream_order_2026_10_30", "edge_type": "related"}]
 cue: About to record device access details (accounts, credentials, sudo setup, keys) in a record of this public repo.
 ---
 

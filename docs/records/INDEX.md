@@ -52,6 +52,7 @@
 | domain_t585_mic_panning_summing_in_software_2026_10_24 | mainline | domain | Decision (user, 2026-10-24): Mic panning and summing is done in software, not in | active |
 | domain_t585_mics_fixed_mono_tracks_2026_10_24 | mainline | domain | Decision (user, 2026-10-24): The mics are fixed mono tracks like on a mixing des | active |
 | domain_t585_no_custom_power_key_console_handling_2026_10_29 | goal | domain | Decision: No custom power-key handling for the text console (user, agent advised | active |
+| domain_t585_no_gpu_overclock_max_1001mhz_2026_10_30 | mainline | domain | Decision: No GPU overclocking (user, 2026-10-30). The GPU tops out at Samsung's  | active |
 | domain_t585_own_machine_driver_for_audio_2026_10_23 | mainline | domain | Decision: A small own machine driver for gtaxllte (src/mainline/sound/soc/samsun | active |
 | domain_t585_own_pmos_packages_not_pmaports_2026_10_25 | mainline | domain | Decision: The pmOS device and kernel are our own packages in this repo: pmos/dev | superseded_by: domain_t585_pmos_packages_follow_exynos7_efi_model_2026_10_26 |
 | domain_t585_pmos_in_userdata_pmaports_model_2026_10_26 | goal | domain | Decision (user, 2026-10-25): postmarketOS moves from SYSTEM (mmcblk0p19) to USER | active |
@@ -61,6 +62,7 @@
 | domain_t585_pmos_ui_console_2026_10_25 | goal | domain | Decision: The pmOS UI on the SM-T585 is "console" (the pmOS UI choice, no graphi | superseded_by: domain_t585_pmos_ui_gnome_mobile_2026_10_26 |
 | domain_t585_pmos_ui_gnome_mobile_2026_10_26 | goal | domain | Decision: The pmOS UI on the SM-T585 is GNOME Mobile, installed into the running | active |
 | domain_t585_polling_delay_1000_tmu_irq_edge_2026_10_24 | mainline | domain | Decision: polling-delay of soc-thermal stays 1000 ms for now (not 0). Revisit la | active |
+| domain_t585_repo_as_portfolio_root_cause_fixes_upstream_order_2026_10_30 | goal | domain | Decision (user, 2026-10-30): The public repo (sm-t585-mainline plus the kernel f | active |
 | domain_t585_rootfs_image_in_lineage_userdata_2026_10_25 | goal | domain | Decision: With no working SD card, the Alpine rootfs lives as an ext4 image file | superseded_by: domain_t585_pmos_systemd_in_lineage_system_partition_2026_10_25 |
 | domain_t585_sm5703_battery_ntc_exynos_adc_chunk3c_2026_10_24 | mainline | domain | Decision: Next chunk 3c = battery NTC via the Exynos ADC, replacing the FG-tempe | active |
 | domain_t585_sm5703_battery_ntc_generic_adc_thermal_charger_zones_2026_10_24 | mainline | domain | Decision: Battery NTC = generic-adc-thermal node battery_ntc (#io-channel-cells  | active |
@@ -143,6 +145,7 @@
 | learning_t585_audio_roughness_volume_independent_open_2026_10_23 | mainline | learning | Observed: After the click fix the 440 Hz tone is rough ("ring modulator", "Amiga | superseded_by: learning_t585_i2s0_rclksrc_pclk_causes_roughness_2026_10_23 |
 | learning_t585_background_logger_dies_with_ssh_use_systemd_run_2026_10_27 | workflow | learning | Observed: On the pmOS tablet a background logger started via ssh with nohup/sets | active |
 | learning_t585_backlight_class_pulls_defconfig_panel_modules_off_in_pmos_config_2026_10_26 | mainline | learning | Observed: Enabling BACKLIGHT_CLASS_DEVICE in the T585 config exposes about 28-30 | active |
+| learning_t585_black_screen_after_hs200_decon_sysmmu_panel_module_simpledrm_2026_10_30 | mainline | learning | Observed: Since HS200 (faster boot, GDM at ~19-21 s) the screen could stay black | active |
 | learning_t585_boot_on_only_enables_at_registration_cleanup_still_runs_2026_10_27 | mainline | learning | Observed: In the regulator core, regulator-boot-on only enables the rail at regi | active |
 | learning_t585_bootloader_fb_a8r8g8b8_2026_10_23 | mainline | learning | Observed: On mainline, the SM-T585 bootloader framebuffer at 0x67000000 is a8r8g | active |
 | learning_t585_bt_btqca_firmware_names_fallback_2026_10_27 | mainline | learning | Observed: btqca requests qca/rampatch_<soc_ver>.bin and qca/nvm_<soc_ver>.bin. l | active |
@@ -189,6 +192,10 @@
 | learning_t585_gauge_status_from_current_sign_wrong_2026_10_27 | mainline | learning | Observed: "Discharging" from sm5703-fuel-gauge on an SDP port (about 450 mA) whi | active |
 | learning_t585_gnome_mobile_power_button_backlight_2026_10_26 | device | learning | Observed: Under GNOME Mobile, gsd power-button-action defaulted to 'suspend' and | active |
 | learning_t585_gnome_mobile_power_key_blank_not_suspend_logind_ignore_2026_10_28 | mainline | learning | Observed: GNOME Mobile does the system action 'blank' on a short power-key press | active |
+| learning_t585_gpu_dvfs_data_pll_ect_asv7_2026_10_30 | mainline | learning | Observed: GPU DVFS data for this chip. G3D_PLL is type 14180 (VCO 600-1200 MHz). | active |
+| learning_t585_gpu_fixed_343mhz_slow_gnome_js_faults_bt_panel_2026_10_30 | mainline | learning | Observed: Mainline runs the GPU fixed at 343 MHz (1/3 of the 1001 MHz maximum);  | active |
+| learning_t585_gpu_pll_rate_table_and_devfreq_works_d1_d2_2026_10_30 | mainline | learning | Observed: GPU D1/D2 result. A G3D_PLL rate table plus CLK_SET_RATE_PARENT on dou | active |
+| learning_t585_gpu_supply_is_buck2_shared_mif_int_disp_cam_not_buck3_2026_10_30 | mainline | learning | Observed: The SM-T585 GPU (G3D) supply is BUCK2, not BUCK3. The downstream Mali  | active |
 | learning_t585_hall_pwrkeyd_thermal_checked_fine_2026_10_27 | mainline | learning | Observed: audit found these already standard: the hall sensor is gpio-keys SW_LI | active |
 | learning_t585_hang_without_panic_leaves_pstore_empty_2026_10_30 | workflow | learning | Observed: A hang without a panic leaves pstore empty on this device, both after  | active |
 | learning_t585_headset_mic_in1_needs_ejd_ctrl_1_0x70c0_2026_10_24 | mainline | learning | Observed: Headset mic on SM-T585 = IN1 (single-ended) + MICBIAS1 (downstream DT  | active |
@@ -219,6 +226,7 @@
 | learning_t585_never_rmmod_charger_host_built_module_fails_btf_package_kernel_2026_10_29 | workflow | learning | Observed: Host-built modules (kernel/build) do not load into a pmbootstrap-built | active |
 | learning_t585_ntc_vs_fg_temp_wall_charger_hw_kernel30_2026_10_24 | mainline | learning | Observed: Verified on HW, kernel #30. NTC reads 24.0 C at room temp. On the wall | active |
 | learning_t585_opp_microvolt_triplet_shared_buck1_2026_10_24 | mainline | learning | Observed: With exact opp-microvolt (<v v v>) the two cpufreq-dt policies on the  | active |
+| learning_t585_panel_module_in_initramfs_fixes_black_screen_h1_h2_prepared_2026_10_30 | mainline | learning | Observed: H1 result (3/3 boots): the panel module in the initramfs (/etc/mkinitf | active |
 | learning_t585_panel_remove_must_disable_unprepare_before_panel_remove_2026_10_27 | mainline | learning | Observed: A drm panel driver's .remove must call drm_panel_disable and drm_panel | active |
 | learning_t585_panfrost_probes_on_mainline_2026_10_24 | mainline | learning | Observed: On the SM-T585 mainline stage 1, Panfrost probes with only `&gpu { sta | active |
 | learning_t585_panfrost_renders_kmscube_simpledrm_2026_10_24 | mainline | learning | Observed: On the SM-T585 with the stage-1 image boot-stage1-k32b.img, `kmscube - | active |
@@ -286,6 +294,7 @@
 | learning_t585_stmfts_logs_error_code_on_every_resume_harmless_2026_10_29 | mainline | learning | Observed: stmfts logs "error code: 0x0dec00d0ba" once on every resume; touch kee | active |
 | learning_t585_sustained_load_reaches_81c_trip_2026_10_24 | mainline | learning | Observed: On SM-T585 mainline at 1690 MHz on all 8 cores (busy loops) the SoC zo | active |
 | learning_t585_sx9306_grip_sensors_no_mainline_driver_2026_10_27 | mainline | learning | Observed: The sx9306 grip/SAR sensors have no mainline driver (the sx9310 family | active |
+| learning_t585_test_kernel_built_without_btf_mismatch_librarian_not_asked_2026_10_30 | workflow | learning | Observed: The first D1/D2 test kernel was built in kernel/build without CONFIG_M | active |
 | learning_t585_test_kernel_changes_vmlinux_btf_modules_fail_allow_mismatch_2026_10_28 | workflow | learning | Observed: Test kernels with built-in driver changes, a struct change in samsung- | active |
 | learning_t585_test_kernel_localversion_empty_reuse_package_modules_2026_10_29 | workflow | learning | Observed: A test kernel built in a separate build dir (kernel/build-diag, copy o | active |
 | learning_t585_tmu_clocked_by_cpucl0_gates_2026_10_24 | mainline | learning | Observed: The 7870 TMU register block at 0x10130000 is clocked by the CPUCL0 gat | active |
@@ -341,6 +350,7 @@
 | pattern_t585_pmos_post_install_checklist_2026_10_25 | workflow | pattern | Rule: After the recovery-zip install, before trusting the result: (1) in /etc/fs | active |
 | pattern_t585_pmos_ssh_dedicated_key_2026_10_25 | workflow | pattern | Rule: Reach pmOS with the dedicated, passphrase-less key ~/.ssh/id_ed25519_gtaxl | active |
 | pattern_t585_read_pmu_registers_python_mmap_dev_mem_2026_10_30 | workflow | pattern | Rule: Read Exynos PMU registers on the running pmOS with python3 mmap of /dev/me | active |
+| pattern_t585_recopy_test_dtb_after_mkinitfs_boot_deploy_2026_10_30 | workflow | pattern | Rule: After running mkinitfs on the tablet in a test setup, re-copy the hand-ins | active |
 | pattern_t585_recover_boot_via_twrp_stage1_image_2026_10_25 | workflow | pattern | Rule: Recover with TWRP: Power + Vol-down, then Vol-up + Home + Power to enter T | active |
 | pattern_t585_reload_audio_modules_from_host_2026_10_24 | mainline | pattern | Rule: Use kernel/out/alsa/reload.sh to reload the codec and machine modules from | active |
 | pattern_t585_runtime_switch_hypothesis_tests_one_diagnostic_kernel_2026_10_29 | workflow | pattern | Rule: Build one diagnostic kernel with one module_param per hypothesis variant o | active |
@@ -352,6 +362,7 @@
 | todo_sm5703_charger_fuel_gauge_2026_10_23 | mainline | todo | TODO: SM5703 charger and fuel gauge drivers. Chunk 1 (raw read) is DONE 2026-10- | active |
 | todo_stmfts_pm_runtime_before_register_2026_10_23 | mainline | todo | TODO: Fix an upstream-style bug in mainline stmfts: input_register_device() runs | active |
 | todo_t585_alsa_ucm_profile_for_pipewire_2026_10_24 | mainline | todo | TODO: For the postmarketOS/PipeWire userspace (installed on the SM-T585 on 2026- | active |
+| todo_t585_config_uhid_for_ble_hid_2026_10_30 | mainline | todo | TODO: CONFIG_UHID is not set in the pmOS kernel config (kernel/gtaxllte-pmos.con | active |
 | todo_t585_dsi_decisions_after_hw_test_2026_10_26 | mainline | todo | TODO: The first DSI HW test (2026-10-27) hard-hung the tablet before GDM, so fir | active |
 | todo_t585_find_why_fw_devlink_skips_fg_power_supplies_link_2026_10_27 | mainline | todo | TODO (low priority, user confirmed): find out why fw_devlink does not create a d | active |
 | todo_t585_free_cont_splash_mem_once_dsi_reliable_2026_10_28 | mainline | todo | TODO (low): Free the 9 MiB cont_splash_mem reserved region once DSI is reliable  | active |

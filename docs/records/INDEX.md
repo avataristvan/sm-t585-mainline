@@ -38,6 +38,7 @@
 | domain_t585_cooling_maps_both_clusters_2026_10_24 | mainline | domain | Decision: Cooling maps on soc-thermal bind both cpufreq cooling devices (cpu0 =  | active |
 | domain_t585_cpu_opp_table_asv7_2026_10_24 | mainline | domain | Decision: T585 CPU OPP table (both clusters identical, this chip, ASV group 7),  | active |
 | domain_t585_cpufreq_dt_cluster_clocks_userspace_governor_2026_10_24 | mainline | domain | Decision: T585 cpufreq = cpufreq-dt on new cluster clocks CLK_CLUSTER0/1_SCLK (c | active |
+| domain_t585_cpuidle_c2_accepted_done_after_r13_use_2026_10_30 | mainline | domain | Decision: cpuidle C2 counts as done and stays on (linux-samsung-gtaxllte r13); t | active |
 | domain_t585_cpuidle_on_again_r13_with_pmu_init_2026_10_30 | mainline | domain | Decision: cpuidle (C2) is on again in package r13, together with exynos7870_pmu_ | active |
 | domain_t585_cpuidle_stays_off_until_irq_loss_fixed_2026_10_30 | mainline | domain | Decision: cpuidle stays off (CONFIG_CPU_IDLE off in kernel/gtaxllte-pmos.config, | superseded_by: domain_t585_cpuidle_on_again_r13_with_pmu_init_2026_10_30 |
 | domain_t585_default_audio_routing_in_machine_driver_2026_10_24 | mainline | domain | Decision: Default audio routing lives in the machine driver: DAC1 -> Stereo DAC  | active |
@@ -343,7 +344,6 @@
 | todo_sm5703_charger_fuel_gauge_2026_10_23 | mainline | todo | TODO: SM5703 charger and fuel gauge drivers. Chunk 1 (raw read) is DONE 2026-10- | active |
 | todo_stmfts_pm_runtime_before_register_2026_10_23 | mainline | todo | TODO: Fix an upstream-style bug in mainline stmfts: input_register_device() runs | active |
 | todo_t585_alsa_ucm_profile_for_pipewire_2026_10_24 | mainline | todo | TODO: For the postmarketOS/PipeWire userspace (installed on the SM-T585 on 2026- | active |
-| todo_t585_cpuidle_c2_day_of_real_use_after_r13_2026_10_30 | mainline | todo | TODO: after r13 is installed, a day of real use (incl. cover suspend) before cal | active |
 | todo_t585_dsi_decisions_after_hw_test_2026_10_26 | mainline | todo | TODO: The first DSI HW test (2026-10-27) hard-hung the tablet before GDM, so fir | active |
 | todo_t585_find_why_fw_devlink_skips_fg_power_supplies_link_2026_10_27 | mainline | todo | TODO (low priority, user confirmed): find out why fw_devlink does not create a d | active |
 | todo_t585_free_cont_splash_mem_once_dsi_reliable_2026_10_28 | mainline | todo | TODO (low): Free the 9 MiB cont_splash_mem reserved region once DSI is reliable  | active |

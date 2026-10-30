@@ -3,7 +3,7 @@ type: domain
 area: mainline
 perspective: agent
 created: 1793341581.291644
-edges: [{"target_id": "learning_t585_c2_irq_loss_fixed_by_cpu0_pmu_option_vendor_value_2026_10_30", "edge_type": "derived_from"}, {"target_id": "domain_t585_cpuidle_stays_off_until_irq_loss_fixed_2026_10_30", "edge_type": "supersedes"}]
+edges: [{"target_id": "learning_t585_c2_irq_loss_fixed_by_cpu0_pmu_option_vendor_value_2026_10_30", "edge_type": "derived_from"}, {"target_id": "domain_t585_cpuidle_stays_off_until_irq_loss_fixed_2026_10_30", "edge_type": "supersedes"}, {"target_id": "domain_t585_cpuidle_c2_accepted_done_after_r13_use_2026_10_30", "edge_type": "related"}]
 cue: You are deciding whether cpuidle C2 is on or off for the SM-T585 package, or whether it counts as done.
 ---
 

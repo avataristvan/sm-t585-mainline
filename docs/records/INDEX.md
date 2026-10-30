@@ -38,6 +38,7 @@
 | domain_t585_cooling_maps_both_clusters_2026_10_24 | mainline | domain | Decision: Cooling maps on soc-thermal bind both cpufreq cooling devices (cpu0 =  | active |
 | domain_t585_cpu_opp_table_asv7_2026_10_24 | mainline | domain | Decision: T585 CPU OPP table (both clusters identical, this chip, ASV group 7),  | active |
 | domain_t585_cpufreq_dt_cluster_clocks_userspace_governor_2026_10_24 | mainline | domain | Decision: T585 cpufreq = cpufreq-dt on new cluster clocks CLK_CLUSTER0/1_SCLK (c | active |
+| domain_t585_cpuidle_stays_off_until_irq_loss_fixed_2026_10_30 | mainline | domain | Decision: cpuidle stays off (CONFIG_CPU_IDLE off in kernel/gtaxllte-pmos.config, | active |
 | domain_t585_default_audio_routing_in_machine_driver_2026_10_24 | mainline | domain | Decision: Default audio routing lives in the machine driver: DAC1 -> Stereo DAC  | active |
 | domain_t585_dsi_panel_own_driver_hx8279d_2026_10_26 | mainline | domain | Decision: The HX8279D panel of the gtaxllte gets its own driver drivers/gpu/drm/ | active |
 | domain_t585_general_lean_tablet_not_music_only_2026_10_25 | goal | domain | Decision: The SM-T585 becomes a general lean tablet: a light desktop environment | active |
@@ -126,6 +127,7 @@
 | learning_t585_adc_loopback_zeros_dac_mix_mute_nopm_rt5659_2026_10_24 | mainline | learning | Observed: RT5659 ADC loopback (Stereo1 ADC1/ADC2 Source = "DAC MIX") returned ex | active |
 | learning_t585_adc_vdd_supply_switches_consumers_to_mv_2026_10_24 | mainline | learning | Observed: Giving the Exynos ADC a real vdd-supply changes what its consumers rea | active |
 | learning_t585_adma_bus_clock_apb_aud_2026_10_23 | mainline | learning | Observed: The Exynos7870 ADMA (PL330 @14890000) bus clock is APB_AUD, not APB_AU | active |
+| learning_t585_ask_librarian_before_on_device_background_run_2026_10_30 | workflow | learning | Observed: The systemd-run lesson (learning_t585_background_logger_dies_with_ssh_ | active |
 | learning_t585_aud_pll_97_5mhz_not_98_304_2026_10_23 | mainline | learning | Observed: AUD_PLL runs at 97.5 MHz under mainline, not 98.304 MHz, so 48 kHz aud | superseded_by: learning_t585_aud_pll_is_fractional_pll36xx_98_304_2026_10_23 |
 | learning_t585_aud_pll_is_fractional_pll36xx_98_304_2026_10_23 | mainline | learning | Observed: The 7870 DISPAUD AUD_PLL is a fractional PLL1431x (downstream pwrcal:  | active |
 | learning_t585_aud_pll_request_target_plus_100hz_2026_10_23 | mainline | learning | Observed: Mainline AUD_PLL (pll_36xx) runs at 98 304 019 Hz, a few Hz above 98.3 | active |
@@ -156,6 +158,7 @@
 | learning_t585_cpucl_pll_14170_rates_dividers_cmu_missing_2026_10_24 | mainline | learning | Observed: CPUCL0/1 PLL is type 14170 (ECT), 26 MHz osc, P/M/S per level in ect-p | active |
 | learning_t585_cpufreq_dt_first_transition_undervolt_fix_2026_10_24 | mainline | learning | Observed: A cpufreq-dt policy registers its regulator request only on its first  | active |
 | learning_t585_cpuidle_c2_freezes_s2idle_timekeeping_watchdog_cause_resolved_2026_10_30 | mainline | learning | Observed: With PSCI C2 enabled on all CPUs (test kernel #9, PMU notifier), s2idl | active |
+| learning_t585_cpuidle_c2_loses_device_irqs_under_io_2026_10_30 | mainline | learning | Observed: With PSCI C2 enabled from boot (package r11), the SM-T585 loses device | active |
 | learning_t585_cpuidle_psci_all_or_nothing_staged_test_needs_two_cpus_2026_10_30 | mainline | learning | Observed: Mainline cpuidle-psci is all-or-nothing: if any present CPU has no cpu | active |
 | learning_t585_dapm_delay_event_on_both_widgets_skip_if_done_2026_10_24 | mainline | learning | Observed: Putting the PRE_PMU adc_power_delay only on "Stereo1 ADC Volume L" bro | active |
 | learning_t585_dapm_delay_event_on_one_widget_only_2026_10_24 | mainline | learning | Observed: With the delay event on both the L and R widgets of the same register, | superseded_by: learning_t585_dapm_delay_event_on_both_widgets_skip_if_done_2026_10_24 |
@@ -216,6 +219,7 @@
 | learning_t585_pmos_kconfig_overrides_stage1_trims_image_size_2026_10_25 | mainline | learning | Observed: kernel/gtaxllte-pmos.config adds what pmaports kconfigcheck wants ("de | active |
 | learning_t585_pmu_aud_sys_pwr_alone_gives_no_sound_2026_10_23 | mainline | learning | Observed: PMU 0x10481340 (GPIO_MODE_AUD_SYS_PWR) reads 0 on mainline; setting bi | active |
 | learning_t585_pmu_clkout_7870_mainline_wiring_2026_10_23 | mainline | learning | Observed: PMU CLKOUT on 7870 works via mainline drivers/clk/samsung/clk-exynos-c | active |
+| learning_t585_pmu_cpu_options_not_programmed_mainline_vs_downstream_syspwr_init_2026_10_30 | mainline | learning | Observed: Downstream programs the PMU CPU options at boot (pwrcal/S5E7870/S5E787 | active |
 | learning_t585_pmu_regmap_cat_hangs_device_2026_10_23 | device | learning | Observed: Under Lineage (downstream 3.18), `cat /d/regmap/10480000.system-contro | active |
 | learning_t585_power_supply_supplier_name_pointer_rmmod_oops_devlink_fix_2026_10_26 | mainline | learning | Observed: HW 2026-10-26: with the FG's `power-supplies = <&charger>`, `rmmod sm5 | active |
 | learning_t585_poweroff_f_works_stage1_2026_10_23 | mainline | learning | Observed: On stage 1 (mainline 7.3), `poweroff -f` from the shell switched the S | active |
@@ -325,6 +329,7 @@
 | pattern_t585_reload_audio_modules_from_host_2026_10_24 | mainline | pattern | Rule: Use kernel/out/alsa/reload.sh to reload the codec and machine modules from | active |
 | pattern_t585_runtime_switch_hypothesis_tests_one_diagnostic_kernel_2026_10_29 | workflow | pattern | Rule: Build one diagnostic kernel with one module_param per hypothesis variant o | active |
 | pattern_t585_twrp_dtb_bisect_swap_in_pmos_boot_2026_10_27 | workflow | pattern | Rule: In TWRP, losetup -o $((2048*512)) on mmcblk0p23 and mount the vfat pmOS_bo | active |
+| pattern_t585_verify_idle_power_features_with_io_and_reboot_2026_10_30 | workflow | pattern | Rule: Hardware verification of an idle/power feature must include sustained I/O  | active |
 | pattern_user_runs_audio_test_with_timed_register_write_2026_10_24 | workflow | pattern | Rule: When the user tests audio, let them run the test commands themselves via " | active |
 | todo_audio_analysis_lpass_i2s_2026_10_23 | mainline | todo | TODO: Audio analysis: compare downstream lpass-exynos7870.c + i2s.c with mainlin | active |
 | todo_bluetooth_then_dsi_panel_2026_10_23 | mainline | todo | TODO: Bluetooth (hci_qca + "tf" firmware), then the real DSI panel (hx8279 varia | active |
@@ -332,6 +337,7 @@
 | todo_sm5703_charger_fuel_gauge_2026_10_23 | mainline | todo | TODO: SM5703 charger and fuel gauge drivers. Chunk 1 (raw read) is DONE 2026-10- | active |
 | todo_stmfts_pm_runtime_before_register_2026_10_23 | mainline | todo | TODO: Fix an upstream-style bug in mainline stmfts: input_register_device() runs | active |
 | todo_t585_alsa_ucm_profile_for_pipewire_2026_10_24 | mainline | todo | TODO: For the postmarketOS/PipeWire userspace (installed on the SM-T585 on 2026- | active |
+| todo_t585_cpuidle_c2_debug_plan_2_2026_10_30 | mainline | todo | TODO: cpuidle C2 debug plan 2, user present for every run: F1 C2 on cpu1-7 only  | active |
 | todo_t585_dsi_decisions_after_hw_test_2026_10_26 | mainline | todo | TODO: The first DSI HW test (2026-10-27) hard-hung the tablet before GDM, so fir | active |
 | todo_t585_find_why_fw_devlink_skips_fg_power_supplies_link_2026_10_27 | mainline | todo | TODO (low priority, user confirmed): find out why fw_devlink does not create a d | active |
 | todo_t585_free_cont_splash_mem_once_dsi_reliable_2026_10_28 | mainline | todo | TODO (low): Free the 9 MiB cont_splash_mem reserved region once DSI is reliable  | active |

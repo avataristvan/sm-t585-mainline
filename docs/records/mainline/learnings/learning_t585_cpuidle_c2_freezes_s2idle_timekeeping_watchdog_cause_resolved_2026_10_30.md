@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1793317612.981748
-edges: [{"target_id": "learning_t585_s2idle_keeps_monotonic_clock_running_journald_udevd_watchdog_2026_10_29", "edge_type": "confirms"}, {"target_id": "learning_t585_psci_cpu_suspend_needs_pmu_cpu_local_pwr_cfg_clear_2026_10_30", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_s2idle_keeps_monotonic_clock_running_journald_udevd_watchdog_2026_10_29", "edge_type": "confirms"}, {"target_id": "learning_t585_psci_cpu_suspend_needs_pmu_cpu_local_pwr_cfg_clear_2026_10_30", "edge_type": "related"}, {"target_id": "learning_t585_cpuidle_c2_loses_device_irqs_under_io_2026_10_30", "edge_type": "contradicts"}]
 cue: You see journald/udevd watchdog restarts after s2idle on the SM-T585, or ask whether shipping PSCI C2 cpuidle fixes them.
 ---
 

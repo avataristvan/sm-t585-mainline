@@ -3,7 +3,7 @@ type: learning
 area: mainline
 perspective: agent
 created: 1793315636.670749
-edges: [{"target_id": "learning_t585_cpuidle_psci_all_or_nothing_staged_test_needs_two_cpus_2026_10_30", "edge_type": "related"}, {"target_id": "learning_t585_s2idle_keeps_monotonic_clock_running_journald_udevd_watchdog_2026_10_29", "edge_type": "related"}, {"target_id": "learning_t585_c2_saves_only_8ma_idle_baseline_1_7w_screen_off_2026_10_30", "edge_type": "related"}]
+edges: [{"target_id": "learning_t585_cpuidle_psci_all_or_nothing_staged_test_needs_two_cpus_2026_10_30", "edge_type": "related"}, {"target_id": "learning_t585_s2idle_keeps_monotonic_clock_running_journald_udevd_watchdog_2026_10_29", "edge_type": "related"}, {"target_id": "learning_t585_c2_saves_only_8ma_idle_baseline_1_7w_screen_off_2026_10_30", "edge_type": "related"}, {"target_id": "learning_t585_cpuidle_c2_loses_device_irqs_under_io_2026_10_30", "edge_type": "contradicts"}]
 cue: You are enabling cpuidle power-down states (PSCI CPU_SUSPEND) on the SM-T585 and the core never returns or the system hangs.
 ---
 

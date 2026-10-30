@@ -75,6 +75,68 @@ On failure: S2 tuning fails / CRC → E-B: try `sdr-timing <0 3>`, then a higher
   no `/dev/mem`, so its register values could not be dumped.
 - Decision: stay on S1 (DDR52) for now; HS200 needs a driver investigation.
 
+## HS200 desk research (downstream vs mainline driver)
+
+- Downstream timing cells are `<div f_drv drv sample>`: HS200 `<3 0 3 0>` = CLKSEL 0x03030000,
+  sdr `<3 0 4 0>` = 0x03040000 (= mainline `<0 4>`). The live sweep already covered the
+  downstream HS200 value (d3 s0) → CLKSEL alone does not explain the difference.
+- gtaxl has no `use-enable-shift`, so `DDR200_ENABLE_SHIFT` (0x110) is unused downstream too.
+  `use-fine-tuning` only adds CLKSEL bit 6 (half step); 8 failing coarse samples rule it out
+  as the sole cause.
+- Card read threshold (`CDTHRCTL`): same logic in both drivers, `data_shift` is 3 in both
+  (FIFO64_32 only changes PIO accessors) → enabled with 512 for 512 B blocks. Not a difference.
+- Downstream sets `FORCE_CLK_STOP` bit 4 (HWACG Q-active) above 400 kHz
+  (`card-init-hwacg-ctrl`); mainline never does. DDR52 works without it, effect at 200 MHz
+  unknown.
+- Mainline set_ios for HS200 falls into `default:` → writes `sdr_timing` with sample 0, not the
+  tuned sample (downstream: `hs200_timing` + `tuned_sample`). Any set_ios after tuning loses
+  the tuned sample. Reads failed for every sample, so this is a latent bug, not the cause.
+- **Key 7870 difference:** mainline raises `dma_threshold` to 512 for the 7870 (Kaustabh
+  Chakraborty, merged for v7.2: small IDMAC transfers are unreliable/cache-incoherent on
+  7870). So HS200 tuning (CMD21, 128 B) runs by **PIO**, while every block read (≥512 B) runs
+  by **IDMAC**. Tuning therefore never validates the DMA path. On Exynos7 espresso (HS200 works)
+  tuning goes through IDMAC.
+- Caveat on the sweep: after a failed read the mmc core resets/re-inits/re-tunes, which
+  rewrites CLKSEL; my write held for the first attempt of each `dd` only if no retune was
+  pending. Readbacks mostly matched the written value, two did not (s2 → 0).
+
+Next HW round (one boot, then one TWRP restore): a diag kernel that logs, for mmc0, the
+interrupt status of each failing data transfer (RINTSTS: DCRC / DRTO / HTO / FRUN / EBE /
+SBE) and IDSTS (IDMAC bus error), plus the tuning candidate bitmap and the chosen sample.
+DCRC → signal/sampling; DRTO/HTO/FRUN → clock or DMA flow; IDSTS FBE → IDMAC/bus. In the same
+boot, repeat the sweep from the ACM shell with the error type visible per attempt.
+
+## HS200 root cause and fix (2026-10-30)
+
+- Diag kernel (patch kept out of tree): tuning `candidates 0xff` (all 8 samples pass, PIO);
+  every block read `-110`, RINTSTS `0x20c` = **DRTO** + DTO + CD, IDSTS 0 (no IDMAC error).
+  Second sweep with the effective CLKSEL logged per transfer: all sample × drive values → DRTO.
+- Debug knobs (`dw_mmc.dbg_flags`) live in the initramfs shell: force PIO → DRTO, read threshold
+  off / 256 → DRTO, **TMOUT = ~0 → reads OK**.
+- `TMOUT` as written by mainline at HS200: `0xf3fcf0ff` (≈16 M clocks = 80 ms, from CSD
+  TAAC 8 ms × 10). The 7870 controller uses Samsung's **extended data timeout format**
+  `(TMOUT[10:8] − 1) × 0xFFFFFF + TMOUT[31:11] × 8` (downstream `dw_mci_calc_timeout` writes
+  `count << 11 | 7 << 8 | 0xFF`). Mainline writes the plain format; at DDR52 the value
+  `0x3D0900` happens to have [10:8] = 1 and decodes correctly, at HS200 [10:8] = 0 → bogus
+  short timeout → DRTO.
+- Fix (src/mainline, `dw_mmc-exynos.c`): an `exynos7870_drv_data` with the existing
+  `dw_mci_exynos_set_data_timeout` / `get_drto_clks` (extended format, as ARTPEC-8 uses);
+  the ARTPEC `DW_MMC_QUIRK_EXTENDED_TMOUT` IRQ handling is not taken (the 7870 reports DTO with
+  errors). Plus `mmc-hs200-1_8v` in the board DTS.
+- Installed from the initramfs shell without TWRP: the knob kernel with `dbg_flags=4` made the
+  eMMC readable, pmOS_boot was mounted (loop offset 1 MiB on mmcblk0p23) and the fix kernel sent
+  over `nc`.
+- Verified: HS200 200 MHz, **129.5 MB/s** (25 MHz: 20.8, DDR52: 72.7); p19 sha256 equal to the
+  baseline; 6 min eMMC + WiFi load (WiFi mmc1 also uses the new timeout code) clean at 39 °C;
+  RTC s2idle; 3 reboots; no mmc errors.
+- Caveat: tuning is all-pass on this board, mainline then picks sample 0; downstream treats
+  all-pass as "not tuned" (drive-strength retries, `ignore-phase` bit 7, an SM-T58x
+  `CONFIG_MMC_TUNING_ALL_PASS_QUIRK` → sample 7). Sample 0 passed every test here; margin under
+  temperature extremes is not characterised.
+- Likely also the cause of the U-Boot HS200/HS400 flaky reads (U-Boot's exynos dw_mmc writes
+  the plain TMOUT format) — unverified.
+- Upstream relevance: affects every Exynos7870 board that enables HS200 (none does yet).
+
 ## Risk / restore
 
 - DT-only changes; a card init failure means no rootfs → boot fails → TWRP: copy back

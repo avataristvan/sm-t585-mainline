@@ -43,7 +43,8 @@
 | domain_t585_cpuidle_stays_off_until_irq_loss_fixed_2026_10_30 | mainline | domain | Decision: cpuidle stays off (CONFIG_CPU_IDLE off in kernel/gtaxllte-pmos.config, | superseded_by: domain_t585_cpuidle_on_again_r13_with_pmu_init_2026_10_30 |
 | domain_t585_default_audio_routing_in_machine_driver_2026_10_24 | mainline | domain | Decision: Default audio routing lives in the machine driver: DAC1 -> Stereo DAC  | active |
 | domain_t585_dsi_panel_own_driver_hx8279d_2026_10_26 | mainline | domain | Decision: The HX8279D panel of the gtaxllte gets its own driver drivers/gpu/drm/ | active |
-| domain_t585_emmc_ddr52_clock_frequency_cap_highspeed_2026_10_30 | mainline | domain | Decision: The board DTS mmc0 carries `cap-mmc-highspeed` and `clock-frequency =  | active |
+| domain_t585_emmc_ddr52_clock_frequency_cap_highspeed_2026_10_30 | mainline | domain | Decision: The board DTS mmc0 carries `cap-mmc-highspeed` and `clock-frequency =  | superseded_by: domain_t585_emmc_hs200_exynos7870_drv_data_extended_tmout_2026_10_30 |
+| domain_t585_emmc_hs200_exynos7870_drv_data_extended_tmout_2026_10_30 | mainline | domain | Decision: The eMMC of the SM-T585 runs HS200 (mmc-hs200-1_8v in the board DTS, s | active |
 | domain_t585_general_lean_tablet_not_music_only_2026_10_25 | goal | domain | Decision: The SM-T585 becomes a general lean tablet: a light desktop environment | active |
 | domain_t585_jack_detect_gpio_only_2026_10_24 | mainline | domain | Decision (user, 2026-10-24): Jack detection option (a), GPIO-only. Machine drive | active |
 | domain_t585_jack_switch_module_param_2026_10_24 | mainline | domain | Decision (user, 2026-10-24): Autoswitching on jack events is configurable by mod | active |
@@ -192,7 +193,9 @@
 | learning_t585_hang_without_panic_leaves_pstore_empty_2026_10_30 | workflow | learning | Observed: A hang without a panic leaves pstore empty on this device, both after  | active |
 | learning_t585_headset_mic_in1_needs_ejd_ctrl_1_0x70c0_2026_10_24 | mainline | learning | Observed: Headset mic on SM-T585 = IN1 (single-ended) + MICBIAS1 (downstream DT  | active |
 | learning_t585_held_power_supply_reference_blocks_unregister_warn_2026_10_26 | mainline | learning | Observed: power_supply_unregister() WARN_ON(use_cnt) fired when the FG was remov | active |
-| learning_t585_hs200_data_reads_fail_mainline_2026_10_30 | mainline | learning | Observed: HS200 on the 7870 in mainline fails beyond DT. Card init and tuning su | active |
+| learning_t585_hs200_data_reads_fail_mainline_2026_10_30 | mainline | learning | Observed: HS200 on the 7870 in mainline fails beyond DT. Card init and tuning su | superseded_by: learning_t585_hs200_drto_samsung_extended_tmout_format_cause_2026_10_30 |
+| learning_t585_hs200_drto_samsung_extended_tmout_format_cause_2026_10_30 | mainline | learning | Observed: HS200 reads fail on the Exynos7870 dw_mmc although tuning passes (all- | active |
+| learning_t585_hs200_tuning_all_pass_sample0_margin_unknown_2026_10_30 | mainline | learning | Observed: HS200 tuning is all-pass (0xff) on this board; mainline then picks sam | active |
 | learning_t585_hw_test_duration_by_data_volume_not_minutes_2026_10_30 | workflow | learning | Observed: A 10-minute load test was copied from the cpuidle work for the eMMC sp | active |
 | learning_t585_i2cx_rt5659_register_access_2026_10_23 | workflow | learning | Observed: kernel/tools/i2cx writes RT5659 registers directly (16-bit register, 1 | active |
 | learning_t585_i2s0_is_exynos7_i2s1_three_clocks_2026_10_23 | mainline | learning | Observed: SM-T585 I2S0 matches the mainline `samsung,exynos7-i2s1` register layo | active |
@@ -328,6 +331,7 @@
 | pattern_t585_charger_test_without_shell_setsid_dcpzones_2026_10_24 | mainline | pattern | Rule: For a test that needs the wall charger or no USB host, run a script that w | active |
 | pattern_t585_crash_iteration_panic5_boot_entry_fb0_blank_pstore_2026_10_28 | workflow | pattern | Rule: Put panic=5 on the options line of the pmos.conf boot entry, then trigger  | active |
 | pattern_t585_debug_delays_as_runtime_module_params_bisect_2026_10_26 | workflow | pattern | Rule: Make debug delays and overrides runtime-switchable via module_param, also  | active |
+| pattern_t585_dwmmc_diag_kernel_runtime_flags_via_acm_shell_2026_10_30 | workflow | pattern | Rule: Put the suspected controller settings behind a runtime module param in a d | active |
 | pattern_t585_fast_kernel_iteration_scp_vmlinuz_modules_tar_2026_10_27 | workflow | pattern | Rule: Build on the host, run `make modules_install INSTALL_MOD_PATH=<dir>` and t | active |
 | pattern_t585_idle_psci_experiments_load_control_reverting_run_staged_enable_2026_10_30 | workflow | pattern | Rule: Test idle/PSCI changes with a reproducible load and a control: 10 min rand | active |
 | pattern_t585_on_device_measurement_scripts_systemd_run_usb_unplugged_2026_10_30 | workflow | pattern | Rule: Start on-device measurement scripts over ssh as a transient unit (`systemd | active |
@@ -345,7 +349,6 @@
 | pattern_user_runs_audio_test_with_timed_register_write_2026_10_24 | workflow | pattern | Rule: When the user tests audio, let them run the test commands themselves via " | active |
 | todo_audio_analysis_lpass_i2s_2026_10_23 | mainline | todo | TODO: Audio analysis: compare downstream lpass-exynos7870.c + i2s.c with mainlin | active |
 | todo_bluetooth_then_dsi_panel_2026_10_23 | mainline | todo | TODO: Bluetooth (hci_qca + "tf" firmware), then the real DSI panel (hx8279 varia | active |
-| todo_emmc_hs200_vmmc_ldo26_2026_10_23 | mainline | todo | TODO: eMMC HS200 in the driver (low priority, DDR52 already gives 3.5x): desk re | active |
 | todo_sm5703_charger_fuel_gauge_2026_10_23 | mainline | todo | TODO: SM5703 charger and fuel gauge drivers. Chunk 1 (raw read) is DONE 2026-10- | active |
 | todo_stmfts_pm_runtime_before_register_2026_10_23 | mainline | todo | TODO: Fix an upstream-style bug in mainline stmfts: input_register_device() runs | active |
 | todo_t585_alsa_ucm_profile_for_pipewire_2026_10_24 | mainline | todo | TODO: For the postmarketOS/PipeWire userspace (installed on the SM-T585 on 2026- | active |
@@ -363,7 +366,9 @@
 | todo_t585_standard_interfaces_charger_gauge_stmfts_followups_2026_10_27 | mainline | todo | TODO (ranked, all need HW; numbers follow docs/standard-interfaces-audit-2026-10 | active |
 | todo_t585_test_kernel_infrastructure_btf_build_dir_swap_script_2026_10_28 | mainline | todo | TODO (suggested): Test-kernel infrastructure: a separate build dir with CONFIG_M | active |
 | todo_t585_thermal_followup_trips_cpufreq_2026_10_24 | mainline | todo | TODO: Thermal follow-up, remaining only: polling-delay 0 once the TMU IRQ is tru | active |
+| todo_t585_uboot_emmc_tmout_format_check_2026_10_30 | device | todo | TODO: Check whether the U-Boot HS200/HS400 flaky reads have the same cause as th | active |
 | todo_t585_uboot_hang_after_no_ethernet_2026_10_26 | device | todo | TODO: Confirm the U-Boot eMMC fix with a multi-reboot stability test (several co | active |
+| todo_t585_upstream_dwmmc_exynos_extended_tmout_fix_2026_10_30 | mainline | todo | TODO: Send the dw_mmc-exynos extended-TMOUT fix (src/mainline 9e129452c) upstrea | active |
 | user_hw_debug_wants_written_plan_and_desk_research_first_2026_10_28 | general | user | The user wants a written plan up front for hardware debugging: hypotheses, the d | active |
 | user_skill_profile_hw_bringup | general | user | User (avataristvan) skill profile for the galaxy-rab-a-10 device bring-up projec | active |
 | user_wants_hardware_explanations_2026_10_24 | general | user | The user is learning a lot about the hardware through this bring-up ("ich lerne  | active |

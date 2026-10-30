@@ -3,7 +3,7 @@ type: pattern
 area: workflow
 perspective: agent
 created: 1793346588.739978
-edges: [{"target_id": "pattern_pmos_logs_via_pstore_and_losetup_journal_2026_10_25", "edge_type": "related"}]
+edges: [{"target_id": "pattern_pmos_logs_via_pstore_and_losetup_journal_2026_10_25", "edge_type": "related"}, {"target_id": "pattern_t585_dwmmc_diag_kernel_runtime_flags_via_acm_shell_2026_10_30", "edge_type": "related"}]
 cue: A kernel or DT test leaves pmOS on the SM-T585 unable to mount root, blank screen, no ssh.
 ---
 

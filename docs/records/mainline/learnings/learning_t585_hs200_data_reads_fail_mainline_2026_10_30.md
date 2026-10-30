@@ -3,6 +3,8 @@ type: learning
 area: mainline
 perspective: agent
 created: 1793346588.489185
+superseded_by: learning_t585_hs200_drto_samsung_extended_tmout_format_cause_2026_10_30
+valid_until: 1793375805.753806
 edges: [{"target_id": "domain_t585_emmc_ddr52_clock_frequency_cap_highspeed_2026_10_30", "edge_type": "related"}, {"target_id": "learning_t585_uboot_emmc_flaky_reads_hs400_2026_10_26", "edge_type": "related"}]
 cue: You try HS200 or HS400 on the SM-T585 eMMC in the kernel and card init and tuning succeed but the rootfs cannot be read.
 ---

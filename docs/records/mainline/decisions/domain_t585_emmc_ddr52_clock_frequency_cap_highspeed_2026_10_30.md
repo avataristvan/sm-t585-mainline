@@ -3,6 +3,8 @@ type: domain
 area: mainline
 perspective: agent
 created: 1793346588.235783
+superseded_by: domain_t585_emmc_hs200_exynos7870_drv_data_extended_tmout_2026_10_30
+valid_until: 1793375806.037041
 cue: You tune eMMC speed in the SM-T585 board DTS, or wonder why the eMMC reads at 25 MHz or caps near 50 MHz.
 ---
 
